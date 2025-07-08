@@ -7,7 +7,7 @@ const Footer = () => {
         <h3 className="sitename">Fisheries Commission</h3>
         <p>
           Follow us on our social media channels to stay updated with the latest
-          news and activities of the Fisheries Commission.
+          news and activities of the Fisheries Commission
         </p>
         <div className="social-links d-flex justify-content-center">
           <a href="">
