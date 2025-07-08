@@ -6,7 +6,7 @@ const AboutUs = () => {
       <section id="about" className="about section">
         <div className="container section-title" data-aos="fade-up">
           <h2>About US</h2>
-          <p>WELCOME TO FISHERIES COMMISSION</p>
+          <p>WELCOME TO THE FISHERIES COMMISSION</p>
         </div>
 
         <div className="container">
