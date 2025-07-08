@@ -5,7 +5,11 @@ const Header = () => {
     <header id="header" className="header d-flex align-items-center fixed-top">
       <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" className="logo d-flex align-items-center">
-          <h1 className="sitename">Selecao</h1>
+          <img
+            src="/assets/img/logo-white.png"
+            alt="Selecao Logo"
+            className="logo-image"
+          />
         </a>
 
         <nav id="navmenu" className="navmenu">
@@ -15,66 +19,115 @@ const Header = () => {
                 Home
               </a>
             </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="#portfolio">Portfolio</a>
-            </li>
-            <li>
-              <a href="#team">Team</a>
-            </li>
-            <li>
-              <a href="blog.html">Blog</a>
-            </li>
-            <li className="dropdown">
+            <li className="dropdown d-none">
               <a href="#">
-                <span>Dropdown</span>{" "}
+                <span>About Us</span>{" "}
                 <i className="bi bi-chevron-down toggle-dropdown"></i>
               </a>
               <ul>
                 <li>
-                  <a href="#">Dropdown 1</a>
+                  <a href="#">Goals and Objectives</a>
                 </li>
-                <li className="dropdown">
+                <li>
+                  <a href="#">Board Members</a>
+                </li>
+                <li>
+                  <a href="#">Executive Director</a>
+                </li>
+                <li>
+                  <a href="#">Divisions and Units</a>
+                </li>
+                <li>
+                  <a href="#">Regional Offices</a>
+                </li>
+              </ul>
+            </li>
+            <li className="dropdown d-none">
+              <a href="#">
+                <span>Collaborators</span>{" "}
+                <i className="bi bi-chevron-down toggle-dropdown"></i>
+              </a>
+              <ul>
+                <li>
+                  <a href="#">Formal Institutions</a>
+                </li>
+                <li>
+                  <a href="#">Informal Institutions</a>
+                </li>
+                <li>
+                  <a href="#">Development Partners</a>
+                </li>
+                <li>
+                  <a href="#">Fisheries Associations</a>
+                </li>
+                <li>
+                  <a href="#">Civil Society Organizations</a>
+                </li>
+              </ul>
+            </li>
+            <li className="dropdown">
+              <a href="#">
+                <span>Resources</span>{" "}
+                <i className="bi bi-chevron-down toggle-dropdown"></i>
+              </a>
+              <ul>
+                <li>
+                  <a href="#">Laws and Regulations</a>
+                </li>
+                <li>
+                  <a href="#">Reports and Plans</a>
+                </li>
+              </ul>
+            </li>
+            <li className="dropdown">
+              <a href="#">
+                <span>News and Events </span>{" "}
+                <i className="bi bi-chevron-down toggle-dropdown"></i>
+              </a>
+              <ul>
+                <li>
+                  <a href="#">Press and Release </a>
+                </li>
+                <li>
+                  <a href="#">Articles</a>
+                </li>
+                <li>
+                  <a href="#">Gallery</a>
+                </li>
+              </ul>
+            </li>
+            <li className="dropdown">
+              <a href="#">
+                <span>Projects </span>{" "}
+                <i className="bi bi-chevron-down toggle-dropdown"></i>
+              </a>
+              <ul>
+                <li>
+                  <a href="#">Fish For Development (FFD) </a>
+                </li>
+                <li>
                   <a href="#">
-                    <span>Deep Dropdown</span>{" "}
-                    <i className="bi bi-chevron-down toggle-dropdown"></i>
+                    Sustainable Fisheries Managemenent Programme (SFMP)
                   </a>
-                  <ul>
-                    <li>
-                      <a href="#">Deep Dropdown 1</a>
-                    </li>
-                    <li>
-                      <a href="#">Deep Dropdown 2</a>
-                    </li>
-                    <li>
-                      <a href="#">Deep Dropdown 3</a>
-                    </li>
-                    <li>
-                      <a href="#">Deep Dropdown 4</a>
-                    </li>
-                    <li>
-                      <a href="#">Deep Dropdown 5</a>
-                    </li>
-                  </ul>
                 </li>
                 <li>
-                  <a href="#">Dropdown 2</a>
-                </li>
-                <li>
-                  <a href="#">Dropdown 3</a>
-                </li>
-                <li>
-                  <a href="#">Dropdown 4</a>
+                  <a href="#">
+                    West African Regional Fisheries Programme (WARFP)
+                  </a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a
+                rel="noopener"
+                href="https://fishcom.gov.gh/recruitment/"
+                target="_blank"
+              >
+                Recruitment Portal
+              </a>
+            </li>
+            <li>
+              <a href="#portfolio">Contact Us</a>
             </li>
           </ul>
           <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>

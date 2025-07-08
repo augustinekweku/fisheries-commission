@@ -4,10 +4,10 @@ const Footer = () => {
   return (
     <footer id="footer" className="footer dark-background">
       <div className="container">
-        <h3 className="sitename">Selecao</h3>
+        <h3 className="sitename">Fisheries Commission</h3>
         <p>
-          Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni
-          eligendi fuga maxime saepe commodi placeat.
+          Follow us on our social media channels to stay updated with the latest
+          news and activities of the Fisheries Commission.
         </p>
         <div className="social-links d-flex justify-content-center">
           <a href="">
@@ -29,8 +29,7 @@ const Footer = () => {
         <div className="container">
           <div className="copyright"></div>
           <div className="credits">
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>{" "}
-            Distributed By <a href="https://themewagon.com">ThemeWagon</a>
+            © 2025 Fisheries Commission. All Rights Reserved.
           </div>
         </div>
       </div>

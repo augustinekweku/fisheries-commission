@@ -1,4 +1,10 @@
 import HeroSection from "@/components/HeroSection";
+import AboutUs from "@/components/HomePage/about-us-section";
+import BlogPosts from "@/components/HomePage/blog-posts";
+import CallToAction from "@/components/HomePage/call-to-action";
+import Faculties from "@/components/HomePage/faculties";
+import Features from "@/components/HomePage/features-section";
+import VideoPost from "@/components/HomePage/video-post";
 import Head from "next/head";
 
 export default function Home() {
@@ -34,8 +40,11 @@ export default function Home() {
             {/* Add Hero Section Content */}
             <HeroSection />
           </section>
-
+          <AboutUs />
           {/* Add other sections like About, Features, Services, Portfolio, etc. */}
+          <Faculties /> <BlogPosts />
+          <CallToAction />
+          <VideoPost />
         </main>
 
         {/* Scroll Top */}

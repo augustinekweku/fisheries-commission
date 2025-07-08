@@ -1,73 +1,77 @@
 import React from "react";
 
 const HeroSection = () => {
+  const carouselItems = [
+    {
+      id: 1,
+      backgroundImage: "/assets/img/hero/hero-1.jpg",
+      title: "Welcome to the Fisheries Commission Official Website",
+      buttonText: "Read More",
+      buttonLink: "#about",
+    },
+    {
+      id: 2,
+      backgroundImage: "/assets/img/hero/hero-2.jpg",
+      title: "Explore Our Services and Resources",
+      buttonText: "Learn More",
+      buttonLink: "#services",
+    },
+    {
+      id: 3,
+      backgroundImage: "/assets/img/hero/hero-3.jpeg",
+      title: "Join Us in Sustainable Fisheries Management",
+      buttonText: "Get Started",
+      buttonLink: "#contact",
+    },
+    {
+      id: 4,
+      backgroundImage: "/assets/img/hero/hero-4.jpeg",
+      title: "Join Us in Sustainable Fisheries Management",
+      buttonText: "Get Started",
+      buttonLink: "#contact",
+    },
+  ];
+
   return (
     <section id="hero" className="hero section dark-background">
       <div
         id="hero-carousel"
         data-bs-interval="5000"
-        className="container carousel carousel-fade"
+        className="carousel carousel-fade"
         data-bs-ride="carousel"
       >
-        <div className="carousel-item active">
-          <div className="carousel-container">
-            <h2 className="animate__animated animate__fadeInDown">
-              Welcome to <span>Selecao</span>
-            </h2>
-            <p className="animate__animated animate__fadeInUp">
-              Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et
-              est quaerat sequi nihil ut aliquam. Occaecati alias dolorem
-              mollitia ut. Similique ea voluptatem. Esse doloremque accusamus
-              repellendus deleniti vel. Minus et tempore modi architecto.
-            </p>
-            <a
-              href="#about"
-              className="btn-get-started animate__animated animate__fadeInUp scrollto"
+        {carouselItems.map((item, index) => (
+          <div
+            key={item.id}
+            className={`carousel-item ${index === 0 ? "active" : ""}`}
+            style={{
+              backgroundImage: `url('${item.backgroundImage}')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              width: "100%",
+            }}
+          >
+            <div
+              className="carousel-container w-100"
+              style={{
+                backgroundColor: "rgba(0, 0, 0, 0.5)",
+              }}
             >
-              Read More
-            </a>
+              <div className="w-75">
+                <h3 className="animate__animated animate__fadeInDown">
+                  {item.title}
+                </h3>
+                <a
+                  href={item.buttonLink}
+                  className="btn-get-started animate__animated animate__fadeInUp scrollto"
+                >
+                  {item.buttonText}
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div className="carousel-item">
-          <div className="carousel-container">
-            <h2 className="animate__animated animate__fadeInDown">
-              Lorem Ipsum Dolor
-            </h2>
-            <p className="animate__animated animate__fadeInUp">
-              Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et
-              est quaerat sequi nihil ut aliquam. Occaecati alias dolorem
-              mollitia ut. Similique ea voluptatem. Esse doloremque accusamus
-              repellendus deleniti vel. Minus et tempore modi architecto.
-            </p>
-            <a
-              href="#about"
-              className="btn-get-started animate__animated animate__fadeInUp scrollto"
-            >
-              Read More
-            </a>
-          </div>
-        </div>
-
-        <div className="carousel-item">
-          <div className="carousel-container">
-            <h2 className="animate__animated animate__fadeInDown">
-              Sequi ea ut et est quaerat
-            </h2>
-            <p className="animate__animated animate__fadeInUp">
-              Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et
-              est quaerat sequi nihil ut aliquam. Occaecati alias dolorem
-              mollitia ut. Similique ea voluptatem. Esse doloremque accusamus
-              repellendus deleniti vel. Minus et tempore modi architecto.
-            </p>
-            <a
-              href="#about"
-              className="btn-get-started animate__animated animate__fadeInUp scrollto"
-            >
-              Read More
-            </a>
-          </div>
-        </div>
+        ))}
 
         <a
           className="carousel-control-prev"
