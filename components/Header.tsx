@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header id="header" className="header d-flex align-items-center fixed-top">
       <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" className="logo d-flex align-items-center">
+        <a href="/" className="logo d-flex  align-items-center w-75">
           <img
             src="/assets/img/logo-white.png"
             alt="Selecao Logo"

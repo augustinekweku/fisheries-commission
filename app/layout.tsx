@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "./globals.scss";
 import "../public/assets/css/main.css";
 import "../public/assets/vendor/bootstrap/css/bootstrap.css";
 import "../public/assets/vendor/bootstrap-icons/bootstrap-icons.css";
