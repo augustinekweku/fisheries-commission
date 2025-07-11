@@ -1,0 +1,56 @@
+import { DocumentItem } from "@/types/Resources";
+
+export const reportsAndPlansDocs: Record<string, DocumentItem[]> = {
+  Legislation: [
+    {
+      title: "Wholesale_Fish_Marketing_Act_1963_Act_N_156",
+      size: "284 KB",
+      hits: 75,
+      dateAdded: "02-08-2019",
+      dateModified: "29-11-2019",
+      thumbnailUrl: "/assets/img/previews/wholesale-fishing.png",
+      downloadUrl: "/docs/Wholesale_Fish_Marketing_Act_1963_Act_N_156.pdf",
+      previewUrl: "/docs/Wholesale_Fish_Marketing_Act_1963_Act_N_156.pdf",
+    },
+    {
+      title: "Oil_in_Navigable_Waters_Act_1964_Act_235",
+      size: "604 KB",
+      hits: 84,
+      dateAdded: "02-08-2019",
+      dateModified: "29-11-2019",
+      thumbnailUrl: "/assets/img/previews/oil.png",
+      downloadUrl: "/docs/Oil_in_Navigable_Waters_Act_1964_Act_235.pdf",
+      previewUrl: "/docs/Oil_in_Navigable_Waters_Act_1964_Act_235.pdf",
+    },
+    {
+      title: "Maritime_Zones-Delimitation-Law_1986_PNDCL-159",
+      size: "1.2 MB",
+      hits: 120,
+      dateAdded: "02-08-2019",
+      dateModified: "29-11-2019",
+      thumbnailUrl: "/assets/img/previews/maritime.png",
+      downloadUrl: "/docs/Maritime_Zones-Delimitation-Law_1986_PNDCL-159.pdf",
+      previewUrl: "/docs/Maritime_Zones-Delimitation-Law_1986_PNDCL-159.pdf",
+    },
+    {
+      title: "Ghana_Shipping_Act_2003",
+      size: "1.8 MB",
+      hits: 95,
+      dateAdded: "02-08-2019",
+      dateModified: "29-11-2019",
+      thumbnailUrl: "/assets/img/previews/shipping-act.png",
+      downloadUrl: "/docs/Ghana_Shipping_Act_2003.pdf",
+      previewUrl: "/docs/Ghana_Shipping_Act_2003.pdf",
+    },
+    {
+      title: "Ghana_Maritime_Security_Act_2004",
+      size: "1.1 MB",
+      hits: 110,
+      dateAdded: "02-08-2019",
+      dateModified: "29-11-2019",
+      thumbnailUrl: "/assets/img/previews/maritime-security.png",
+      downloadUrl: "/docs/Ghana_Maritime_Security_Act_2004.pdf",
+      previewUrl: "/docs/Ghana_Maritime_Security_Act_2004.pdf",
+    },
+  ],
+};

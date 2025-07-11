@@ -33,8 +33,8 @@ export default function Home() {
         />
       </Head>
 
-      <body className="index-page">
-        <main className="main">
+      <main className="index-page">
+        <div className="main">
           {/* Hero Section */}
           <section id="hero" className="hero section dark-background">
             {/* Add Hero Section Content */}
@@ -45,7 +45,7 @@ export default function Home() {
           <Faculties /> <BlogPosts />
           <CallToAction />
           <VideoPost />
-        </main>
+        </div>
 
         {/* Scroll Top */}
         <a
@@ -55,7 +55,7 @@ export default function Home() {
         >
           <i className="bi bi-arrow-up-short"></i>
         </a>
-      </body>
+      </main>
     </>
   );
 }

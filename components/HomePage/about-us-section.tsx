@@ -47,7 +47,7 @@ const AboutUs = () => {
 
             <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
               <p>
-                Our work at the Fisheries Commission is guided by MoFAD’s
+                Our work at the Fisheries Commission is guided by MoFAD's
                 policies and regulations, and we also provide valuable feedback
                 to MoFAD to inform future policies.
               </p>
