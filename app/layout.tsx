@@ -11,6 +11,7 @@ import CustomScript from "@/components/CustomScript";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Roboto } from "next/font/google";
+import LayoutWrapper from "@/components/LayoutWrapper";
 
 export const metadata: Metadata = {
   title: "Fisheries Commission",
@@ -34,9 +35,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className}`}>
-        <Header />
-        {children}
+      <body className={roboto.className}>
+        <LayoutWrapper>{children}</LayoutWrapper>
         <CustomScript />
         <Footer />
       </body>

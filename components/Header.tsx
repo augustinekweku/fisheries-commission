@@ -1,119 +1,122 @@
+import Link from "next/link";
 import React from "react";
 
 const Header = () => {
   return (
     <header id="header" className="header d-flex align-items-center fixed-top">
       <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-        <a href="/" className="logo d-flex  align-items-center w-75">
+        <Link href="/" className="logo d-flex  align-items-center w-75">
           <img
             src="/assets/img/logo-white.png"
             alt="Selecao Logo"
             className="logo-image"
           />
-        </a>
+        </Link>
 
         <nav id="navmenu" className="navmenu">
           <ul>
             <li>
-              <a href="#hero" className="active">
+              <Link href="/" className="active">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="dropdown d-none">
-              <a href="#">
+              <Link href="#">
                 <span>About Us</span>{" "}
                 <i className="bi bi-chevron-down toggle-dropdown"></i>
-              </a>
+              </Link>
               <ul>
                 <li>
-                  <a href="#">Goals and Objectives</a>
+                  <Link href="#">Goals and Objectives</Link>
                 </li>
                 <li>
-                  <a href="#">Board Members</a>
+                  <Link href="#">Board Members</Link>
                 </li>
                 <li>
-                  <a href="#">Executive Director</a>
+                  <Link href="#">Executive Director</Link>
                 </li>
                 <li>
-                  <a href="#">Divisions and Units</a>
+                  <Link href="#">Divisions and Units</Link>
                 </li>
                 <li>
-                  <a href="#">Regional Offices</a>
+                  <Link href="#">Regional Offices</Link>
                 </li>
               </ul>
             </li>
             <li className="dropdown d-none">
-              <a href="#">
+              <Link href="#">
                 <span>Collaborators</span>{" "}
                 <i className="bi bi-chevron-down toggle-dropdown"></i>
-              </a>
+              </Link>
               <ul>
                 <li>
-                  <a href="#">Formal Institutions</a>
+                  <Link href="#">Formal Institutions</Link>
                 </li>
                 <li>
-                  <a href="#">Informal Institutions</a>
+                  <Link href="#">Informal Institutions</Link>
                 </li>
                 <li>
-                  <a href="#">Development Partners</a>
+                  <Link href="#">Development Partners</Link>
                 </li>
                 <li>
-                  <a href="#">Fisheries Associations</a>
+                  <Link href="#">Fisheries Associations</Link>
                 </li>
                 <li>
-                  <a href="#">Civil Society Organizations</a>
+                  <Link href="#">Civil Society Organizations</Link>
                 </li>
               </ul>
             </li>
             <li className="dropdown">
-              <a href="#">
+              <Link href="#">
                 <span>Resources</span>{" "}
                 <i className="bi bi-chevron-down toggle-dropdown"></i>
-              </a>
+              </Link>
               <ul>
                 <li>
-                  <a href="#">Laws and Regulations</a>
+                  <Link href="/laws-and-regulations">Laws and Regulations</Link>
                 </li>
                 <li>
-                  <a href="#">Reports and Plans</a>
+                  <Link href="/reports-and-plans">Reports and Plans</Link>
                 </li>
               </ul>
             </li>
             <li className="dropdown">
-              <a href="#">
+              <Link href="#">
                 <span>News and Events </span>{" "}
                 <i className="bi bi-chevron-down toggle-dropdown"></i>
-              </a>
+              </Link>
               <ul>
                 <li>
-                  <a href="#">Press and Release </a>
+                  <Link href="/press-and-release">Press and Release</Link>
                 </li>
                 <li>
-                  <a href="#">Articles</a>
+                  <Link href="/articles">Articles</Link>
                 </li>
                 <li>
-                  <a href="#">Gallery</a>
+                  <Link href="/gallery">Gallery</Link>
                 </li>
               </ul>
             </li>
             <li className="dropdown">
-              <a href="#">
+              <Link href="#">
                 <span>Projects </span>{" "}
                 <i className="bi bi-chevron-down toggle-dropdown"></i>
-              </a>
+              </Link>
               <ul>
                 <li>
-                  <a href="#">Fish For Development (FFD) </a>
+                  <Link href="/projects/fish-for-development">
+                    Fish For Development (FFD)
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    Sustainable Fisheries Managemenent Programme (SFMP)
-                  </a>
+                  <Link href="#">
+                    Sustainable Fisheries Management Programme (SFMP)
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
+                  <Link href="#">
                     West African Regional Fisheries Programme (WARFP)
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -127,7 +130,7 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="#portfolio">Contact Us</a>
+              <Link href="/contact">Contact Us</Link>
             </li>
           </ul>
           <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
