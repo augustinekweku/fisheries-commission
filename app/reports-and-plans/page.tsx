@@ -5,7 +5,7 @@ const ReportsAndPlansPage = () => {
   return (
     <div>
       <div className="container-fluid pt-5">
-        <div className="container section-title pt-10" data-aos="fade-up">
+        <div className="container section-title" data-aos="fade-up">
           <h2>Reports & Plans</h2>
           <p className="mt-1">Latest updates and strategies</p>
 

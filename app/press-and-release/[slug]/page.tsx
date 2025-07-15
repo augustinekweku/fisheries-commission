@@ -28,13 +28,13 @@ export default async function PressDetailPage({
   if (!post) return notFound();
 
   return (
-    <section className="container-fluid pt-10">
-      <div className="container mt-5">
+    <section className="container-fluid">
+      <div className="container mt-1">
         <div className="row">
           {/* Main Post */}
           <div className="col-lg-8">
             {/* Title */}
-            <h2 className="fw-semibold mb-3">{post.title}</h2>
+            <h2 className="fw-semibold mb-3 text-uppercase">{post.title}</h2>
 
             {/* Meta Info */}
             <div className="d-flex justify-content-between align-items-center mt-5 border-bottom pb-2 mb-4 text-muted small flex-wrap">

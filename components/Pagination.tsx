@@ -65,7 +65,7 @@ const Pagination = ({ currentPage, totalPages, basePath }: PaginationProps) => {
         <li className={`page-item ${currentPage <= 1 ? "disabled" : ""}`}>
           {currentPage > 1 ? (
             <Link
-              className="page-link text-primary border-0 bg-light me-1 rounded px-2 py-1 fw-semibold"
+              className="page-link text-dark border-0 bg-light me-1 rounded px-2 py-1 fw-semibold"
               href={createLink(currentPage - 1)}
               style={{
                 textDecoration: "none",
@@ -92,7 +92,7 @@ const Pagination = ({ currentPage, totalPages, basePath }: PaginationProps) => {
         >
           {currentPage < totalPages ? (
             <Link
-              className="page-link text-primary border-0 bg-light ms-1 rounded px-2 py-1 fw-semibold"
+              className="page-link text-dark border-0 bg-light ms-1 rounded px-2 py-1 fw-semibold"
               href={createLink(currentPage + 1)}
               style={{
                 textDecoration: "none",

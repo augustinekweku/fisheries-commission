@@ -5,7 +5,7 @@ export const pressReleases = [
     image: "assets/img/blog/blog-post-1.jpeg",
     title: "Implementation of PSMA Regulations",
     excerpt:
-      "The Ministry of Fisheries and Aquaculture Development (MoFAD) and the Fisheries [...]",
+      "The Ministry of Fisheries and Aquaculture Development (MoFAD) and the Fisheries Commission (FC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations [...]",
     content: `
     <p>The Ministry of Fisheries and Aquaculture Development (MoFAD) and the Fisheries Commission (FC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations, organized a three-day stakeholder consultation on the ongoing review of the fisheries regulations to incorporate and implement the Port State Measures Agreement (PSMA). The stakeholder consultation was held at the Coconut Groove Hotel in Accra from September 18-20, 2023.</p>
     <p>The reviewed Fisheries Regulations and the PSMA will support the fight to prevent, deter, and eliminate illegal, unreported, and unregulated fishing (IUU) by implementing stringent measures at the local ports to prevent illegally caught fish from being landed.</p>
@@ -32,7 +32,7 @@ export const pressReleases = [
     image: "assets/img/blog/blog-post-2.jpeg",
     title: "POLICY BRIEF ON THE INCLUSION OF SMALL FISH IN THE GSFP LAUNCHED",
     excerpt:
-      "The Fisheries Commission in collaboration with the Food and Agriculture Organization (FAO) launched a policy brief and organized a national workshop on integrating small fish into the Ghana School Feeding Programme.",
+      "The Fisheries Commission in collaboration with the Food and Agriculture Organization (FAO) launched a policy brief and organized a national workshop on integrating [...]",
     content: `
     <p>The Fisheries Commission in collaboration with the Food and Agriculture Organization (FAO) on Tuesday, July 25, 2023, launched a policy brief on the inclusion of small fish into the Ghana School Feeding Programme (GSFP) and nutrition education materials. A national workshop was also organized at Labadi Beach Hotel, Accra to disseminate the policy brief.</p>
 
@@ -74,7 +74,7 @@ export const pressReleases = [
     image: "assets/img/blog/blog-post-3.jpeg",
     title: "WORKSHOP ON THE INCLUSION OF SMALLFISH IN GSFP",
     excerpt:
-      "Fisheries Commission in collaboration with the FAO organized a three-day workshop for stakeholders on integrating small fish into the GSFP.",
+      "Fisheries Commission in collaboration with the FAO organized a three-day workshop for stakeholders on Small-Scale Fisheries (SSF) and the Ghana School Feeding Program (GSFP) on the [...]",
     content: `
     <p>Fisheries Commission in collaboration with the Food and Agriculture Organization (FAO) organized a three-day workshop for key stakeholders of Small-Scale Fisheries (SSF) and the Ghana School Feeding Program (GSFP) on the inclusion of small fish in the Ghana School Feeding Program from 26th - 28th June, 2023 at SkyPlus Hotel, Ho in the Volta Region.</p>
     <p>The workshop aimed at building skills and capacity of stakeholders of SSF and GSFP on best practices and to create awareness on the importance of small fish in Ghanaian food systems approach to food and nutrition security.</p>
@@ -104,7 +104,7 @@ export const pressReleases = [
     title:
       "SECOND COORDINATION MEETING OF POST-HARVEST ACTORS IN THE FISHERIES SECTOR HELD",
     excerpt:
-      "The Post-Harvest Management and Trade Division of the Fisheries Commission in collaboration with GFRA organized the second stakeholder coordination meeting.",
+      "The Post-Harvest Management and Trade Division (PHM&TD) of the Fisheries Commission in collaboration with the Feed the Future Ghana Fisheries Recovery Activity (GFRA) held the second Meeting of Post-Harvest stakeholders in the Fisheries Sector from Monday 27th - Wednesday 29th March, 2023 at [...]",
     content: `
     <p>The Post-Harvest Management and Trade Division (PHM&TD) of the Fisheries Commission in collaboration with the Feed the Future Ghana Fisheries Recovery Activity (GFRA) held the second Meeting of Post-Harvest stakeholders in the Fisheries Sector from Monday 27th - Wednesday 29th March, 2023 at the Elmina Beach Resort in the Central Region.</p>
     <p>The Post-Harvest Fisheries Coordination Meeting was established in 2022 to create a platform for stakeholders and experts in the sector to share information and brainstorm on issues relating to the sector for harmonisation of programs.</p>
@@ -131,7 +131,7 @@ export const pressReleases = [
     title:
       "WOMEN IN FISHERIES & AQUACULTURE: RISING ABOVE THE CHALLENGES TO PROVIDE SAFE FISH FOR A HEALTHY SOCIETY",
     excerpt:
-      "The role of women in the Fisheries and Aquaculture sector is vital in household nutrition, food security, and sustainable livelihoods.",
+      "The role of women in the Fisheries and Aquaculture sector is vital in household nutrition, food security, and sustainable livelihoods [...]",
     content: `
     <p>The role of women in the Fisheries and Aquaculture sector is vital in providing household nutrition and food security. According to the FAO's State of the World's Fisheries and Aquaculture Report 2022, women account for 28% of the workforce in aquaculture, 18% in fisheries, and 50% across the pre- and post-harvest value chain globally. This makes women key drivers of small-scale fisheries and rural economies.</p>
     
@@ -158,16 +158,12 @@ export const pressReleases = [
     title:
       "FAO/ FC HAND OVER COMPONENTS AND ACCESSORIES OF THE FTT OVEN TO FISH PROCESSORS",
     excerpt:
-      "The FAO in collaboration with the Fisheries Commission handed over components and accessories of the FTT oven to Fish Processors.",
+      "The FAO in collaboration with the Fisheries Commission handed over components and accessories of the FTT oven to Fish Processors on Wednesday, 26th October 2022. The Food and Agriculture Organization (FAO) [...]",
     content: `
     <p>The Food and Agriculture Organization (FAO) in collaboration with the Fisheries Commission handed over components and accessories of the FAO Thiaroye Technology (FTT) oven to Fish Processors on Wednesday, 26th October, 2022.</p>
-
     <p>The FAO Thiaroye Technique (FTT) is a modern fish smoking technology developed by FAO to reduce post-harvest loss and improve fish preservation. It has significantly enhanced the livelihoods of fish processors in regions where smoked fish is a critical component of food systems. The oven was introduced in Ghana in 2014.</p>
-
     <p>Mdm. Abigail Kanyi, the National Project Coordinator of FAO, explained that the FTT is one of the improved smoking ovens designed to produce safe and high-quality smoked fish with low levels of Polycyclic Aromatic Hydrocarbons (PAHs), making it suitable for both local and international markets.</p>
-
     <p>Miss Yaa Tiwaah Amoah, Acting Head of the Post-Harvest Unit at the Fisheries Commission, expressed appreciation to the FAO for its consistent support to Ghana's fisheries sector. She encouraged the fish processors to become agents of change by adopting and promoting the use of improved ovens to ensure the production of safe and high-quality fish products.</p>
-
     <p>Dr. Lipe Gavu, a beneficiary fish processor, expressed gratitude on behalf of all the recipients. He acknowledged the FAO and Fisheries Commission for their support and emphasized that the improved oven would enhance value addition within the fisheries sector.</p>
   `,
     images: [
@@ -231,7 +227,7 @@ export const pressReleases = [
     ],
     title: "GREPPAO NATIONAL CAPACITY BUILDING AND RESEARCH-POLICY WORKSHOP",
     excerpt:
-      "The GREPPAO Project organized a workshop focused on sustainable fisheries and small pelagic management in West Africa...",
+      "The GREPPAO PROJECT (Management, and Resilience of Small Pelagic Fisheries in West Africa) on Wednesday 26th October 2022 organized a workshop at the Ampomaah Tourist Hotel in Accra. The project is to improve the [...]",
     content: `
     <p>The GREPPAO PROJECT (Management, and Resilience of Small Pelagic Fisheries in West Africa) on Wednesday 26th October 2022 organized a workshop at the Ampomaah Tourist Hotel in Accra.</p>
     <p>The project is to improve the contribution of fisheries resources to sustainable development, food security, and poverty reduction in West Africa.</p>
@@ -257,7 +253,7 @@ export const pressReleases = [
     title:
       "FISHERIES OFFICERS UNDERGO WORKSHOP ON SSF GUIDELINES AND GENDER TRANSFORMATIVE APPROACH",
     excerpt:
-      "A four-day workshop was held for Fisheries Officers on Small-Scale Fisheries Guidelines and gender transformative approaches...",
+      "A four-day workshop was held for Fisheries Officers on Small-Scale Fisheries Guidelines and gender transformative approaches [...]",
     content: `
     <p>A four (4) day workshop on Gender Transformative Approach and Small Scale Fisheries Guidelines (SSF) was organized for Fisheries Officers nationwide, from Monday October 10 to Thursday October 14, 2022 by the Food and Agriculture Organization (FAO) at Elmina Beach Resort in the Central Region.</p>
     
@@ -281,7 +277,7 @@ export const pressReleases = [
     images: [],
     title: "MARINE FISHING: CLOSED SEASON STARTS IN JULY TO AUGUST, 2022",
     excerpt:
-      "The Ministry of Fisheries and Aquaculture Development has announced the 2022 closed season for various fishing groups...",
+      "The Ministry of Fisheries and Aquaculture Development in collaboration with the Fisheries Commission has announced that it will observe the 2022 closed season from July to August, this year. The term “closed season”, also [...]",
     content: `
     <p>The Ministry of Fisheries and Aquaculture Development in collaboration with the Fisheries Commission has announced that it will observe the 2022 closed season from July to August, this year.</p>
     
@@ -310,7 +306,7 @@ export const pressReleases = [
     title:
       "FISHERIES MINISTER ATTENDS SIGNING OF OACPS HOST NATION'S AGREEMENT",
     excerpt:
-      "The Minister of Fisheries and Aquaculture Development, Hon. Mavis Hawa Koomson attended the Host Country Agreement signing for the 7th OACPS Fisheries Meeting…",
+      "The Minister of Fisheries and Aquaculture Development, Hon. Mavis Hawa Koomson attended the Host Country Agreement signing for the 7th OACPS Fisheries Meeting [...]",
     content: `
     <p>The Minister of Fisheries and Aquaculture Development, Hon. Mavis Hawa Koomson has attended the signing of the Host Country Agreement of the 7th Organisation of African Caribbean Pacific States (OACPS) Meeting of Ministers in charge of Fisheries at the Ministry of Foreign Affairs and Regional Integration.</p>
     
@@ -340,7 +336,7 @@ export const pressReleases = [
     images: [],
     title: "FISHING INDUSTRY RECEIVING THE NEEDED ATTENTION - HAWA KOOMSON",
     excerpt:
-      "Hon. Mavis Hawa Koomson assures that illegal fishing practices are being addressed through strategic legal reforms and policy enforcement...",
+      "Hon. Mavis Hawa Koomson assures that illegal fishing practices are being addressed through strategic legal reforms and policy enforcement [...]",
     content: `
     <p>The Minister of Fisheries and Aquaculture Development (MoFAD), Hon. Mavis Hawa Koomson has assured Ghanaians that issues relating to illegal fishing practices are receiving urgent attention by the government through legal and policy reviews to provide the requisite legal framework and strategic direction to improve the state of fisheries and aquaculture.</p>
 
@@ -371,7 +367,7 @@ export const pressReleases = [
     title:
       "FISHERIES MINISTER DONATES 4,000 FINGERLINGS AND 320 BAGS OF FISH FEED TO JAMES CAMP PRISON",
     excerpt:
-      "As part of the Aquaculture for Food and Jobs (AFJ) pilot program, Hon. Mavis Hawa Koomson has donated 4,000 fingerlings and fish feed to James Camp Prison.",
+      "As part of the Aquaculture for Food and Jobs (AFJ) pilot program, Hon. Mavis Hawa [...]",
     content: `
     <p>As part of the Aquaculture for Food and Jobs (AFJ) pilot program aimed at increasing domestic fish production and creating job opportunities along the value chain, particularly for the youth, the Hon. Minister of Fisheries and Aquaculture Development, Hon. Mavis Hawa Koomson, has donated 4,000 fingerlings and 320 bags of Ranaan fish feed to the James Camp Prison in Accra.</p>
 
@@ -397,7 +393,7 @@ export const pressReleases = [
     images: [],
     title: "PREMIX FUEL DISTRIBUTION TO GO DIGITAL",
     excerpt:
-      "MoFAD and the National Premix Fuel Secretariat organized a meeting on the automation of premix fuel distribution for the fishing sector.",
+      "MoFAD and the National Premix Fuel Secretariat organized a meeting on the automation of premix fuel distribution for the fishing sector [...]",
     content: `
     <p>The Ministry of Fisheries and Aquaculture Development (MoFAD) and the National Premix Fuel Secretariat have organized a National Consultative Meeting on the premix fuel automation project with stakeholders in the fishing industry. The purpose of the meeting was to shed light on the premix fuel automation system and also seek stakeholders' input to commence the project. The meeting took place in Accra on 28th January, 2022.</p>
 
@@ -418,41 +414,12 @@ export const pressReleases = [
   },
   {
     id: 15,
-    slug: "fisheries-train-fishers-rdt-illegal-fishing",
-    image: "assets/img/blog/blog-post-15.jpg",
-    images: [],
-    title:
-      "FISHERIES COMMISSION TRAINS FISHERS ON THE USE OF RDT TO CHECK ILLEGAL FISHING ACTIVITIES",
-    excerpt:
-      "The Fisheries Commission organized a training for fishers on using Rapid Diagnostic Test Kits to detect formalin and explosives in fish.",
-    content: `
-    <p>The Fish Health Unit under the Fisheries Commission (FC) organized a training session aimed at equipping Fisheries Officers and fishers with the knowledge and practical skills to use Rapid Diagnostic Test (RDT) Kits. The goal is to detect illegal chemicals like formalin and explosive residues in fish, and to raise awareness of their associated dangers.</p>
-
-    <p>This initiative forms part of the FC's broader mandate to ensure the safety and quality of fish and fishery products by reducing health risks along the fisheries value chain.</p>
-
-    <p>The Executive Director of the Fisheries Commission, Mr. Michael Arthur Dadzie, issued a stern warning to individuals involved in illegal fishing practices. “All fishers using DDT, dynamite, and other harmful chemicals — we are coming after you,” he said. He stressed that the Commission will crack down on illegal fishing activities across all sectors — trawlers, inshore, and artisanal.</p>
-
-    <p>Mr. Dadzie called on chief fishermen to disseminate the knowledge acquired during the training to their communities and encouraged all stakeholders to support the Commission’s enforcement efforts to protect Ghana’s marine resources.</p>
-
-    <p>Ms. Mary Nkansah, Head of the Fish Health Unit, opened the training by citing empirical evidence showing increased use of formalin and dynamite in fish preservation. She emphasized the significant health and environmental risks posed by these substances.</p>
-
-    <p>According to Ms. Nkansah, the RDT kits are designed to detect the presence of formalin and explosives in fish at landing sites. Their usage will not only enhance fish inspection systems but also improve compliance with fisheries regulations and boost the competitiveness of Ghana’s fish products on both domestic and international markets.</p>
-
-    <p>Dr. Stanley Hughes Obresi, the training instructor, explained that a color change on the RDT paper — from faint to deep blue — indicates formalin presence. He warned that such fish should not be consumed due to their carcinogenic properties.</p>
-
-    <p>The Ministry of Fisheries and Aquaculture Development (MoFAD) procured these test kits as part of ongoing efforts to curb illegalities and protect public health within the fishing industry.</p>
-  `,
-    authorName: "rampadu",
-    date: "May 9, 2022",
-  },
-  {
-    id: 16,
     slug: "marine-fisheries-plan-2022-2026-validated",
     image: "assets/img/blog/blog-post-16.jpeg",
     images: [],
     title: "2022-2026 MARINE FISHERIES MANAGEMENT PLAN VALIDATED",
     excerpt:
-      "A final stakeholders meeting was held to validate the 2022-2026 Marine Fisheries Management Plan aimed at reversing declining fish stocks.",
+      "A final stakeholders meeting was held to validate the 2022-2026 Marine Fisheries Management Plan aimed at reversing declining fish stocks [...]",
     content: `
     <p>A one-day final stakeholders meeting to validate the Marine Fisheries Management Plan 2022-2026 was held on 1st February 2022 in Accra. The event brought together stakeholders to build consensus with the Ministry of Fisheries and Aquaculture Development and the Fisheries Commission (FC) on the newly developed plan.</p>
 

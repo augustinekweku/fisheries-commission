@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section className="pt-10">
+    <section>
       <div id="contact" className="contact section container-fluid">
         {/* Section Title */}
         <div className="container section-title" data-aos="fade-up">
