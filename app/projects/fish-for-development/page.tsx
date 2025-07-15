@@ -2,8 +2,8 @@ import React from "react";
 
 const FishDevelopmentPage = () => {
   return (
-    <section className="container-fluid pt-10">
-      <div className="container mt-5">
+    <section className="container-fluid">
+      <div className="container mt-2">
         <div className="row">
           {/* Main Post */}
           <div className="col-lg-1"></div>

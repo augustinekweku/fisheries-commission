@@ -17,7 +17,7 @@ const LoadingFallback = () => (
 
 const PressRelease = () => {
   return (
-    <div className="container-fluid pt-10">
+    <div className="container-fluid">
       <Suspense fallback={<LoadingFallback />}>
         <PressAndRelease />
       </Suspense>

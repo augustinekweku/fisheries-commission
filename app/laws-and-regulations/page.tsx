@@ -9,7 +9,7 @@ export default function LawsAndRegulationsPage() {
   const [selectedFolder, setSelectedFolder] = useState<string | null>(null);
 
   return (
-    <div className="container-fluid pt-10">
+    <div className="container-fluid">
       <div className="container">
         <div className="row mt-5">
           <div className="col-md-4 border-end mb-4 mb-md-0">

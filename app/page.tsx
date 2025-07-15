@@ -4,6 +4,7 @@ import BlogPosts from "@/components/HomePage/blog-posts";
 import CallToAction from "@/components/HomePage/call-to-action";
 import Faculties from "@/components/HomePage/faculties";
 import Features from "@/components/HomePage/features-section";
+import Projects from "@/components/HomePage/projects";
 import VideoPost from "@/components/HomePage/video-post";
 import Head from "next/head";
 
@@ -44,6 +45,7 @@ export default function Home() {
           {/* Add other sections like About, Features, Services, Portfolio, etc. */}
           <Faculties /> <BlogPosts />
           <CallToAction />
+          <Projects />
           <VideoPost />
         </div>
 

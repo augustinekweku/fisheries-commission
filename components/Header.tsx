@@ -3,7 +3,10 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header id="header" className="header d-flex align-items-center fixed-top">
+    <header
+      id="header"
+      className="header d-flex align-items-center sticky-top header-background dark-background"
+    >
       <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
         <Link href="/" className="logo d-flex  align-items-center w-75">
           <img

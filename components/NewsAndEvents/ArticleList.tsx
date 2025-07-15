@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { pressReleases } from "@/data/posts";
 import Pagination from "@/components/Pagination";
+import { articles } from "@/data/articles";
 
 const POSTS_PER_PAGE = 6;
 
@@ -11,10 +11,10 @@ export default function ArticleList() {
   const searchParams = useSearchParams();
   const currentPage = parseInt(searchParams.get("page") || "1", 10);
 
-  const totalPosts = pressReleases.length;
+  const totalPosts = articles.length;
   const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
 
-  const paginatedPosts = pressReleases.slice(
+  const paginatedPosts = articles.slice(
     (currentPage - 1) * POSTS_PER_PAGE,
     currentPage * POSTS_PER_PAGE
   );
@@ -36,7 +36,7 @@ export default function ArticleList() {
               data-aos-delay={100 * (index + 1)}
             >
               <Link
-                href={`/press-and-release/${post.slug}`}
+                href={`/articles/${post.slug}`}
                 className="text-decoration-none text-dark"
               >
                 <article className="h-100 p-2 border rounded shadow-sm transition hover-shadow-sm">
@@ -48,7 +48,7 @@ export default function ArticleList() {
                     />
                   </div>
 
-                  <h2 className="title">{post.title}</h2>
+                  <h2 className="title text-uppercase">{post.title}</h2>
 
                   <p className="post-excerpt">{post.excerpt}</p>
 

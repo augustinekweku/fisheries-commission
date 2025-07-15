@@ -48,7 +48,7 @@ export default function PressAndReleaseList() {
                     />
                   </div>
 
-                  <h2 className="title">{post.title}</h2>
+                  <h2 className="title text-uppercase">{post.title}</h2>
 
                   <p className="post-excerpt">{post.excerpt}</p>
 
