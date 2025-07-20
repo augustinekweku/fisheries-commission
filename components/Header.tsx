@@ -23,6 +23,17 @@ const Header = () => {
                 Home
               </Link>
             </li>
+            <div className="d-block d-lg-none">
+              <li>
+                <Link href="">What We Do</Link>
+              </li>
+              <li>
+                <Link href="">Collaborators</Link>
+              </li>
+              <li>
+                <Link href="">FiTi</Link>
+              </li>
+            </div>
             <li className="dropdown d-none">
               <Link href="#">
                 <span>About Us</span>{" "}
@@ -132,6 +143,7 @@ const Header = () => {
                 Recruitment Portal
               </a>
             </li>
+
             <li>
               <Link href="/contact">Contact Us</Link>
             </li>
