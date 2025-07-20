@@ -23,7 +23,7 @@ const BlogPosts = () => {
               data-aos-delay={100 * (index + 1)}
             >
               <Link
-                href={`/press-and-release/${post.slug}`}
+                href={`/articles/${post.slug}`}
                 className="text-decoration-none text-dark"
               >
                 <article className="h-100 p-2 border rounded shadow-sm transition hover-shadow-sm">
