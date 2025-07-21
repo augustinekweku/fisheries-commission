@@ -166,6 +166,12 @@ h2 {
   z-index: 997;
 }
 
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 0;
+  }
+}
+
 .header-background {
   background-color: var(--surface-color);
 }
@@ -2726,4 +2732,27 @@ pagination .page-link {
 
 .bg-surface {
   background: #404356;
+}
+
+/* fiti */
+
+.about-fiti {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .about-fiti {
+    flex-direction: column;
+  }
+}
+
+.video-responsive {
+  height: 315px;
+}
+
+@media (min-width: 992px) {
+  .video-responsive {
+    height: 415px;
+  }
 }
