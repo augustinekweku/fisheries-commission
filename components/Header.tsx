@@ -31,7 +31,7 @@ const Header = () => {
                 <Link href="">Collaborators</Link>
               </li>
               <li>
-                <Link href="">FiTi</Link>
+                <Link href="fiti-standard">FiTi</Link>
               </li>
             </div>
             <li className="dropdown d-none">

@@ -37,7 +37,10 @@ const TopBar = () => {
               <Link href="" className="text-body py-2 px-3 border-end">
                 <small>Collaborators</small>
               </Link>
-              <Link href="" className="text-body py-2 px-3 border-end">
+              <Link
+                href="fiti-standard"
+                className="text-body py-2 px-3 border-end"
+              >
                 <small>FiTi</small>
               </Link>
               <Link
