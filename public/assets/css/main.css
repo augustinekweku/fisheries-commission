@@ -166,12 +166,6 @@ h2 {
   z-index: 997;
 }
 
-@media (max-width: 768px) {
-  .header {
-    padding: 10px 0;
-  }
-}
-
 .header-background {
   background-color: var(--surface-color);
 }
@@ -186,10 +180,19 @@ h2 {
 }
 
 .header .logo h1 {
-  font-size: 30px;
+  /* font-size: 30px; */
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 0;
+  }
+  .logo img {
+    width: 235px;
+  }
 }
 
 .scrolled .header {
