@@ -4,28 +4,28 @@ const HeroSection = () => {
   const carouselItems = [
     {
       id: 1,
-      backgroundImage: "/assets/img/hero/hero-1.jpg",
+      backgroundImage: "/assets/img/blog/article-post-1.jpg",
       title: "Welcome to the Fisheries Commission Official Website",
       buttonText: "Read More",
       buttonLink: "#about",
     },
     {
       id: 2,
-      backgroundImage: "/assets/img/hero/hero-2.jpg",
+      backgroundImage: "/assets/img/blog/navy-5.jpg",
       title: "Explore Our Services and Resources",
       buttonText: "Learn More",
       buttonLink: "#services",
     },
     {
       id: 3,
-      backgroundImage: "/assets/img/hero/hero-3.jpeg",
+      backgroundImage: "/assets/img/blog/navy-2.jpg",
       title: "Join Us in Sustainable Fisheries Management",
       buttonText: "Get Started",
       buttonLink: "#contact",
     },
     {
       id: 4,
-      backgroundImage: "/assets/img/hero/hero-4.jpeg",
+      backgroundImage: "/assets/img/blog/navy-3.jpg",
       title: "Join Us in Sustainable Fisheries Management",
       buttonText: "Get Started",
       buttonLink: "#contact",

@@ -70,7 +70,7 @@ const TransparencyRequirements = () => {
 
   return (
     <div
-      className="px-2 py-4 p-lg-5"
+      className="py-4 p-lg-5"
       style={{
         backgroundColor: "#f8f9fa",
       }}
@@ -79,7 +79,7 @@ const TransparencyRequirements = () => {
         {/* Header */}
         <div className="text-center mb-5">
           <h3 className="fw-bold mb-4">The 12 transparency requirements</h3>
-          <p className="text-muted px-3">
+          <p className="text-muted px-1 px-lg-3">
             At the heart of the FiTI Standard are 12 transparency requirements
             which are applicable for all countries (for more Information please
             refer to section B.1 of the FiTI Standard):

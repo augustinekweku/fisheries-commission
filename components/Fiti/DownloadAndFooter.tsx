@@ -32,9 +32,7 @@ const DownloadAndFooter = () => {
           <div className="row justify-content-center">
             <div className="col-md-10 col-lg-8">
               <div className="text-center mb-4">
-                <h2 className="display-6 fw-bold mb-5">
-                  Download the FiTI Standard
-                </h2>
+                <h3 className="fw-bold mb-4">Download the FiTI Standard</h3>
               </div>
 
               <div className="mx-auto" style={{ maxWidth: "900px" }}>
@@ -44,11 +42,11 @@ const DownloadAndFooter = () => {
                       key={link.id}
                       href={link.url}
                       download
-                      className="btn btn-accent btn-lg text-white bg-accent text-decoration-none"
+                      className="btn btn-accent text-white bg-accent text-decoration-none px-2 px-lg-4 py-2 py-lg-3"
                       style={{
                         border: "none",
                         borderRadius: "25px",
-                        padding: "18px 40px",
+                        // padding: "18px 40px",
                         fontSize: "1.2rem",
                         fontWeight: "500",
                         transition: "all 0.3s ease",
