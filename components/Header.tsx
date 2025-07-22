@@ -8,10 +8,10 @@ const Header = () => {
       className="header d-flex align-items-center sticky-top header-background dark-background"
     >
       <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-        <Link href="/" className="logo d-flex  align-items-center w-75">
+        <Link href="/" className="logo d-flex align-items-center w-75">
           <img
             src="/assets/img/logo-white.png"
-            alt="Selecao Logo"
+            alt="Fisheries Commission Logo"
             className="logo-image"
           />
         </Link>
