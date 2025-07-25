@@ -11,10 +11,14 @@ export default function ArticleList() {
   const searchParams = useSearchParams();
   const currentPage = parseInt(searchParams.get("page") || "1", 10);
 
-  const totalPosts = articles.length;
+  const sortedArticles = [...articles].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
+  const totalPosts = sortedArticles.length;
   const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
 
-  const paginatedPosts = articles.slice(
+  const paginatedPosts = sortedArticles.slice(
     (currentPage - 1) * POSTS_PER_PAGE,
     currentPage * POSTS_PER_PAGE
   );

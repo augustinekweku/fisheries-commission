@@ -84,4 +84,65 @@ export const articles = [
     authorName: "",
     date: "Jun 26, 2025",
   },
+  {
+    id: 4,
+    slug: "supporting-post-harvest-loss-management",
+    image: "assets/img/blog/article-post-4.jpg",
+    title: "Supporting Post-Harvest Loss Management",
+    excerpt:
+      "The Executive Director of the Fisheries Commission, Prof. Benjamin Betey Campion led a delegation of the Project Team and the Korean Contractors on a working visit to the fish processing construction site at Tema Manhean to [...]",
+    content: `
+  <p>The Executive Director of the Fisheries Commission, Prof. Benjamin Betey Campion led a delegation of the Project Team and the Korean Contractors on a working visit to the fish processing construction site at Tema Manhean to:</p>
+  <p>• Inspect current state of the first phase of construction and;<br/>
+  • Discuss the second phase of the construction works and any amendments to the design where applicable that meets local and international best standards.</p>
+  <p>The facility upgrade supported by the Korean Maritime Institute (KMI), under the “Supporting post-harvest loss management through strengthening the processing and distribution capabilities of fisherwomen along the fisheries value chain” project, seeks to enhance improved post-harvest processing capacity, food safety and improve livelihoods within the Tema Manhean community and its environs.</p>
+  <p>The Executive Director assured the Korean contractors of the requisition of all necessary permits in accordance with National Regulatory Authorities to expedite construction works.</p>
+`,
+
+    images: [
+      "assets/img/blog/tema-1.jpg",
+      "assets/img/blog/tema-2.jpg",
+      "assets/img/blog/tema-3.jpg",
+      "assets/img/blog/tema-4.jpg",
+      "assets/img/blog/tema-5.jpg",
+      "assets/img/blog/tema-6.jpg",
+    ],
+    authorName: "",
+    date: "Jul 24, 2025",
+  },
+  {
+    id: 5,
+    slug: "strengthening-compliance-in-ghana-inshore-fisheries",
+    image: "assets/img/blog/article-post-5.jpg",
+    title: "Strengthening Compliance in Ghana's Inshore Fisheries Sector",
+    excerpt:
+      "The Fisheries Commission, together with key partners, held a working session on 23rd July 2025 at the Ministry of Fisheries and Aquaculture conference room to address low compliance with licensing requirements [...]",
+    content: `
+<p>The Fisheries Commission, together with key partners, held a working session on 23rd July 2025 at the Ministry of Fisheries and Aquaculture conference room to address low compliance with licensing requirements among inshore fishing vessels.</p>
+<p>The Commission is stepping up efforts to ensure all semi-industrial (inshore) fishing vessels operating in Ghana' waters are properly licensed as required under the Fisheries Act, 2002 (Act 625).</p>
+<p>Licensing our inshore vessels is not just a legal requirement; it is a vital tool for managing fishing effort, protecting our fish stocks, and safeguarding livelihoods for future generations.</p>
+<p>Unfortunately, many vessels continue to operate without valid licenses. This undermines our collective efforts to manage our marine resources sustainably, leads to loss of state revenue, and creates unfair competition for compliant fishers.</p>
+<p>To address this, we are working closely with the Ministry of Fisheries and Aquaculture, the Ghana Inshore Fishers Association, Marine Police, Navy, traditional authorities, and civil society partners to:</p>
+<ul>
+<li>Identify and document unlicensed vessels</li>
+<li>Engage fishing communities on the importance of compliance</li>
+<li>Strengthen enforcement operations at sea and landing sites</li>
+<li>Promote policy solutions that make licensing more transparent and efficient</li>
+</ul>
+<p>Let's work together to ensure every vessel is licensed, every fisher is informed, and our marine resources are protected for the next generation.</p>
+<p>#SustainableFisheries #Compliance #IUUFreeGhana</p>
+`,
+    images: [
+      "assets/img/blog/vessel-1.jpg",
+      "assets/img/blog/vessel-2.jpg",
+      "assets/img/blog/vessel-3.jpg",
+      "assets/img/blog/vessel-4.jpg",
+      "assets/img/blog/vessel-5.jpg",
+      "assets/img/blog/vessel-6.jpg",
+      "assets/img/blog/vessel-7.jpg",
+      "assets/img/blog/vessel-8.jpg",
+    ],
+    authorName: "",
+    date: "Jul 23, 2025",
+  },
 ];

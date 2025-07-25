@@ -14,10 +14,9 @@ export default function PressAndReleaseList() {
   const totalPosts = pressReleases.length;
   const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
 
-  const paginatedPosts = pressReleases.slice(
-    (currentPage - 1) * POSTS_PER_PAGE,
-    currentPage * POSTS_PER_PAGE
-  );
+  const paginatedPosts = [...pressReleases]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice((currentPage - 1) * POSTS_PER_PAGE, currentPage * POSTS_PER_PAGE);
 
   return (
     <section id="recent-posts" className="recent-posts section">
