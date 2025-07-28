@@ -53,8 +53,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="mb-2">
-                <Link href="/events" className="btn btn-link p-0 text-white">
-                  Events
+                <Link
+                  href="/collaborators"
+                  className="btn btn-link p-0 text-white"
+                >
+                  Collaborators
                 </Link>
               </li>
             </ul>
@@ -68,20 +71,20 @@ const Footer = () => {
               latest news and activities of the Fisheries Commission
             </p>
             <div className="social-links d-flex">
-              <a href="">
+              <a href="https://x.com/fisheriescommhq?s=21" target="_blank">
                 <i className="bi bi-twitter-x"></i>
               </a>
-              <a href="">
+              <a
+                href="https://www.facebook.com/share/1BrvStesR1/?mibextid=wwXIfr"
+                target="_blank"
+              >
                 <i className="bi bi-facebook"></i>
               </a>
-              <a href="">
+              <a
+                href="https://www.instagram.com/fisheries_commission?igsh=YmRtMDJpZ3BoZzht"
+                target="_blank"
+              >
                 <i className="bi bi-instagram"></i>
-              </a>
-              <a href="">
-                <i className="bi bi-skype"></i>
-              </a>
-              <a href="">
-                <i className="bi bi-linkedin"></i>
               </a>
             </div>
           </div>

@@ -45,9 +45,7 @@ const Header = () => {
                   <Link href="/about-us/board-members">Board Members</Link>
                 </li>
                 <li>
-                  <Link href="/about-us/executive-director">
-                    Executive Director
-                  </Link>
+                  <Link href="/about-us/leadership">Leadership</Link>
                 </li>
                 <li>
                   <Link href="/about-us/divisions-and-units">
