@@ -5,12 +5,9 @@ const FishDevelopmentPage = () => {
     <section className="container-fluid">
       <div className="container mt-2">
         <div className="row">
-          {/* Main Post */}
-          <div className="col-lg-1"></div>
-          <div className="col-lg-10">
-            {/* Title */}
-            <h2 className="fw-semibold mb-4 text-uppercase">
-              Fishes for Development
+          <div className="col-lg-12">
+            <h2 className="fw-semibold mb-5 text-uppercase text-center">
+              Fish for Development (FFD)
             </h2>
 
             {/* Main Image */}
@@ -18,11 +15,15 @@ const FishDevelopmentPage = () => {
               src="/assets/img/fisheries.png"
               alt="Fisheries Commission Ghana"
               className="img-fluid mb-4 rounded"
-              style={{ objectFit: "cover", width: "100%" }}
+              style={{
+                objectFit: "contain",
+                width: "100vw",
+                maxHeight: "230px",
+              }}
             />
 
             {/* Main Content */}
-            <div className="mx-auto mb-5" style={{ maxWidth: "800px" }}>
+            <div className="mx-auto mb-5">
               <p>
                 The Programme for Improved Regional Fisheries Governance in
                 Western Africa (PESCAO) is a five-year, European Union-funded
@@ -64,7 +65,6 @@ const FishDevelopmentPage = () => {
               </ol>
             </div>
           </div>
-          <div className="col-lg-1"></div>
         </div>
       </div>
     </section>

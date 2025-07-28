@@ -19,7 +19,7 @@ const Projects = () => {
 
   return (
     <section id="team" className="team section">
-      <div className="container section-title" data-aos="fade-up">
+      <div className="container section-title text-center" data-aos="">
         <h2>Projects</h2>
         <p>Progress through action</p>
       </div>
@@ -29,16 +29,22 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="col-lg-4 col-md-6 d-flex"
-              data-aos="fade-up"
-              data-aos-delay={100 * (index + 1)}
+              className="col-lg-4 col-md-6"
+              // data-aos="fade-up"
+              // data-aos-delay={100 * (index + 1)}
             >
-              <div className="team-member">
+              <div className="">
                 <div className="">
                   <img
                     src={project.image}
                     className="img-fluid"
                     alt="project image"
+                    style={{
+                      maxHeight: "180px",
+                      objectFit: "contain",
+                      width: "100%",
+                      borderRadius: "8px",
+                    }}
                   />
                 </div>
               </div>

@@ -75,6 +75,11 @@ body {
   font-family: var(--default-font);
 }
 
+html,
+body {
+  overflow-x: hidden !important;
+}
+
 a {
   color: var(--accent-color);
   text-decoration: none !important;
@@ -714,6 +719,13 @@ section,
   font-weight: 700;
   text-transform: uppercase;
   font-family: var(--heading-font);
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .section-title p {
+    font-size: 20px;
+  }
 }
 
 /*--------------------------------------------------------------

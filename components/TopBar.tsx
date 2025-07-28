@@ -34,11 +34,9 @@ const TopBar = () => {
               <Link href="" className="text-body py-2 pe-3 border-end">
                 <small>What We Do</small>
               </Link>
-              <Link href="" className="text-body py-2 px-3 border-end">
-                <small>Collaborators</small>
-              </Link>
+
               <Link
-                href="fiti-standard"
+                href="/fiti-standard"
                 className="text-body py-2 px-3 border-end"
               >
                 <small>FiTi</small>
@@ -50,6 +48,9 @@ const TopBar = () => {
                 className="text-body py-2 px-3 border-end"
               >
                 <small>Recruitment Portal</small>
+              </Link>
+              <Link href="/contact" className="text-body py-2 px-3 border-end">
+                <small>Contact Us</small>
               </Link>
             </div>
           </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const HeroSection = () => {
@@ -7,28 +8,28 @@ const HeroSection = () => {
       backgroundImage: "/assets/img/blog/article-post-1.jpg",
       title: "Welcome to the Fisheries Commission Official Website",
       buttonText: "Read More",
-      buttonLink: "#about",
+      buttonLink: "/about-us",
     },
     {
       id: 2,
       backgroundImage: "/assets/img/blog/navy-5.jpg",
       title: "Explore Our Services and Resources",
       buttonText: "Learn More",
-      buttonLink: "#services",
+      buttonLink: "/laws-and-regulations",
     },
     {
       id: 3,
       backgroundImage: "/assets/img/blog/navy-2.jpg",
       title: "Join Us in Sustainable Fisheries Management",
       buttonText: "Get Started",
-      buttonLink: "#contact",
+      buttonLink: "/contact",
     },
     {
       id: 4,
       backgroundImage: "/assets/img/blog/navy-3.jpg",
       title: "Join Us in Sustainable Fisheries Management",
       buttonText: "Get Started",
-      buttonLink: "#contact",
+      buttonLink: "/contact",
     },
   ];
 
@@ -62,12 +63,12 @@ const HeroSection = () => {
                 <h3 className="animate__animated animate__fadeInDown">
                   {item.title}
                 </h3>
-                <a
+                <Link
                   href={item.buttonLink}
                   className="btn-get-started animate__animated animate__fadeInUp scrollto"
                 >
                   {item.buttonText}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
