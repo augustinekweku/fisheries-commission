@@ -10,17 +10,18 @@ const Faculties = () => {
     },
     {
       id: 2,
-      image: "assets/img/faculties/faculties-2.png",
-      title: "MoFAD",
-      description: "Ministry Of Fisheries and Aquaculture Developmnet",
-    },
-    {
-      id: 3,
       image: "assets/img/faculties/faculties-3.jpg",
       title: "Regional Offices",
       description:
         "Information on all our regional offices and their activities",
     },
+    {
+      id: 3,
+      image: "assets/img/faculties/faculties-2.png",
+      title: "MoFAD",
+      description: "Ministry Of Fisheries and Aquaculture Developmnet",
+    },
+
     {
       id: 4,
       image: "assets/img/faculties/faculties-4.jpg",

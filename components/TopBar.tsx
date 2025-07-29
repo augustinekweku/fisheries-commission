@@ -14,17 +14,20 @@ const TopBar = () => {
                 </p>
               </div>
               <div className="social-top-links d-flex">
-                <a href="">
+                <a href="https://x.com/fisheriescommhq?s=21" target="_blank">
                   <i className="bi bi-twitter-x"></i>
                 </a>
-                <a href="">
+                <a
+                  href="https://www.facebook.com/share/1BrvStesR1/?mibextid=wwXIfr"
+                  target="_blank"
+                >
                   <i className="bi bi-facebook"></i>
                 </a>
-                <a href="">
+                <a
+                  href="https://www.instagram.com/fisheries_commission?igsh=YmRtMDJpZ3BoZzht"
+                  target="_blank"
+                >
                   <i className="bi bi-instagram"></i>
-                </a>
-                <a href="">
-                  <i className="bi bi-linkedin"></i>
                 </a>
               </div>
             </div>
@@ -34,11 +37,9 @@ const TopBar = () => {
               <Link href="" className="text-body py-2 pe-3 border-end">
                 <small>What We Do</small>
               </Link>
-              <Link href="" className="text-body py-2 px-3 border-end">
-                <small>Collaborators</small>
-              </Link>
+
               <Link
-                href="fiti-standard"
+                href="/fiti-standard"
                 className="text-body py-2 px-3 border-end"
               >
                 <small>FiTi</small>
@@ -50,6 +51,9 @@ const TopBar = () => {
                 className="text-body py-2 px-3 border-end"
               >
                 <small>Recruitment Portal</small>
+              </Link>
+              <Link href="/contact" className="text-body py-2 px-3 border-end">
+                <small>Contact Us</small>
               </Link>
             </div>
           </div>

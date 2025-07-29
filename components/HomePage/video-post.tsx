@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const VideoPost = () => {
@@ -14,8 +15,15 @@ const VideoPost = () => {
         <div className="row align-items-center">
           {/* Left Side: Title and Description */}
           <div className="col-lg-6" data-aos="fade-right">
-            <h2>{videoData.title}</h2>
+            <h2 className="fw-semibold mb-4">{videoData.title}</h2>
             <p>{videoData.description}</p>
+            <Link
+              href="#"
+              className="btn btn-md text-white btn-accent px-4 py-2 mb-4"
+            >
+              <span>Read More</span>
+              <i className="bi bi-arrow-right ms-1"></i>
+            </Link>
           </div>
 
           {/* Right Side: YouTube Video */}

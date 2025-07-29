@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const CallToAction = () => {
@@ -15,9 +16,9 @@ const CallToAction = () => {
             </p>
           </div>
           <div className="col-xl-3 cta-btn-container text-center">
-            <a className="cta-btn align-middle" href="#">
+            <Link className="cta-btn align-middle" href="/about-us">
               Learn More
-            </a>
+            </Link>
           </div>
         </div>
       </div>

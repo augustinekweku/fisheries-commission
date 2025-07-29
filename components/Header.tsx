@@ -7,12 +7,12 @@ const Header = () => {
       id="header"
       className="header d-flex align-items-center sticky-top header-background dark-background"
     >
-      <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-        <Link href="/" className="logo d-flex align-items-center w-75">
+      <div className="container-xl position-relative d-flex align-items-center justify-content-between">
+        <Link href="/" className="logo d-flex align-items-center">
           <img
             src="/assets/img/logo-white.png"
             alt="Fisheries Commission Logo"
-            className="logo-image"
+            className="logo-image img-fluid"
           />
         </Link>
 
@@ -27,15 +27,13 @@ const Header = () => {
               <li>
                 <Link href="">What We Do</Link>
               </li>
+
               <li>
-                <Link href="">Collaborators</Link>
-              </li>
-              <li>
-                <Link href="fiti-standard">FiTi</Link>
+                <Link href="/fiti-standard">FiTi</Link>
               </li>
             </div>
-            <li className="dropdown d-none">
-              <Link href="#">
+            <li className="dropdown">
+              <Link href="/about-us">
                 <span>About Us</span>{" "}
                 <i className="bi bi-chevron-down toggle-dropdown"></i>
               </Link>
@@ -44,39 +42,46 @@ const Header = () => {
                   <Link href="#">Goals and Objectives</Link>
                 </li>
                 <li>
-                  <Link href="#">Board Members</Link>
+                  <Link href="/about-us/board-members">Board Members</Link>
                 </li>
                 <li>
-                  <Link href="#">Executive Director</Link>
+                  <Link href="/about-us/leadership">Leadership</Link>
                 </li>
                 <li>
-                  <Link href="#">Divisions and Units</Link>
+                  <Link href="/about-us/divisions-and-units">
+                    Divisions and Units
+                  </Link>
                 </li>
                 <li>
                   <Link href="#">Regional Offices</Link>
                 </li>
               </ul>
             </li>
-            <li className="dropdown d-none">
-              <Link href="#">
+            <li className="dropdown">
+              <Link href="/collaborators">
                 <span>Collaborators</span>{" "}
                 <i className="bi bi-chevron-down toggle-dropdown"></i>
               </Link>
               <ul>
                 <li>
-                  <Link href="#">Formal Institutions</Link>
+                  <Link href="/collaborators/formal-institutions">
+                    Formal Institutions
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#">Informal Institutions</Link>
+                  <Link href="/collaborators/informal-institutions">
+                    Informal Institutions
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#">Development Partners</Link>
+                  <Link href="/collaborators/development-partners">
+                    Development Partners
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#">Fisheries Associations</Link>
-                </li>
-                <li>
-                  <Link href="#">Civil Society Organizations</Link>
+                  <Link href="/collaborators/fisheries-association-civil-society-organization">
+                    Fisheries Associations & Civil Society Organizations
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -134,18 +139,11 @@ const Header = () => {
                 </li>
               </ul>
             </li>
-            <li>
-              <a
-                rel="noopener"
-                href="https://fishcom.gov.gh/recruitment/"
-                target="_blank"
-              >
-                Recruitment Portal
-              </a>
-            </li>
 
             <li>
-              <Link href="/contact">Contact Us</Link>
+              <Link className="d-block d-lg-none" href="/contact">
+                Contact Us
+              </Link>
             </li>
           </ul>
           <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
