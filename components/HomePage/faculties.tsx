@@ -18,8 +18,8 @@ const Faculties = () => {
     {
       id: 3,
       image: "assets/img/faculties/faculties-2.png",
-      title: "MoFAD",
-      description: "Ministry Of Fisheries and Aquaculture Developmnet",
+      title: "MOFA",
+      description: "Ministry Of Fisheries and Aquaculture",
     },
 
     {
