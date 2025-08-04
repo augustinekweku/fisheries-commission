@@ -122,7 +122,7 @@ export default async function PressDetailPage({
                   />
                   <div className="d-flex flex-column justify-content-between">
                     <Link
-                      href={`/press-and-release/${recent.slug}`}
+                      href={`/articles/${recent.slug}`}
                       className="fw-semibold d-block text-dark text-decoration-none border-bottom pb-1 mb-1"
                     >
                       {recent.title.length > 60

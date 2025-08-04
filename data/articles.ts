@@ -145,4 +145,28 @@ export const articles = [
     authorName: "",
     date: "Jul 23, 2025",
   },
+  {
+    id: 6,
+    slug: "fisheries-commission-meets-sensus-systems",
+    image: "assets/img/blog/article-post-6.jpg",
+    title:
+      "Fisheries Commission Engages Sensus Systems and U.S. Embassy on Maritime Surveillance",
+    excerpt:
+      "On 1st August 2025, the Executive Director of the Fisheries Commission, together with Heads of Divisions and Units, held a meeting with representatives from Sensus Systems and the U.S. Embassy in Ghana to  [...]",
+    content: `
+<p>At the Head Office of the Fisheries Commission on 1st August 2025, the Executive Director and key Heads of Divisions and Units welcomed Mr. Jeffery Assibey, founder of Sensus Systems, and Madam Victoria Agbai from the Commercial Section of the U.S. Embassy in Ghana.</p>
+<p>The meeting centered around a proposal for the installation of the <strong>Stevens Seabed Passive Acoustic Detection System (S-SPADES)</strong>. This advanced system utilizes hydrophone arrays and sophisticated signal processing to detect and locate vessels, underwater vehicles, and diver activity in Ghana's waters.</p>
+<p>The S-SPADES integrates seamlessly with <strong>Automatic Identification System (AIS) technology</strong>, radar, and satellite feeds to provide real-time maritime data and domain awareness. This technology will enhance Ghana's capacity to monitor its marine environment, combat illegal fishing, and improve overall maritime security.</p>
+<p>The Fisheries Commission continues to prioritize innovation and collaboration with both local and international partners to protect Ghana's marine resources and ensure sustainable fisheries management.</p>
+<p>#MaritimeSecurity #SustainableFisheries #Innovation #USGhanaPartnership</p>
+`,
+    images: [
+      "assets/img/blog/sensus-1.jpg",
+      "assets/img/blog/sensus-2.jpg",
+      "assets/img/blog/sensus-3.jpg",
+      "assets/img/blog/sensus-4.jpg",
+    ],
+    authorName: "",
+    date: "Aug 1, 2025",
+  },
 ];
