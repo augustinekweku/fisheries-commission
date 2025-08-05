@@ -9,9 +9,9 @@ const Footer = () => {
           <div className="col-md-6 col-lg-4">
             <h4 className="fw-semibold mb-4">Locate us</h4>
             <h4 className="h6 fw-semibold">Mailing Address</h4>
-            <p>
-              Fisheries Commission, HQ, Ridge, P.O. Box GP 630 Ministries, Accra
-            </p>
+            <p className="mb-0 pb-0">Fisheries Commission, HQ, Ridge</p>
+            <p className="mt-0 pt-1">P.O. Box GP 630 Ministries, Accra</p>
+
             <h4 className="h6 fw-semibold">Physical Address</h4>
             <p>Adjacent the Ridge Church School</p>
 

@@ -73,13 +73,6 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
-  padding-top: 170px;
-}
-
-@media (max-width: 991px) {
-  body {
-    padding-top: 100px;
-  }
 }
 
 html,
@@ -2779,11 +2772,11 @@ pagination .page-link {
   }
 }
 
-.fixed-header-wrapper {
+/* .fixed-header-wrapper {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1040;
   margin-bottom: 100px;
-}
+} */

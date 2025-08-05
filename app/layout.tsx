@@ -36,11 +36,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <div className="fixed-header-wrapper">
-          <TopBar />
-          <Header />
-        </div>
-
+        <TopBar />
+        <Header />
         {children}
         <CustomScript />
         <Footer />
