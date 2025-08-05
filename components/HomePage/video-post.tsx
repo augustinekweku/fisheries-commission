@@ -11,20 +11,19 @@ const VideoPost = () => {
   };
 
   return (
-    <section id="video-post" className="video-post section">
+    <section id="video-post" className="video-post section px-2">
       <div className="container">
         <div className="row align-items-center">
           {/* Left Side: Title and Description */}
           <div className="col-lg-6" data-aos="fade-right">
-            <h2 className="fw-semibold mb-4">{videoData.title}</h2>
+            <h2 className="fw-bold mb-4">{videoData.title}</h2>
             <p>{videoData.description}</p>
             <Link
-              href="/fishing-season-closure-2025-ghana
-"
-              className="btn btn-md text-white btn-accent px-4 py-2 mb-4 mt-2"
+              href="/fishing-season-closure-2025-ghana"
+              className="read-more mt-3 mb-4"
             >
               <span>Read More</span>
-              <i className="bi bi-arrow-right ms-1"></i>
+              <i className="bi bi-arrow-right ms-2"></i>
             </Link>
           </div>
 

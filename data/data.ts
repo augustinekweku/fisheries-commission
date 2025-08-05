@@ -145,3 +145,25 @@ export const galleryImages = [
     title: "National Fisheries Dialogue",
   },
 ];
+
+// data/teamData.ts
+export const teamMembers = [
+  {
+    id: 1,
+    name: "Prof. Benjamin B. Campion",
+    role: "Executive Director",
+    image: "assets/img/executive-director.jpg",
+  },
+  {
+    id: 2,
+    name: "Prof. Berchie Asiedu",
+    role: "Deputy Executive Director",
+    image: "assets/img/team/asiedu.jpg",
+  },
+  {
+    id: 3,
+    name: "HON. DR ERIC COBINNAH",
+    role: "Deputy Executive Director",
+    image: "assets/img/team/cobinah.jpg",
+  },
+];

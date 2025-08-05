@@ -3,9 +3,9 @@ export const pressReleases = [
     id: 1,
     slug: "implementation-of-psma-regulations",
     image: "assets/img/blog/blog-post-1.jpeg",
-    title: "Implementation of PSMA Regulations",
+    title: "IMPLEMENTATION of PSMA REGULATIONS",
     excerpt:
-      "The Ministry of Fisheries and Aquaculture Development (MoFAD) and the Fisheries Commission (FC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations [...]",
+      "The Ministry of Fisheries and Aquaculture Development (MoFAD) and the Fisheries Commission (FC) in collaboration with the Food and Agriculture Organization (FAO) of the [...]",
     content: `
     <p>The Ministry of Fisheries and Aquaculture Development (MoFAD) and the Fisheries Commission (FC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations, organized a three-day stakeholder consultation on the ongoing review of the fisheries regulations to incorporate and implement the Port State Measures Agreement (PSMA). The stakeholder consultation was held at the Coconut Groove Hotel in Accra from September 18-20, 2023.</p>
     <p>The reviewed Fisheries Regulations and the PSMA will support the fight to prevent, deter, and eliminate illegal, unreported, and unregulated fishing (IUU) by implementing stringent measures at the local ports to prevent illegally caught fish from being landed.</p>

@@ -59,10 +59,13 @@ const HeroSection = () => {
                 backgroundColor: "rgba(0, 0, 0, 0.5)",
               }}
             >
-              <div className="w-75">
-                <h3 className="animate__animated animate__fadeInDown">
+              <div
+                className="carousel-content d-flex flex-column justify-content-center align-items-center"
+                style={{ maxWidth: "900px" }}
+              >
+                <h1 className="animate__animated animate__fadeInDown display-5 fw-semibold">
                   {item.title}
-                </h3>
+                </h1>
                 <Link
                   href={item.buttonLink}
                   className="btn-get-started animate__animated animate__fadeInUp scrollto"

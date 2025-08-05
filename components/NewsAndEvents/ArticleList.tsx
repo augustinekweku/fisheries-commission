@@ -24,7 +24,7 @@ export default function ArticleList() {
   );
 
   return (
-    <section id="recent-posts" className="recent-posts section">
+    <section id="blog-posts" className="blog-posts section">
       <div className="container section-title" data-aos="fade-up">
         <h2>News</h2>
         <p>Our Recent Articles</p>
@@ -43,7 +43,7 @@ export default function ArticleList() {
                 href={`/articles/${post.slug}`}
                 className="text-decoration-none text-dark"
               >
-                <article className="h-100 p-2 border rounded shadow-sm transition hover-shadow-sm">
+                <article>
                   <div className="post-img">
                     <img
                       src={`/${post.image}`}
@@ -52,12 +52,13 @@ export default function ArticleList() {
                     />
                   </div>
 
-                  <h2 className="title text-uppercase">{post.title}</h2>
+                  <h2 className="title">{post.title}</h2>
 
                   <p className="post-excerpt">{post.excerpt}</p>
 
                   <div className="d-flex justify-content-between align-items-center mt-3">
-                    <small className="post-date text-muted">
+                    <small className="post-date text-muted d-flex align-items-center">
+                      <i className="bi bi-calendar3 me-1"></i>
                       <time>{post.date}</time>
                     </small>
 

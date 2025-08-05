@@ -1,3 +1,18 @@
+/* Body text -> Roboto */
+body {
+  font-family: var(--font-roboto), sans-serif;
+}
+
+/* Headings -> Raleway */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-raleway), sans-serif;
+}
+
 .logo-image {
   @media screen and (max-width: 600px) {
     width: 300px;

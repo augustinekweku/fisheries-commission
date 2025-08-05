@@ -19,7 +19,7 @@ const Projects = () => {
 
   return (
     <section id="team" className="team section">
-      <div className="container section-title text-center" data-aos="">
+      <div className="container section-title text-center" data-aos="fade-up">
         <h2>Projects</h2>
         <p>Progress through action</p>
       </div>
@@ -30,8 +30,8 @@ const Projects = () => {
             <div
               key={project.id}
               className="col-lg-4 col-md-6"
-              // data-aos="fade-up"
-              // data-aos-delay={100 * (index + 1)}
+              data-aos="fade-up"
+              data-aos-delay={100 * (index + 1)}
             >
               <div className="">
                 <div className="">

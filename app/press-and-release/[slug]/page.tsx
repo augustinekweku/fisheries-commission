@@ -34,7 +34,9 @@ export default async function PressDetailPage({
           {/* Main Post */}
           <div className="col-lg-8">
             {/* Title */}
-            <h2 className="fw-semibold mb-3 text-uppercase">{post.title}</h2>
+            <h2 className="fw-semibold mb-3 text-uppercase fw-bold">
+              {post.title}
+            </h2>
 
             {/* Meta Info */}
             <div className="d-flex justify-content-between align-items-center mt-5 border-bottom pb-2 mb-4 text-muted small flex-wrap">
@@ -96,8 +98,8 @@ export default async function PressDetailPage({
 
           {/* Sidebar */}
           <div className="col-lg-4 mt-5 mt-lg-0">
-            <h5 className="mb-4 border-bottom pb-2 accent-color">
-              Recent News
+            <h5 className="mb-4 border-bottom pb-2 accent-color fw-bold">
+              Recent Press And Releases
             </h5>
             {[...pressReleases]
               .sort(

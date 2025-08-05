@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const BlogPosts = () => {
   return (
-    <section id="recent-posts" className="recent-posts section">
+    <section id="blog-posts" className="blog-posts section px-2">
       <div className="container section-title" data-aos="fade-up">
         <h2>News</h2>
         <p>
@@ -30,7 +30,7 @@ const BlogPosts = () => {
                   href={`/articles/${post.slug}`}
                   className="text-decoration-none text-dark"
                 >
-                  <article className="h-100 p-2 border rounded shadow-sm transition hover-shadow-sm">
+                  <article>
                     <div className="post-img">
                       <img
                         src={`/${post.image}`}
@@ -39,16 +39,17 @@ const BlogPosts = () => {
                       />
                     </div>
 
-                    <h2 className="title text-uppercase">{post.title}</h2>
+                    <h2 className="title">{post.title}</h2>
 
                     <p className="post-excerpt">{post.excerpt}</p>
 
                     <div className="d-flex justify-content-between align-items-center mt-3">
-                      <small className="post-date text-muted">
+                      <small className="post-date text-muted d-flex align-items-center">
+                        <i className="bi bi-calendar3 me-1"></i>
                         <time>{post.date}</time>
                       </small>
 
-                      <span className="btn btn-outline-danger btn-sm rounded-pill px-3">
+                      <span className="btn btn-outline-danger rounded-pill btn-sm px-3">
                         Read More <i className="bi bi-arrow-right"></i>
                       </span>
                     </div>

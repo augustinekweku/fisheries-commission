@@ -1,5 +1,5 @@
 import { boardMembers } from "@/data/data";
-import React from "react";
+import Link from "next/link";
 
 const BoardMembersPage = () => {
   return (
@@ -40,9 +40,10 @@ const BoardMembersPage = () => {
                       <strong>Designation:</strong> {member.designation}
                     </p>
                   )}
-                  <button className="btn btn-accent btn-sm text-white mt-2 px-4 py-2">
+                  <Link href="#" className="read-more mt-1">
                     Read More
-                  </button>
+                    <i className="bi bi-arrow-right ms-1"></i>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -4,6 +4,7 @@ import BlogPosts from "@/components/HomePage/blog-posts";
 import CallToAction from "@/components/HomePage/call-to-action";
 import Faculties from "@/components/HomePage/faculties";
 import Features from "@/components/HomePage/features-section";
+import Leadership from "@/components/HomePage/leadership";
 import Projects from "@/components/HomePage/projects";
 import VideoPost from "@/components/HomePage/video-post";
 import Head from "next/head";
@@ -38,10 +39,10 @@ export default function Home() {
         <div className="main">
           {/* Hero Section */}
           <section id="hero" className="hero section dark-background">
-            {/* Add Hero Section Content */}
             <HeroSection />
           </section>
           <AboutUs />
+          <Leadership />
           {/* Add other sections like About, Features, Services, Portfolio, etc. */}
           <Faculties /> <BlogPosts />
           <CallToAction />

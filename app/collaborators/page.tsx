@@ -3,7 +3,7 @@ const CollaboratorsPage = () => {
     <div>
       <div className="container-fluid mb-0 pb-0">
         <section className="about section mb-0 pb-0">
-          <div className="container section-title pb-4 mb-1">
+          <div className="container section-title pb-3">
             <h2>Collaborators</h2>
             <p>Formal Institutions</p>
           </div>
@@ -144,7 +144,7 @@ const CollaboratorsPage = () => {
         </section>
 
         <section className="about section pt-4 mb-0 pb-0">
-          <div className="container section-title pb-4">
+          <div className="container section-title pb-3">
             <p>Informal Institutions</p>
           </div>
 
@@ -179,7 +179,7 @@ const CollaboratorsPage = () => {
         </section>
 
         <section className="about section mt-0 pt-4 mb-0 pb-0">
-          <div className="container section-title pb-4">
+          <div className="container section-title pb-3">
             <p>Development Partners</p>
           </div>
 
@@ -198,7 +198,7 @@ const CollaboratorsPage = () => {
         </section>
 
         <section className="about section mt-0 pt-4">
-          <div className="container section-title pb-4 mb-1 mt-0 pt-0">
+          <div className="container section-title pb-3 mt-0 pt-0">
             <p>Fisheries Associations & Civil Society Organizations</p>
           </div>
 

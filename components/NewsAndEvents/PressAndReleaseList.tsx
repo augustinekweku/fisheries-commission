@@ -19,7 +19,7 @@ export default function PressAndReleaseList() {
     .slice((currentPage - 1) * POSTS_PER_PAGE, currentPage * POSTS_PER_PAGE);
 
   return (
-    <section id="recent-posts" className="recent-posts section">
+    <section className="blog-posts section">
       <div className="container section-title" data-aos="fade-up">
         <h2>News</h2>
         <p>Our Recent Press And Releases</p>
@@ -38,7 +38,7 @@ export default function PressAndReleaseList() {
                 href={`/press-and-release/${post.slug}`}
                 className="text-decoration-none text-dark"
               >
-                <article className="h-100 p-2 border rounded shadow-sm transition hover-shadow-sm">
+                <article>
                   <div className="post-img">
                     <img
                       src={`/${post.image}`}

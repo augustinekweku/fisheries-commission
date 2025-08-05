@@ -4,7 +4,7 @@ const InformalInstitutions = () => {
   return (
     <div className="container-fluid">
       <section className="about section">
-        <div className="container section-title pb-4 mb-1">
+        <div className="container section-title pb-3">
           <p>Informal Institutions</p>
         </div>
 

@@ -4,7 +4,7 @@ import React from "react";
 const AboutUs = () => {
   return (
     <div>
-      <section id="about" className="about section">
+      <section id="about" className="about section px-2">
         <div className="container section-title" data-aos="fade-up">
           <h2>About US</h2>
           <p>WELCOME TO THE FISHERIES COMMISSION</p>
