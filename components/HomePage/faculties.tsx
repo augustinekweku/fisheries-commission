@@ -49,7 +49,7 @@ const Faculties = () => {
   ];
 
   return (
-    <section id="team" className="team section">
+    <section id="team" className="team section px-2">
       <div className="container section-title" data-aos="fade-up">
         <h2>SECTIONS</h2>
         <p>Our Various Sections</p>

@@ -23,8 +23,8 @@ const LeadershipPage = () => {
 
             <div className="col-lg-8 mt-lg-4">
               <h3 className="h5 mb-3 text-uppercase">
-                <strong>Prof. Benjamin B. Campion</strong>, Executive Director,
-                Fisheries Commission.
+                <strong className="fw-bold">Prof. Benjamin B. Campion</strong>,
+                Executive Director, Fisheries Commission.
               </h3>
 
               <p>
@@ -79,8 +79,8 @@ const LeadershipPage = () => {
 
             <div className="col-lg-8 mt-lg-4">
               <h3 className="h5 mb-3 text-uppercase">
-                <strong>Prof. Berchie Asiedu</strong>, Deputy Executive
-                Director, Technical Fisheries Commission
+                <strong className="fw-bold">Prof. Berchie Asiedu</strong>,
+                Deputy Executive Director, Technical Fisheries Commission
               </h3>
               <p>
                 Prof. Berchie Asiedu is a renowned fisheries and aquaculture
@@ -130,8 +130,8 @@ const LeadershipPage = () => {
 
             <div className="col-lg-8 mt-lg-4">
               <h3 className="h5 mb-3 text-uppercase">
-                <strong>HON. DR ERIC COBINNAH</strong>, DEPUTY EXECUTIVE
-                DIRECTOR, GENERAL SERVICES FISHERIES COMMISSION
+                <strong className="fw-bold">HON. DR ERIC COBINNAH</strong>,
+                DEPUTY EXECUTIVE DIRECTOR, GENERAL SERVICES FISHERIES COMMISSION
               </h3>
               <p>
                 Hon. Dr. Eric Cobbinah hails from Shama in the Western Region.

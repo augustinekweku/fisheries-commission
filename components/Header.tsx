@@ -1,13 +1,25 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
+
+  // Helper to check exact match
+  const isActive = (path: string) => pathname === path;
+
+  // Helper to check dropdown parent (startsWith any child path)
+  const isParentActive = (paths: string[]) =>
+    paths.some((path) => pathname.startsWith(path));
+
   return (
     <header
       id="header"
       className="header d-flex align-items-center sticky-top header-background dark-background"
     >
       <div className="container-xl position-relative d-flex align-items-center justify-content-between">
+        {/* Logo */}
         <Link href="/" className="logo d-flex align-items-center">
           <img
             src="/assets/img/logo-white.png"
@@ -16,23 +28,38 @@ const Header = () => {
           />
         </Link>
 
+        {/* Navigation */}
         <nav id="navmenu" className="navmenu">
           <ul>
             <li>
-              <Link href="/" className="active">
+              <Link href="/" className={isActive("/") ? "active" : ""}>
                 Home
               </Link>
             </li>
+
+            {/* Mobile Only Links */}
             <div className="d-block d-lg-none">
               <li>
                 <Link href="">What We Do</Link>
               </li>
-
               <li>
                 <Link href="/fiti-standard">FiTi</Link>
               </li>
             </div>
-            <li className="dropdown">
+
+            {/* About Us Dropdown */}
+            <li
+              className={`dropdown ${
+                isParentActive([
+                  "/about-us",
+                  "/about-us/board-members",
+                  "/about-us/leadership",
+                  "/about-us/divisions-and-units",
+                ])
+                  ? "active"
+                  : ""
+              }`}
+            >
               <Link href="/about-us">
                 <span>About Us</span>{" "}
                 <i className="bi bi-chevron-down toggle-dropdown"></i>
@@ -57,7 +84,21 @@ const Header = () => {
                 </li>
               </ul>
             </li>
-            <li className="dropdown">
+
+            {/* Collaborators Dropdown */}
+            <li
+              className={`dropdown ${
+                isParentActive([
+                  "/collaborators",
+                  "/collaborators/formal-institutions",
+                  "/collaborators/informal-institutions",
+                  "/collaborators/development-partners",
+                  "/collaborators/fisheries-association-civil-society-organization",
+                ])
+                  ? "active"
+                  : ""
+              }`}
+            >
               <Link href="/collaborators">
                 <span>Collaborators</span>{" "}
                 <i className="bi bi-chevron-down toggle-dropdown"></i>
@@ -85,7 +126,15 @@ const Header = () => {
                 </li>
               </ul>
             </li>
-            <li className="dropdown">
+
+            {/* Resources Dropdown */}
+            <li
+              className={`dropdown ${
+                isParentActive(["/laws-and-regulations", "/reports-and-plans"])
+                  ? "active"
+                  : ""
+              }`}
+            >
               <Link href="#">
                 <span>Resources</span>{" "}
                 <i className="bi bi-chevron-down toggle-dropdown"></i>
@@ -99,9 +148,17 @@ const Header = () => {
                 </li>
               </ul>
             </li>
-            <li className="dropdown">
+
+            {/* News & Events Dropdown */}
+            <li
+              className={`dropdown ${
+                isParentActive(["/press-and-release", "/articles", "/gallery"])
+                  ? "active"
+                  : ""
+              }`}
+            >
               <Link href="#">
-                <span>News and Events </span>{" "}
+                <span>News and Events</span>{" "}
                 <i className="bi bi-chevron-down toggle-dropdown"></i>
               </Link>
               <ul>
@@ -116,9 +173,17 @@ const Header = () => {
                 </li>
               </ul>
             </li>
-            <li className="dropdown">
+
+            {/* Projects Dropdown */}
+            <li
+              className={`dropdown ${
+                isParentActive(["/projects/fish-for-development"])
+                  ? "active"
+                  : ""
+              }`}
+            >
               <Link href="#">
-                <span>Projects </span>{" "}
+                <span>Projects</span>{" "}
                 <i className="bi bi-chevron-down toggle-dropdown"></i>
               </Link>
               <ul>
@@ -140,8 +205,14 @@ const Header = () => {
               </ul>
             </li>
 
+            {/* Contact (Mobile only) */}
             <li>
-              <Link className="d-block d-lg-none" href="/contact">
+              <Link
+                className={`d-block d-lg-none ${
+                  isActive("/contact") ? "active" : ""
+                }`}
+                href="/contact"
+              >
                 Contact Us
               </Link>
             </li>

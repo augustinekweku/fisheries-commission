@@ -34,7 +34,7 @@ export const articles = [
     slug: "mcsd-feu-beach-combing-ga-south-ledzekuku-greater-accra",
     image: "assets/img/blog/article-post-2.jpg",
     title:
-      "THE MCSD/FEU BEACH COMBING CARAVAN BERTH AT GA SOUTH AND LEDZEKUKU MUNICIPAL ASSEMBLIES OF THE GREATER ACCRA REGION",
+      "The MCSD/FEU Beach Combing Caravan Berth at Ga South and Ledzekuku Municipal Assemblies of the Greater Accra Region",
     excerpt:
       "Today, 5th July, 2025, the MCSD/FEU in conjunction with the Greater Accra Region took [...]",
     content: `
@@ -68,7 +68,7 @@ export const articles = [
     image: "assets/img/blog/article-post-3.jpg",
     title: "Strengthening Ghana's Aquatic Animal Health! ",
     excerpt:
-      "The Fish Health Unit (FHU) of the Fisheries Commission, in collaboration with the Food and Agriculture Organization (FAO), successfully hosted a two-day Technical Working Group (TWG) meeting from 25-26 June 2025 at the FAO Ghana Conference [...]",
+      "The Fish Health Unit (FHU) of the Fisheries Commission, in collaboration with the Food and Agriculture Organization (FAO), successfully hosted a two-day Technical Working Group (TWG) meeting from 25-26 June 2025 at [...]",
     content: `
       <p>The Fish Health Unit (FHU) of the Fisheries Commission, in collaboration with the Food and Agriculture Organization (FAO), successfully hosted a two-day Technical Working Group (TWG) meeting from 25-26 June 2025 at the FAO Ghana Conference Room in Accra.</p>
       <p>This key meeting brought together 25 experts from government, academia, research, and industry to refine and advance Ghana's National Aquatic Animal Health Strategy (NAAHS) under the FAO-supported project TCP/GHA/3905. The team reviewed and enhanced eight (8) strategic programmes focused on boosting biosecurity, disease resilience, and institutional capacity in aquaculture.</p>
@@ -90,7 +90,7 @@ export const articles = [
     image: "assets/img/blog/article-post-4.jpg",
     title: "Supporting Post-Harvest Loss Management",
     excerpt:
-      "The Executive Director of the Fisheries Commission, Prof. Benjamin Betey Campion led a delegation of the Project Team and the Korean Contractors on a working visit to the fish processing construction site at Tema Manhean to [...]",
+      "The Executive Director of the Fisheries Commission, Prof. Benjamin Betey Campion led a delegation of the Project Team and the Korean Contractors on a working visit to the fish processing construction site at Tema [...]",
     content: `
   <p>The Executive Director of the Fisheries Commission, Prof. Benjamin Betey Campion led a delegation of the Project Team and the Korean Contractors on a working visit to the fish processing construction site at Tema Manhean to:</p>
   <p>• Inspect current state of the first phase of construction and;<br/>
@@ -152,7 +152,7 @@ export const articles = [
     title:
       "Fisheries Commission Engages Sensus Systems and U.S. Embassy on Maritime Surveillance",
     excerpt:
-      "On 1st August 2025, the Executive Director of the Fisheries Commission, together with Heads of Divisions and Units, held a meeting with representatives from Sensus Systems and the U.S. Embassy in Ghana to  [...]",
+      "On 1st August 2025, the Executive Director of the Fisheries Commission, together with Heads of Divisions and Units, held a meeting with representatives from Sensus Systems [...]",
     content: `
 <p>At the Head Office of the Fisheries Commission on 1st August 2025, the Executive Director and key Heads of Divisions and Units welcomed Mr. Jeffery Assibey, founder of Sensus Systems, and Madam Victoria Agbai from the Commercial Section of the U.S. Embassy in Ghana.</p>
 <p>The meeting centered around a proposal for the installation of the <strong>Stevens Seabed Passive Acoustic Detection System (S-SPADES)</strong>. This advanced system utilizes hydrophone arrays and sophisticated signal processing to detect and locate vessels, underwater vehicles, and diver activity in Ghana's waters.</p>
