@@ -36,9 +36,15 @@ const Faculties = () => {
     },
     {
       id: 6,
-      image: "assets/img/faculties/faculties-6.png",
+      image: "assets/img/faculties/faculties-6.jpg",
       title: "Statistics",
       description: "Statistical informtaion about fish production",
+    },
+    {
+      id: 7,
+      image: "assets/img/faculties/faculties-7.jpg",
+      title: "Secretariat",
+      description: "National Premix Fuel Secretariat",
     },
   ];
 
