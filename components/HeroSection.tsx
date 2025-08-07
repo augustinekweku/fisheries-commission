@@ -5,21 +5,21 @@ const HeroSection = () => {
   const carouselItems = [
     {
       id: 1,
-      backgroundImage: "/assets/img/blog/article-post-1.jpg",
+      backgroundImage: "/assets/img/blog/hero-1.jpg",
       title: "Welcome to the Fisheries Commission Official Website",
       buttonText: "Read More",
       buttonLink: "/about-us",
     },
     {
       id: 2,
-      backgroundImage: "/assets/img/blog/navy-5.jpg",
+      backgroundImage: "/assets/img/blog/article-post-1.jpg",
       title: "Explore Our Services and Resources",
       buttonText: "Learn More",
       buttonLink: "/laws-and-regulations",
     },
     {
       id: 3,
-      backgroundImage: "/assets/img/blog/navy-2.jpg",
+      backgroundImage: "/assets/img/blog/navy-5.jpg",
       title: "Join Us in Sustainable Fisheries Management",
       buttonText: "Get Started",
       buttonLink: "/contact",
@@ -27,9 +27,9 @@ const HeroSection = () => {
     {
       id: 4,
       backgroundImage: "/assets/img/blog/navy-3.jpg",
-      title: "Join Us in Sustainable Fisheries Management",
+      title: "Read Our Latest News and Updates",
       buttonText: "Get Started",
-      buttonLink: "/contact",
+      buttonLink: "/articles",
     },
   ];
 
@@ -63,7 +63,7 @@ const HeroSection = () => {
                 className="carousel-content d-flex flex-column justify-content-center align-items-center"
                 style={{ maxWidth: "900px" }}
               >
-                <h1 className="animate__animated animate__fadeInDown display-5 fw-semibold">
+                <h1 className="animate__animated animate__fadeInDown display-5 hero-title fw-semibold">
                   {item.title}
                 </h1>
                 <Link

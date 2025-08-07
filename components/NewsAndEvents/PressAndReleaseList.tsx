@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { pressReleases } from "@/data/posts";
 import Pagination from "@/components/Pagination";
+import { press } from "@/data/posts";
 
 const POSTS_PER_PAGE = 6;
 
@@ -11,10 +11,10 @@ export default function PressAndReleaseList() {
   const searchParams = useSearchParams();
   const currentPage = parseInt(searchParams.get("page") || "1", 10);
 
-  const totalPosts = pressReleases.length;
+  const totalPosts = press.length;
   const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
 
-  const paginatedPosts = [...pressReleases]
+  const paginatedPosts = [...press]
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice((currentPage - 1) * POSTS_PER_PAGE, currentPage * POSTS_PER_PAGE);
 

@@ -6,10 +6,8 @@ import { usePathname } from "next/navigation";
 const Header = () => {
   const pathname = usePathname();
 
-  // Helper to check exact match
   const isActive = (path: string) => pathname === path;
 
-  // Helper to check dropdown parent (startsWith any child path)
   const isParentActive = (paths: string[]) =>
     paths.some((path) => pathname.startsWith(path));
 

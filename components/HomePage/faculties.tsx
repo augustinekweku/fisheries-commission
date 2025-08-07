@@ -4,44 +4,38 @@ const Faculties = () => {
   const sections = [
     {
       id: 1,
-      image: "assets/img/faculties/faculties-1.jpg",
-      title: "Fisheries Leadership",
-      description: "Information about Fisheries Leadership",
-    },
-    {
-      id: 2,
       image: "assets/img/faculties/faculties-3.jpg",
       title: "Regional Offices",
       description:
         "Information on all our regional offices and their activities",
     },
     {
-      id: 3,
+      id: 2,
       image: "assets/img/faculties/faculties-2.png",
       title: "MOFA",
       description: "Ministry Of Fisheries and Aquaculture",
     },
 
     {
-      id: 4,
+      id: 3,
       image: "assets/img/faculties/faculties-4.jpg",
       title: "Vessel Registry",
       description: "Registration information about all fishing vessels",
     },
     {
-      id: 5,
+      id: 4,
       image: "assets/img/faculties/faculties-5.jpg",
       title: "Reports",
       description: "General Reports of the Fisheries Commission",
     },
     {
-      id: 6,
+      id: 5,
       image: "assets/img/faculties/faculties-6.jpg",
       title: "Statistics",
       description: "Statistical informtaion about fish production",
     },
     {
-      id: 7,
+      id: 6,
       image: "assets/img/faculties/faculties-7.jpg",
       title: "Secretariat",
       description: "National Premix Fuel Secretariat",

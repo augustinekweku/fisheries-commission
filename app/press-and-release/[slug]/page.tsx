@@ -1,7 +1,7 @@
-import { pressReleases } from "@/data/posts";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
+import { press } from "@/data/posts";
 
 // Metadata for SEO
 export async function generateMetadata({
@@ -10,7 +10,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = pressReleases.find((p) => p.slug === slug);
+  const post = press.find((p) => p.slug === slug);
   return {
     title: post?.title || "Press Release",
     description: post?.excerpt || "",
@@ -23,7 +23,7 @@ export default async function PressDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = pressReleases.find((p) => p.slug === slug);
+  const post = press.find((p) => p.slug === slug);
 
   if (!post) return notFound();
 
@@ -101,7 +101,7 @@ export default async function PressDetailPage({
             <h5 className="mb-4 border-bottom pb-2 accent-color fw-bold">
               Recent Press And Releases
             </h5>
-            {[...pressReleases]
+            {[...press]
               .sort(
                 (a, b) =>
                   new Date(b.date).getTime() - new Date(a.date).getTime()

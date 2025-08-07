@@ -30,12 +30,7 @@ const VideoPost = () => {
           {/* Right Side: YouTube Video */}
           <div className="col-lg-6" data-aos="fade-left">
             <div className="video-container">
-              <img
-                src="assets/img/blog/2025-closed-season.jpg"
-                alt=""
-                className="img-fluid rounded shadow"
-              />
-              {/* <iframe
+              <iframe
                 width="100%"
                 height="315"
                 src={videoData.videoUrl}
@@ -43,7 +38,7 @@ const VideoPost = () => {
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-              ></iframe> */}
+              ></iframe>
             </div>
           </div>
         </div>

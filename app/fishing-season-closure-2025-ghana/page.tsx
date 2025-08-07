@@ -37,10 +37,14 @@ export default async function FishingClosurePage(): Promise<React.ReactElement> 
 
             {/* Main Image */}
             <img
-              src="/assets/img/blog/2025-closed-season.jpg"
+              src="/assets/img/blog/closed-season-2025.jpg"
               alt="2025 Closed Season"
               className="img-fluid mb-4 rounded shadow"
-              style={{ maxHeight: "500px", objectFit: "cover", width: "100%" }}
+              style={{
+                maxHeight: "500px",
+                objectFit: "contain",
+                width: "100%",
+              }}
             />
 
             {/* Content */}
