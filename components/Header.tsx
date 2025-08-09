@@ -43,6 +43,9 @@ const Header = () => {
               <li>
                 <Link href="/fiti-standard">FiTi</Link>
               </li>
+              <li>
+                <Link href="">Blue Economy</Link>
+              </li>
             </div>
 
             {/* About Us Dropdown */}
