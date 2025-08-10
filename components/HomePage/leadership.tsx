@@ -1,6 +1,5 @@
 import { teamMembers } from "@/data/data";
 import Link from "next/link";
-import React from "react";
 
 const Leadership = () => {
   return (
@@ -19,19 +18,21 @@ const Leadership = () => {
               data-aos="fade-up"
               data-aos-delay={100 * (index + 1)}
             >
-              <div className="team-member w-100">
-                <div className="member-img position-relative">
-                  <img
-                    src={`/${member.image}`}
-                    className="img-fluid"
-                    alt={member.name}
-                  />
+              <Link href="/about-us/leadership">
+                <div className="team-member w-100">
+                  <div className="member-img position-relative">
+                    <img
+                      src={`/${member.image}`}
+                      className="img-fluid"
+                      alt={member.name}
+                    />
+                  </div>
+                  <div className="member-info text-center mt-3">
+                    <h4 className="text-uppercase">{member.name}</h4>
+                    <span>{member.role}</span>
+                  </div>
                 </div>
-                <div className="member-info text-center mt-3">
-                  <h4 className="text-uppercase">{member.name}</h4>
-                  <span>{member.role}</span>
-                </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>

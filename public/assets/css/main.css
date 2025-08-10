@@ -2800,11 +2800,177 @@ pagination .page-link {
   }
 }
 
-/* .fixed-header-wrapper {
-  position: fixed;
+/* Leadership Team Hover Effects */
+/* Team Member Card */
+.team-member {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Member Image Container */
+.member-img {
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.member-img img {
+  transition: all 0.4s ease;
+  width: 100%;
+}
+
+.team-member:hover .member-img img {
+  transform: scale(1.1);
+}
+
+/* Image Overlay Effect */
+.member-img::before {
+  content: "";
+  position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.team-member:hover .member-img::before {
+  opacity: 1;
+}
+
+/* Member Info */
+
+.team-member:hover .member-info h4 {
+  color: #e64e4e;
+}
+
+.team-member:hover .member-info span {
+  color: #555;
+}
+
+/* Read More Button Hover Effects */
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #e64e4e, #c73e3e);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 15px rgba(230, 78, 78, 0.3);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.read-more::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
   width: 100%;
-  z-index: 1040;
-  margin-bottom: 100px;
-} */
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.read-more:hover::before {
+  left: 100%;
+}
+
+.read-more:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(230, 78, 78, 0.4);
+  background: linear-gradient(135deg, #c73e3e, #b03636);
+  color: white;
+  text-decoration: none;
+}
+
+.read-more i {
+  transition: transform 0.3s ease;
+  margin-left: 8px;
+}
+
+.read-more:hover i {
+  transform: translateX(5px);
+}
+
+/* Section Title Animation */
+.team-member h4 {
+  color: black !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .team-member:hover {
+    transform: translateY(-5px);
+  }
+
+  .read-more {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+/* Additional animation for cards appearing from different directions */
+.team-member:nth-child(3n + 1) {
+  animation-delay: 0.1s;
+}
+
+.team-member:nth-child(3n + 2) {
+  animation-delay: 0.2s;
+}
+
+.team-member:nth-child(3n + 3) {
+  animation-delay: 0.3s;
+}
+
+/* Subtle glow effect on hover */
+.team-member:hover {
+  position: relative;
+}
+
+.team-member:hover::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #e64e4e, #28a745, #ffc107, #dc3545);
+  border-radius: 14px;
+  z-index: -1;
+  opacity: 0.1;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}

@@ -41,8 +41,20 @@ const Header = () => {
                 <Link href="">What We Do</Link>
               </li>
               <li>
-                <Link href="/fiti-standard">FiTi</Link>
+                <Link href="/fiti-standard" target="_blank">
+                  FiTi
+                </Link>
               </li>
+              <li>
+                <Link
+                  href="https://www.macppa.com/en"
+                  target="_blank"
+                  className="text-body py-2 px-3 border-end"
+                >
+                  MACPPA
+                </Link>
+              </li>
+
               <li>
                 <Link href="">Blue Economy</Link>
               </li>

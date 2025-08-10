@@ -44,6 +44,13 @@ const TopBar = () => {
               >
                 <small>FiTi</small>
               </Link>
+              <Link
+                href="https://www.macppa.com/en"
+                target="_blank"
+                className="text-body py-2 px-3 border-end"
+              >
+                <small>MACPPA</small>
+              </Link>
               <Link href="#" className="text-body py-2 px-3 border-end">
                 <small>Blue Economy</small>
               </Link>

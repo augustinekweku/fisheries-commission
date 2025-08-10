@@ -11,23 +11,23 @@ const folderData: Folder[] = [
       { name: "Legal_Documents" },
     ],
   },
-  {
-    name: "BENIN",
-    children: [
-      { name: "Arretes" },
-      { name: "Decrets" },
-      { name: "Documents Connexes" },
-      { name: "Lois" },
-      { name: "Politiques_Strategies" },
-    ],
-  },
-  {
-    name: "COTE D'IVOIRE",
-  },
+  // {
+  //   name: "BENIN",
+  //   children: [
+  //     { name: "Arretes" },
+  //     { name: "Decrets" },
+  //     { name: "Documents Connexes" },
+  //     { name: "Lois" },
+  //     { name: "Politiques_Strategies" },
+  //   ],
+  // },
+  // {
+  //   name: "COTE D'IVOIRE",
+  // },
 
-  { name: "LIBERIA" },
-  { name: "NIGERIA" },
-  { name: "TOGO" },
+  // { name: "LIBERIA" },
+  // { name: "NIGERIA" },
+  // { name: "TOGO" },
 ];
 
 interface FolderTreeProps {
@@ -40,7 +40,7 @@ const FolderTree: React.FC<FolderTreeProps> = ({
   selectedFolder,
 }) => {
   return (
-    <div className="folder-tree pb-4">
+    <div className="folder-tree pb-4 mb-5">
       <h5 className="mb-3 fw-semibold">National Regulations</h5>
       {folderData.map((folder, index) => (
         <FolderItem
