@@ -1,92 +1,138 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Metadata } from "next";
-import { press } from "@/data/posts";
+import type { Metadata } from "next";
+import { PortableText } from "@portabletext/react";
+import { client } from "@/sanity/client";
+import PressAndReleaseSidebar from "@/components/NewsAndEvents/PressAndReleaseSidebar";
 
-// Metadata for SEO
+type Post = {
+  _id: string;
+  title: string;
+  body: any[];
+  imageUrl?: string;
+  imageUrl2?: string;
+  imageUrl3?: string;
+  imageUrl4?: string;
+  publishedAt?: string;
+  slug?: { current: string };
+};
+
+async function getPostBySlug(slug: string): Promise<Post | null> {
+  const query = `
+    *[_type == "post" && slug.current == $slug][0]{
+      "imageUrl": image.asset->url,
+      "imageUrl2": image2.asset->url,
+      "imageUrl3": image3.asset->url,
+      "imageUrl4": image4.asset->url,
+      slug,
+      title,
+      category,
+      _id,
+      body,
+      publishedAt
+    }
+  `;
+  return await client.fetch(query, { slug });
+}
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = press.find((p) => p.slug === slug);
+  const post = await getPostBySlug(slug);
+  const excerpt =
+    post?.body
+      ?.map((block: any) =>
+        (block.children || []).map((c: any) => c.text).join("")
+      )
+      .join(" ")
+      .slice(0, 160) ?? "";
   return {
-    title: post?.title || "Press Release",
-    description: post?.excerpt || "",
+    title: post?.title ?? "Press and Release",
+    description: excerpt,
   };
 }
 
-export default async function PressDetailPage({
+export default async function PressAndReleaseDetailPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = press.find((p) => p.slug === slug);
+  const post = await getPostBySlug(slug);
 
   if (!post) return notFound();
 
+  // compute plain text length from portable text for reading time
+  const plainText =
+    post.body
+      ?.map((block: any) =>
+        (block.children || []).map((c: any) => c.text).join("")
+      )
+      .join("\n") ?? "";
+  const minutes = Math.max(1, Math.round(plainText.length / 1000));
+
+  const gallery = [
+    post.imageUrl,
+    post.imageUrl2,
+    post.imageUrl3,
+    post.imageUrl4,
+  ].filter(Boolean);
+
   return (
     <section className="container-fluid">
-      <div className="container mt-lg-1">
+      <div className="container mt-1">
         <div className="row">
           {/* Main Post */}
           <div className="col-lg-8">
-            {/* Title */}
-            <h2 className="fw-semibold mb-3 text-uppercase fw-bold">
-              {post.title}
-            </h2>
+            <h2 className="fw-bold mb-3 text-uppercase">{post.title}</h2>
 
-            {/* Meta Info */}
             <div className="d-flex justify-content-between align-items-center mt-5 border-bottom pb-2 mb-4 text-muted small flex-wrap">
               <span className="mb-2 mb-md-0">
                 <i className="bi bi-calendar3 me-2"></i>
-                {new Date(post.date).toLocaleDateString(undefined, {
-                  year: "numeric",
-                  month: "short",
-                  day: "numeric",
-                })}
-              </span>
-
-              <span className="btn btn-outline-secondary btn-sm text-uppercase rounded-pill px-3 me-2 mb-2 mb-md-0">
-                BY {post.authorName}
+                {post.publishedAt
+                  ? new Date(post.publishedAt).toLocaleDateString(undefined, {
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
+                    })
+                  : ""}
               </span>
 
               <span className="mb-2 mb-md-0">
-                {(() => {
-                  const minutes = Math.max(
-                    1,
-                    Math.round(post.content.length / 1000)
-                  );
-                  return `${minutes} min${minutes > 1 ? "s" : ""} read`;
-                })()}
+                <i className="bi bi-watch me-1"></i>
+                {minutes} min{minutes > 1 ? "s" : ""} read
               </span>
             </div>
 
-            {/* Main Image */}
-            <img
-              src={`/${post.image}`}
-              alt={post.title}
-              className="img-fluid mb-4 rounded shadow"
-              style={{ maxHeight: "500px", objectFit: "cover", width: "100%" }}
-            />
+            {/* Main Image (imageUrl) */}
+            {post.imageUrl && (
+              <img
+                src={post.imageUrl}
+                alt={post.title}
+                className="img-fluid mb-4 rounded shadow"
+                style={{
+                  maxHeight: "500px",
+                  objectFit: "cover",
+                  width: "100%",
+                }}
+              />
+            )}
 
-            {/* Content */}
-            <div
-              className="mx-auto mb-5"
-              style={{ maxWidth: "800px" }}
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            ></div>
+            {/* Body (Portable Text) */}
+            <div className="mx-auto mb-5" style={{ maxWidth: "800px" }}>
+              <PortableText value={post.body} />
+            </div>
 
-            {/* Additional Images */}
-            {post.images && post.images.length > 0 && (
+            {/* Gallery Images */}
+            {gallery.length > 0 && (
               <div className="row g-4">
-                {post.images.map((img, index) => (
-                  <div className="col-md-6" key={index}>
+                {gallery.map((src, idx) => (
+                  <div className="col-md-6" key={idx}>
                     <img
-                      src={`/${img}`}
-                      alt={`Post image ${index + 1}`}
+                      src={src}
+                      alt={`${post.title} - image ${idx + 2}`}
                       className="img-fluid rounded shadow"
                       style={{ width: "100%", objectFit: "cover" }}
                     />
@@ -97,50 +143,7 @@ export default async function PressDetailPage({
           </div>
 
           {/* Sidebar */}
-          <div className="col-lg-4 mt-5 mt-lg-0">
-            <h5 className="mb-4 border-bottom pb-2 accent-color fw-bold">
-              Recent Press And Releases
-            </h5>
-            {[...press]
-              .sort(
-                (a, b) =>
-                  new Date(b.date).getTime() - new Date(a.date).getTime()
-              )
-              .slice(0, 6)
-              .map((recent, index) => (
-                <div className="d-flex mb-4" key={index}>
-                  <img
-                    src={`/${recent.image}`}
-                    alt={recent.title}
-                    className="rounded flex-shrink-0"
-                    style={{
-                      width: "80px",
-                      height: "60px",
-                      objectFit: "cover",
-                      marginRight: "15px",
-                      display: "block",
-                    }}
-                  />
-                  <div className="d-flex flex-column justify-content-between">
-                    <Link
-                      href={`/press-and-release/${recent.slug}`}
-                      className="fw-semibold d-block text-dark text-decoration-none border-bottom pb-1 mb-1"
-                    >
-                      {recent.title.length > 60
-                        ? recent.title.slice(0, 57) + "..."
-                        : recent.title}
-                    </Link>
-                    <small className="text-muted">
-                      {new Date(recent.date).toLocaleDateString(undefined, {
-                        year: "numeric",
-                        month: "short",
-                        day: "numeric",
-                      })}
-                    </small>
-                  </div>
-                </div>
-              ))}
-          </div>
+          <PressAndReleaseSidebar />
         </div>
       </div>
     </section>

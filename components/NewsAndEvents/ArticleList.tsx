@@ -3,85 +3,49 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import Pagination from "@/components/Pagination";
-import { articles } from "@/data/articles";
 import useSWR from "swr";
 import { fetcher } from "@/sanity/client";
-import {
-  allPostsPaginatedQuery,
-  paginatedByCategoryquery,
-} from "@/sanity/groq";
-import { useEffect } from "react";
+import { paginatedByCategoryquery } from "@/sanity/groq";
+import Loader from "../Loader";
 
 const POSTS_PER_PAGE = 6;
 
-interface ArticleListProps {
-  defaultCategory?: string;
-}
-
-export default function ArticleList({ defaultCategory }: ArticleListProps) {
+export default function ArticleList() {
   const searchParams = useSearchParams();
   const currentPage = parseInt(searchParams.get("page") || "1", 10);
 
-  const sortedArticles = [...articles].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
-
-  const totalPosts = sortedArticles.length;
-  const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
-
-  const paginatedPosts = sortedArticles.slice(
-    (currentPage - 1) * POSTS_PER_PAGE,
-    currentPage * POSTS_PER_PAGE
-  );
-
-  const page = searchParams.get("page");
-  const category = searchParams.get("category") ?? defaultCategory ?? "all";
-
-  const pageIndex = parseInt(page as string) || 1;
-  const pageSize = parseInt(searchParams.get("pageSize") as string) || 12;
-
-  const {
-    data: postsData,
-    error,
-    isValidating,
-    mutate,
-  } = useSWR<{ posts: any[] }>(
-    "batchedRequests",
-    async () => {
-      const posts = await fetchPosts();
-      return { posts };
-    },
-    {
-      revalidateOnFocus: false,
-      fallbackData: {
-        posts: [],
-      },
-    }
-  );
-
-  function getQueryToUse() {
-    if (category !== "all") {
-      return paginatedByCategoryquery;
-    } else {
-      return allPostsPaginatedQuery;
-    }
-  }
+  const category = "articles";
 
   function paramsForQuery() {
     return {
-      pageIndex: (pageIndex - 1) * pageSize,
-      limit: pageIndex * pageSize,
+      pageIndex: (currentPage - 1) * POSTS_PER_PAGE,
+      limit: POSTS_PER_PAGE,
       category,
       publishStatus: "published",
     };
   }
 
-  useEffect(() => {
-    mutate();
-    console.log("Fetching posts with params:", postsData);
-  }, [page, category, postsData?.posts.length]);
+  function getQueryToUse() {
+    return paginatedByCategoryquery;
+  }
 
-  const fetchPosts = () => fetcher([getQueryToUse(), paramsForQuery()]);
+  const fetchPosts = async () => {
+    const query = getQueryToUse();
+    const params = paramsForQuery();
+    return await fetcher([query, params]);
+  };
+
+  const { data, isLoading } = useSWR<{ posts: any[]; totalCount: number }>(
+    ["articles", currentPage, category],
+    fetchPosts,
+    {
+      revalidateOnFocus: false,
+      fallbackData: { posts: [], totalCount: 0 },
+    }
+  );
+
+  const posts = data?.posts || [];
+  const totalPages = Math.ceil((data?.totalCount || 0) / POSTS_PER_PAGE);
 
   return (
     <section id="blog-posts" className="blog-posts section">
@@ -91,52 +55,79 @@ export default function ArticleList({ defaultCategory }: ArticleListProps) {
       </div>
 
       <div className="container">
-        <div className="row gy-4">
-          {paginatedPosts.map((post, index) => (
-            <div
-              key={post.id}
-              className="col-xl-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay={100 * (index + 1)}
-            >
-              <Link
-                href={`/articles/${post.slug}`}
-                className="text-decoration-none text-dark"
-              >
-                <article>
-                  <div className="post-img">
-                    <img
-                      src={`/${post.image}`}
-                      alt={post.title}
-                      className="img-fluid rounded"
-                    />
-                  </div>
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <>
+            <div className="row gy-4">
+              {posts.map((post, index) => (
+                <div
+                  key={post._id}
+                  className="col-xl-4 col-md-6"
+                  data-aos="fade-up"
+                  data-aos-delay={100 * (index + 1)}
+                >
+                  <Link
+                    href={`/articles/${post.slug.current}`}
+                    className="text-decoration-none text-dark"
+                  >
+                    <article>
+                      <div className="post-img">
+                        <img
+                          src={post.imageUrl}
+                          alt={post.title}
+                          className="img-fluid rounded"
+                        />
+                      </div>
 
-                  <h2 className="title">{post.title}</h2>
+                      <h2
+                        className="title"
+                        style={{
+                          display: "-webkit-box",
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: "vertical",
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
+                        }}
+                      >
+                        {post.title}
+                      </h2>
 
-                  <p className="post-excerpt">{post.excerpt}</p>
+                      <p className="post-excerpt">
+                        {post.body[0]?.children[0]?.text.slice(0, 120)}...
+                      </p>
 
-                  <div className="d-flex justify-content-between align-items-center mt-3">
-                    <small className="post-date text-muted d-flex align-items-center">
-                      <i className="bi bi-calendar3 me-1"></i>
-                      <time>{post.date}</time>
-                    </small>
-
-                    <span className="btn btn-outline-danger btn-sm rounded-pill px-3">
-                      Read More <i className="bi bi-arrow-right"></i>
-                    </span>
-                  </div>
-                </article>
-              </Link>
+                      <div className="d-flex justify-content-between align-items-center mt-3">
+                        <small className="post-date text-muted d-flex align-items-center">
+                          <i className="bi bi-calendar3 me-1"></i>
+                          <time>
+                            {new Date(post.publishedAt).toLocaleDateString(
+                              "en-US",
+                              {
+                                day: "numeric",
+                                month: "long",
+                                year: "numeric",
+                              }
+                            )}
+                          </time>
+                        </small>
+                        <span className="btn btn-outline-danger btn-sm rounded-pill px-3">
+                          Read More <i className="bi bi-arrow-right"></i>
+                        </span>
+                      </div>
+                    </article>
+                  </Link>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
 
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          basePath="/articles"
-        />
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              basePath="/articles"
+            />
+          </>
+        )}
       </div>
     </section>
   );

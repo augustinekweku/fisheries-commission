@@ -16,29 +16,58 @@ export const singlequery = groq`
 // Get paginated posts
 
 export const allPostsPaginatedQuery = groq`
-*[_type == "post"  && publishStatus == $publishStatus] | order(publishedAt desc) [$pageIndex...$limit] {
+{
+  "posts": *[
+    _type == "post" &&
+    publishStatus == $publishStatus
+  ]
+  | order(publishedAt desc)
+  [$pageIndex...($pageIndex + $limit)]{
     "imageUrl": image.asset->url,
-     "imageUrl2": image2.asset->url, "imageUrl3": image3.asset->url, "imageUrl4": image4.asset->url,
+    "imageUrl2": image2.asset->url,
+    "imageUrl3": image3.asset->url,
+    "imageUrl4": image4.asset->url,
     slug,
     title,
     category,
     _id,
     body,
-    publishedAt,
+    publishedAt
+  },
+
+  "totalCount": count(*[
+    _type == "post" &&
+    publishStatus == $publishStatus
+  ])
 }
 `;
 
-// Get  paginated posts by category
 export const paginatedByCategoryquery = groq`
-*[_type == "post" && category == $category && publishStatus == $publishStatus]   | order(publishedAt desc) [$pageIndex...$limit] {
+{
+  "posts": *[
+    _type == "post" &&
+    category == $category &&
+    publishStatus == $publishStatus
+  ]
+  | order(publishedAt desc)
+  [$pageIndex...($pageIndex + $limit)]{
     "imageUrl": image.asset->url,
-     "imageUrl2": image2.asset->url, "imageUrl3": image3.asset->url, "imageUrl4": image4.asset->url,
+    "imageUrl2": image2.asset->url,
+    "imageUrl3": image3.asset->url,
+    "imageUrl4": image4.asset->url,
     slug,
     title,
     category,
     _id,
     body,
-    publishedAt,
+    publishedAt
+  },
+
+  "totalCount": count(*[
+    _type == "post" &&
+    category == $category &&
+    publishStatus == $publishStatus
+  ])
 }
 `;
 
