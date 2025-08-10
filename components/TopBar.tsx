@@ -5,7 +5,7 @@ const TopBar = () => {
     <div className="container-fluid bg-light pe-0 ps-0 ms-0 d-none d-lg-block sticky-top py-1">
       <div className="container">
         <div className="row gx-0">
-          <div className="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+          <div className="col-md-5 text-center text-lg-start mb-2 mb-lg-0">
             <div className="position-relative d-inline-flex align-items-center ps-3">
               <div className="me-3 pe-3 border-end py-2">
                 <p className="m-0">
@@ -32,7 +32,7 @@ const TopBar = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-6 text-center text-lg-end pe-3">
+          <div className="col-md-7 text-center text-lg-end pe-3">
             <div className="d-inline-flex align-items-center">
               <Link href="" className="text-body py-2 pe-3 border-end">
                 <small>What We Do</small>
@@ -43,6 +43,9 @@ const TopBar = () => {
                 className="text-body py-2 px-3 border-end"
               >
                 <small>FiTi</small>
+              </Link>
+              <Link href="#" className="text-body py-2 px-3 border-end">
+                <small>Blue Economy</small>
               </Link>
               <Link
                 href="https://fishcom.gov.gh/recruitment/"

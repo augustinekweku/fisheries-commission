@@ -1,6 +1,4 @@
-import Link from "next/link";
-import { articles } from "@/data/articles";
-import NewsSidebar from "@/components/NewsSidebar";
+import NewsSidebar from "@/components/NewsAndEvents/NewsSidebar";
 
 export default async function FishingClosurePage(): Promise<React.ReactElement> {
   return (
@@ -25,10 +23,6 @@ export default async function FishingClosurePage(): Promise<React.ReactElement> 
                   day: "numeric",
                 })}
               </span>
-
-              {/* <span className="btn btn-outline-secondary btn-sm text-uppercase rounded-pill px-3 me-2 mb-2 mb-md-0">
-                BY {post.authorName}
-              </span> */}
 
               <span className="mb-2 mb-md-0">
                 <i className="bi bi-watch me-1"></i>3 mins read
