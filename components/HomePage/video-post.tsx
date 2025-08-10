@@ -19,7 +19,7 @@ const VideoPost = () => {
             <h2 className="fw-bold mb-4">{videoData.title}</h2>
             <p>{videoData.description}</p>
             <Link
-              href="/fishing-season-closure-2025-ghana"
+              href="/press-and-release/2025-closed-season-industrial-trawlers-banned-from-july-to-august-2025"
               className="read-more mt-3 mb-4"
             >
               <span>Read More</span>

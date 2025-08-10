@@ -4,9 +4,10 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import Pagination from "@/components/Pagination";
 import useSWR from "swr";
-import { fetcher } from "@/sanity/client";
+import { client, fetcher } from "@/sanity/client";
 import { paginatedByCategoryquery } from "@/sanity/groq";
 import Loader from "../Loader";
+import { useEffect } from "react";
 
 const POSTS_PER_PAGE = 6;
 
@@ -35,17 +36,37 @@ export default function ArticleList() {
     return await fetcher([query, params]);
   };
 
-  const { data, isLoading } = useSWR<{ posts: any[]; totalCount: number }>(
-    ["articles", currentPage, category],
-    fetchPosts,
-    {
-      revalidateOnFocus: false,
-      fallbackData: { posts: [], totalCount: 0 },
-    }
-  );
+  const { data, isLoading, mutate } = useSWR<{
+    posts: any[];
+    totalCount: number;
+  }>(["articles", currentPage, category], fetchPosts, {
+    revalidateOnFocus: false,
+    fallbackData: { posts: [], totalCount: 0 },
+  });
 
   const posts = data?.posts || [];
   const totalPages = Math.ceil((data?.totalCount || 0) / POSTS_PER_PAGE);
+
+  useEffect(() => {
+    console.log("Setting up real-time subscription for articles...");
+
+    const subscription = client
+      .listen('*[_type == "post" && publishStatus == "published"]')
+      .subscribe((update) => {
+        console.log(
+          "Real-time update received:",
+          update.transition,
+          update.documentId
+        );
+
+        mutate();
+      });
+
+    return () => {
+      console.log("Cleaning up real-time subscription");
+      subscription.unsubscribe();
+    };
+  }, [mutate]);
 
   return (
     <section id="blog-posts" className="blog-posts section">

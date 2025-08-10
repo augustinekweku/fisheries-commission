@@ -3,6 +3,16 @@ import { DocumentItem } from "@/types/Resources";
 export const sampleDocs: Record<string, DocumentItem[]> = {
   Legislation: [
     {
+      title: "ACT 625 Fisheries ACT 2022",
+      size: "284 KB",
+      hits: 75,
+      dateAdded: "02-08-2019",
+      dateModified: "29-11-2019",
+      thumbnailUrl: "/assets/img/previews/wholesale-fishing.png",
+      downloadUrl: "/docs/ACT_625_Fisheries_ACT_2022.pdf",
+      previewUrl: "/docs/ACT_625_Fisheries_ACT_2022.pdf",
+    },
+    {
       title: "Wholesale_Fish_Marketing_Act_1963_Act_N_156",
       size: "284 KB",
       hits: 75,
@@ -56,8 +66,7 @@ export const sampleDocs: Record<string, DocumentItem[]> = {
 
   Policies: [
     {
-      title:
-        "National_Plan_of_Action_to_Prevent_Deter_and_Eliminate_IUU_Fishing",
+      title: "National Plan of Action to Prevent & Eliminate IUU Fishing",
       size: "890 KB",
       hits: 150,
       dateAdded: "02-08-2019",
@@ -94,8 +103,7 @@ export const sampleDocs: Record<string, DocumentItem[]> = {
 
   Regulation: [
     {
-      title:
-        "Fishing_Boats-Certificate_of_Competency_as_Skippers_and_Second_Hands-Regulations_1972",
+      title: "Fishing Boats Certificate of Competency 1972",
       size: " 845 KB",
       hits: 90,
       dateAdded: "02-08-2019",
@@ -110,8 +118,7 @@ export const sampleDocs: Record<string, DocumentItem[]> = {
 
   Legal_Documents: [
     {
-      title:
-        "Ministerial_Directive_Regarding_the_Implementation_of_Closed_Seasons_for_Industrial_2016",
+      title: "Ministerial Directive Regarding Closed Season Fishing 2016",
       size: "1.2 MB",
       hits: 65,
       dateAdded: "02-08-2019",

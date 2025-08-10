@@ -9,7 +9,7 @@ export default function LawsAndRegulationsPage() {
   const [selectedFolder, setSelectedFolder] = useState<string | null>(null);
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid mb-5 pb-5">
       <div className="container">
         <div className="row mt-5">
           <div className="col-md-4 border-end mb-4 mb-md-0">
@@ -22,7 +22,7 @@ export default function LawsAndRegulationsPage() {
             {selectedFolder && sampleDocs[selectedFolder] ? (
               <>
                 <h5 className="mb-3">{selectedFolder}</h5>
-                <DocumentList documents={sampleDocs[selectedFolder]} />
+                <DocumentList document={sampleDocs[selectedFolder][0]} />
               </>
             ) : (
               <p className="text-muted">Select a folder to view documents.</p>

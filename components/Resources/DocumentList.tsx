@@ -1,59 +1,26 @@
 import { DocumentItem } from "@/types/Resources";
 
 interface Props {
-  documents: DocumentItem[];
+  document: DocumentItem;
 }
 
-const DocumentList: React.FC<Props> = ({ documents }) => {
+const DocumentViewer: React.FC<Props> = ({ document }) => {
   return (
-    <div>
-      {documents.map((doc, index) => (
-        <div key={index} className="border rounded p-3 mb-4">
-          <div className="row g-3">
-            {/* Thumbnail */}
-            <div className="col-12 col-sm-2 text-center text-sm-start">
-              <img
-                src={doc.thumbnailUrl}
-                alt="doc"
-                className="img-fluid"
-                style={{ maxWidth: 80 }}
-              />
-            </div>
+    <div className="document-viewer mb-5">
+      <h4 className="mb-3 py-1 title text-uppercase fw-semibold">
+        {document.title}
+      </h4>
 
-            {/* Document Info */}
-            <div className="col-12 col-sm-7">
-              <h6 className="mb-2 text-break">{doc.title}</h6>
-              <small className="text-muted d-block text-break">
-                Size: {doc.size} | Hits: {doc.hits}
-              </small>
-              <small className="text-muted d-block text-break">
-                Date added: {doc.dateAdded} | Modified: {doc.dateModified}
-              </small>
-            </div>
-
-            {/* Buttons */}
-            <div className="col-12 col-sm-3 text-sm-end text-center">
-              <a
-                href={doc.downloadUrl}
-                download
-                className="btn-accent btn-sm mb-2 d-flex align-items-center flex-row align-items-center justify-content-center w-100"
-              >
-                Download
-                <i className="bi bi-cloud-arrow-down-fill fs-5 ms-2"></i>
-              </a>
-              <a
-                href={doc.previewUrl}
-                className="btn-accent btn-sm mb-2 d-flex align-items-center flex-row align-items-center justify-content-center w-100"
-              >
-                Preview
-                <i className="bi bi-eye fs-5 ms-2"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      ))}
+      {/* Embed PDF or Document */}
+      <iframe
+        src={document.previewUrl}
+        width="100%"
+        height="800px"
+        style={{ border: "none" }}
+        title={document.title}
+      ></iframe>
     </div>
   );
 };
 
-export default DocumentList;
+export default DocumentViewer;
