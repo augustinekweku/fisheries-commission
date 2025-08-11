@@ -9,8 +9,8 @@ export const sampleDocs: Record<string, DocumentItem[]> = {
       dateAdded: "02-08-2019",
       dateModified: "29-11-2019",
       thumbnailUrl: "/assets/img/previews/wholesale-fishing.png",
-      downloadUrl: "/docs/ACT_625_Fisheries_ACT_2022.pdf",
-      previewUrl: "/docs/ACT_625_Fisheries_ACT_2022.pdf",
+      downloadUrl: "/docs/ACT_625_FISHERIES_ACT_2002.pdf",
+      previewUrl: "/docs/ACT_625_FISHERIES_ACT_2002.pdf",
     },
     {
       title: "Wholesale_Fish_Marketing_Act_1963_Act_N_156",

@@ -6,7 +6,9 @@ import { sampleDocs } from "@/data/sampleDocs";
 import { useState } from "react";
 
 export default function LawsAndRegulationsPage() {
-  const [selectedFolder, setSelectedFolder] = useState<string | null>(null);
+  const [selectedFolder, setSelectedFolder] = useState<string | null>(
+    "Legislation"
+  );
 
   return (
     <div className="container-fluid mb-5 pb-5">

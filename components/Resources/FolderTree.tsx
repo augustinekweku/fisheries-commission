@@ -11,23 +11,6 @@ const folderData: Folder[] = [
       { name: "Legal_Documents" },
     ],
   },
-  // {
-  //   name: "BENIN",
-  //   children: [
-  //     { name: "Arretes" },
-  //     { name: "Decrets" },
-  //     { name: "Documents Connexes" },
-  //     { name: "Lois" },
-  //     { name: "Politiques_Strategies" },
-  //   ],
-  // },
-  // {
-  //   name: "COTE D'IVOIRE",
-  // },
-
-  // { name: "LIBERIA" },
-  // { name: "NIGERIA" },
-  // { name: "TOGO" },
 ];
 
 interface FolderTreeProps {
@@ -48,6 +31,8 @@ const FolderTree: React.FC<FolderTreeProps> = ({
           folder={folder}
           onSelectFolder={onSelectFolder}
           selectedFolder={selectedFolder}
+          // Pass initial open state - GHANA should be open initially
+          initialOpen={folder.name === "GHANA"}
         />
       ))}
     </div>

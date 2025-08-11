@@ -7,14 +7,16 @@ interface FolderItemProps {
   folder: Folder;
   onSelectFolder?: (name: string) => void;
   selectedFolder?: string | null;
+  initialOpen?: boolean;
 }
 
 const FolderItem: React.FC<FolderItemProps> = ({
   folder,
   onSelectFolder,
   selectedFolder,
+  initialOpen = false,
 }) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(initialOpen);
 
   const handleClick = () => {
     if (!folder.children || folder.children.length === 0) {
