@@ -1,10 +1,12 @@
 "use client";
 
+import { useScrollBehavior } from "@/hooks/useScrollBehaviour";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
   const pathname = usePathname();
+  const isScrolled = useScrollBehavior();
 
   const isActive = (path: string) => pathname === path;
 
@@ -14,7 +16,13 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="header d-flex align-items-center sticky-top header-background dark-background"
+      className={`header d-flex align-items-center header-background dark-background ${
+        isScrolled ? "fixed-top shadow-sm scrolled" : "sticky-top"
+      }`}
+      style={{
+        zIndex: 1030,
+        transition: "all 0.3s ease",
+      }}
     >
       <div className="container-xl position-relative d-flex align-items-center justify-content-between">
         {/* Logo */}
@@ -54,7 +62,6 @@ const Header = () => {
                   MACPPA
                 </Link>
               </li>
-
               <li>
                 <Link href="">Blue Economy</Link>
               </li>

@@ -40,10 +40,10 @@ const BoardMembersPage = () => {
                       <strong>Designation:</strong> {member.designation}
                     </p>
                   )}
-                  <Link href="#" className="read-more mt-1">
+                  {/* <Link href="#" className="read-more mt-1">
                     Read More
                     <i className="bi bi-arrow-right ms-1"></i>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>

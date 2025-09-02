@@ -1,8 +1,23 @@
+"use client";
+
+import { useScrollBehavior } from "@/hooks/useScrollBehaviour";
 import Link from "next/link";
 
 const TopBar = () => {
+  const isScrolled = useScrollBehavior();
+
   return (
-    <div className="container-fluid bg-light pe-0 ps-0 ms-0 d-none d-lg-block sticky-top py-1">
+    <div
+      className={`container-fluid bg-light pe-0 ps-0 ms-0 d-none d-lg-block py-1 transition-opacity ${
+        isScrolled ? "opacity-0 invisible" : "opacity-100 visible"
+      }`}
+      style={{
+        position: "sticky",
+        top: 0,
+        zIndex: 1020,
+        transition: "opacity 0.3s ease, visibility 0.3s ease",
+      }}
+    >
       <div className="container">
         <div className="row gx-0">
           <div className="col-md-5 text-center text-lg-start mb-2 mb-lg-0">
@@ -37,7 +52,6 @@ const TopBar = () => {
               <Link href="" className="text-body py-2 pe-3 border-end">
                 <small>What We Do</small>
               </Link>
-
               <Link
                 href="/fiti-standard"
                 className="text-body py-2 px-3 border-end"

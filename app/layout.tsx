@@ -15,6 +15,7 @@ import TopBar from "@/components/TopBar";
 
 //Import fonts from Google
 import { Roboto, Raleway } from "next/font/google";
+import BotpressChat from "@/components/BotpressChat";
 
 export const metadata: Metadata = {
   title: "Fisheries Commission",
@@ -49,6 +50,7 @@ export default function RootLayout({
         <TopBar />
         <Header />
         {children}
+        <BotpressChat />
         <CustomScript />
         <Footer />
       </body>
