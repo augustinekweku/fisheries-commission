@@ -7,7 +7,6 @@ export interface Folder {
 export interface DocumentItem {
   title: string;
   size: string;
-  hits: number;
   dateAdded: string;
   dateModified: string;
   thumbnailUrl: string;

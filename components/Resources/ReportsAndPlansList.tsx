@@ -6,52 +6,103 @@ interface Props {
 
 const ReportsAndPlansList: React.FC<Props> = ({ documents }) => {
   return (
-    <div className="mt-5">
+    <div className="mt-4">
       {documents.map((doc, index) => (
-        <div key={index} className="border rounded p-3 mb-4">
-          <div className="row g-3">
-            {/* Thumbnail */}
-            <div className="col-12 col-sm-2 text-center text-sm-start">
-              <img
-                src={doc.thumbnailUrl}
-                alt="doc"
-                className="img-fluid"
-                style={{ maxWidth: 80 }}
-              />
-            </div>
+        <div
+          key={index}
+          className="card shadow-sm mb-4 hover-shadow transition-all"
+          style={{
+            borderRadius: "12px",
+            transition: "all 0.3s ease",
+            border: "1px solid #e9ecef",
+          }}
+        >
+          <div className="card-body p-4">
+            <div className="row g-4 align-items-center">
+              {/* Thumbnail */}
+              <div className="col-12 col-sm-2 text-center text-sm-start">
+                <img
+                  src={doc.thumbnailUrl}
+                  alt="doc"
+                  className="img-fluid"
+                  style={{ maxWidth: 80 }}
+                />
+              </div>
 
-            {/* Document Info */}
-            <div className="col-12 col-sm-7">
-              <h6 className="mb-2 text-break">{doc.title}</h6>
-              <small className="text-muted d-block text-break">
-                Size: {doc.size} | Hits: {doc.hits}
-              </small>
-              <small className="text-muted d-block text-break">
-                Date added: {doc.dateAdded} | Modified: {doc.dateModified}
-              </small>
-            </div>
+              {/* Document Info */}
+              <div className="col-12 col-sm-7">
+                <h6 className="mb-2 text-break">
+                  <strong>{doc.title}</strong>
+                </h6>
+                <small className="text-muted d-block text-break">
+                  Size: {doc.size}
+                </small>
+                <small className="text-muted d-block text-break">
+                  Date added: {doc.dateAdded} | Date Modified:{" "}
+                  {doc.dateModified}
+                </small>
+              </div>
 
-            {/* Buttons */}
-            <div className="col-12 col-sm-3 text-sm-end text-center">
-              <a
-                href={doc.downloadUrl}
-                download
-                className=" btn-accent mb-2 d-flex align-items-center flex-row align-items-center justify-content-center w-100"
-              >
-                Download
-                <i className="bi bi-cloud-arrow-down-fill fs-5 ms-2"></i>
-              </a>
-              <a
-                href={doc.previewUrl}
-                className="btn-accent btn-sm mb-2 d-flex align-items-center flex-row align-items-center justify-content-center w-100"
-              >
-                Preview
-                <i className="bi bi-eye fs-5 ms-2"></i>
-              </a>
+              {/* Action Buttons */}
+              <div className="col-12 col-md-3">
+                <div className="d-flex flex-column gap-2">
+                  <a
+                    href={`${doc.downloadUrl}?dl=${encodeURIComponent(doc.title || "document")}.pdf`}
+                    download
+                    className="btn btn-primary d-flex align-items-center justify-content-center gap-2 py-2 rounded-pill"
+                    style={{
+                      backgroundColor: "#e64e4e",
+                      borderColor: "#e64e4e",
+                      transition: "all 0.2s ease",
+                    }}
+                  >
+                    <i className="bi bi-download"></i>
+                    <span className="fw-medium">Download</span>
+                  </a>
+
+                  <a
+                    href={doc.previewUrl}
+                    className="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2 py-2 rounded-pill"
+                    style={{
+                      borderColor: "#e64e4e",
+                      color: "#e64e4e",
+                      transition: "all 0.2s ease",
+                    }}
+                    onMouseOver={(e) => {
+                      e.currentTarget.style.backgroundColor = "#e64e4e";
+                      e.currentTarget.style.color = "white";
+                      e.currentTarget.style.transform = "translateY(-1px)";
+                    }}
+                    onMouseOut={(e) => {
+                      e.currentTarget.style.backgroundColor = "transparent";
+                      e.currentTarget.style.color = "#e64e4e";
+                      e.currentTarget.style.transform = "translateY(0)";
+                    }}
+                  >
+                    <i className="bi bi-eye"></i>
+                    <span className="fw-medium">Preview</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       ))}
+
+      {documents.length === 0 && (
+        <div className="text-center py-5">
+          <div className="mb-3">
+            <i
+              className="bi bi-file-text text-muted"
+              style={{ fontSize: "3rem" }}
+            ></i>
+          </div>
+          <h5 className="text-muted">No documents available</h5>
+          <p className="text-muted mb-0">
+            Documents will appear here when they are added.
+          </p>
+        </div>
+      )}
     </div>
   );
 };

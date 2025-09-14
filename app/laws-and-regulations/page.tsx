@@ -1,37 +1,71 @@
 "use client";
 
-import DocumentList from "@/components/Resources/DocumentList";
-import FolderTree from "@/components/Resources/FolderTree";
-import { sampleDocs } from "@/data/sampleDocs";
-import { useState } from "react";
+import { Suspense, useEffect } from "react";
+import useSWR from "swr";
+import { client, fetcher } from "@/sanity/client";
+import { allResourcesPaginatedQuery } from "@/sanity/groq";
+import Loader from "@/components/Loader";
+import LawsAndRegulationsList from "@/components/Resources/LawsAndRegulationsList";
+import { DocumentItem } from "@/types/Resources";
 
-export default function LawsAndRegulationsPage() {
-  const [selectedFolder, setSelectedFolder] = useState<string | null>(
-    "Legislation"
-  );
+const LawsAndRegulationsPage = () => {
+  const CATEGORY = "laws-and-regulations";
+
+  // Fetch laws & regulations
+  const fetchResources = async () => {
+    return await fetcher([
+      allResourcesPaginatedQuery,
+      { pageIndex: 0, limit: 1000, category: CATEGORY },
+    ]);
+  };
+
+  const { data, isLoading, mutate } = useSWR<{
+    resources: any[];
+    totalCount: number;
+  }>(["resources", CATEGORY], fetchResources, {
+    revalidateOnFocus: false,
+    fallbackData: { resources: [], totalCount: 0 },
+  });
+
+  const documents: DocumentItem[] =
+    data?.resources.map((resource) => {
+      return {
+        title: resource.title,
+        size: resource.size || "Unknown",
+        dateAdded: new Date(resource.date).toLocaleDateString(),
+        dateModified: resource.modifiedAt
+          ? new Date(resource.modifiedAt).toLocaleDateString()
+          : "—",
+        thumbnailUrl: resource.previewImageUrl,
+        downloadUrl: resource.pdfUrl || "",
+        previewUrl: resource.pdfUrl,
+      };
+    }) || [];
+
+  useEffect(() => {
+    const subscription = client
+      .listen(`*[_type == "resource" && category == "${CATEGORY}"]`)
+      .subscribe(() => mutate());
+
+    return () => subscription.unsubscribe();
+  }, [mutate]);
 
   return (
-    <div className="container-fluid mb-5 pb-5">
-      <div className="container">
-        <div className="row mt-5">
-          <div className="col-md-4 border-end mb-4 mb-md-0">
-            <FolderTree
-              onSelectFolder={setSelectedFolder}
-              selectedFolder={selectedFolder}
-            />
-          </div>
-          <div className="col-md-8">
-            {selectedFolder && sampleDocs[selectedFolder] ? (
-              <>
-                <h5 className="mb-3">{selectedFolder}</h5>
-                <DocumentList document={sampleDocs[selectedFolder][0]} />
-              </>
-            ) : (
-              <p className="text-muted">Select a folder to view documents.</p>
-            )}
-          </div>
-        </div>
+    <div className="container-fluid pt-5">
+      <div className="container section-title" data-aos="fade-up">
+        <h2>Laws & Regulations</h2>
+        <p className="mt-1">Acts, laws and regulations governing the sector.</p>
+
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <Suspense fallback={<Loader />}>
+            <LawsAndRegulationsList documents={documents} />
+          </Suspense>
+        )}
       </div>
     </div>
   );
-}
+};
+
+export default LawsAndRegulationsPage;
