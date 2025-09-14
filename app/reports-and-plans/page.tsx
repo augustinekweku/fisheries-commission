@@ -1,21 +1,76 @@
+"use client";
+
+import { Suspense, useEffect } from "react";
+import useSWR from "swr";
+import { client, fetcher } from "@/sanity/client";
+import { allResourcesPaginatedQuery } from "@/sanity/groq";
+import Loader from "@/components/Loader";
+import { DocumentItem } from "@/types/Resources";
 import ReportsAndPlansList from "@/components/Resources/ReportsAndPlansList";
-import { reportsAndPlansDocs } from "@/data/reportsAndPlansDocs";
 
-const ReportsAndPlansPage = () => {
+const LawsAndRegulationsPage = () => {
+  const CATEGORY = "reports-and-plans";
+
+  // Fetch laws & regulations
+  const fetchResources = async () => {
+    return await fetcher([
+      allResourcesPaginatedQuery,
+      { pageIndex: 0, limit: 1000, category: CATEGORY },
+    ]);
+  };
+
+  const { data, isLoading, mutate } = useSWR<{
+    resources: any[];
+    totalCount: number;
+  }>(["resources", CATEGORY], fetchResources, {
+    revalidateOnFocus: false,
+    fallbackData: { resources: [], totalCount: 0 },
+  });
+
+  const documents: DocumentItem[] =
+    data?.resources.map((resource) => {
+      // Add this debugging
+      console.log("Resource:", resource.title, "PDF URL:", resource.pdfUrl);
+
+      return {
+        title: resource.title,
+        size: resource.size || "Unknown",
+        dateAdded: new Date(resource.date).toLocaleDateString(),
+        dateModified: resource.modifiedAt
+          ? new Date(resource.modifiedAt).toLocaleDateString()
+          : "—",
+        thumbnailUrl: resource.previewImageUrl,
+        downloadUrl: resource.pdfUrl
+          ? `${resource.pdfUrl}?dl=${encodeURIComponent(resource.title)}.pdf`
+          : "", // Handle null case
+        previewUrl: resource.pdfUrl || "",
+      };
+    }) || [];
+
+  useEffect(() => {
+    const subscription = client
+      .listen(`*[_type == "resource" && category == "${CATEGORY}"]`)
+      .subscribe(() => mutate());
+
+    return () => subscription.unsubscribe();
+  }, [mutate]);
+
   return (
-    <div>
-      <div className="container-fluid pt-5">
-        <div className="container section-title" data-aos="fade-up">
-          <h2>Reports & Plans</h2>
-          <p className="mt-1">Latest updates and strategies</p>
+    <div className="container-fluid pt-5">
+      <div className="container section-title" data-aos="fade-up">
+        <h2>Reports & Plans</h2>
+        <p className="mt-1">Latest updates and strategies</p>
 
-          <ReportsAndPlansList
-            documents={Object.values(reportsAndPlansDocs).flat()}
-          />
-        </div>
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <Suspense fallback={<Loader />}>
+            <ReportsAndPlansList documents={documents} />
+          </Suspense>
+        )}
       </div>
     </div>
   );
 };
 
-export default ReportsAndPlansPage;
+export default LawsAndRegulationsPage;

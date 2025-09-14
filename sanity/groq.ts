@@ -83,3 +83,84 @@ export const searchquery = groq`
     publishedAt,
 }
 `;
+
+// Single Resource by ID
+export const singleResourceQuery = groq`
+*[_type == "resource" && _id == $id][0] {
+  _id,
+  title,
+  category,
+  date,
+  modifiedAt,
+  size,
+  "pdfUrl": pdf.asset->url,
+  "previewImageUrl": previewImage.asset->url
+}
+`;
+
+// Get All Resources (Paginated)
+export const allResourcesPaginatedQuery = groq`
+{
+  "resources": *[
+    _type == "resource" &&
+    category == $category
+  ]
+  | order(date desc)
+  [$pageIndex...($pageIndex + $limit)]{
+    title,
+    date,
+    modifiedAt,
+    size,
+    category,
+    "pdfUrl": pdf.asset->url,
+    "previewImageUrl": previewImage.asset->url
+  },
+
+  "totalCount": count(*[
+    _type == "resource" &&
+    category == $category
+  ])
+}
+`;
+
+// Get Resources by Category (Paginated)
+export const resourcesByCategoryQuery = groq`
+{
+  "resources": *[
+    _type == "resource" &&
+    category == $category
+  ]
+  | order(date desc)
+  [$pageIndex...($pageIndex + $limit)]{
+    _id,
+    title,
+    category,
+    date,
+    modifiedAt,
+    size,
+    "pdfUrl": pdf.asset->url,
+    "previewImageUrl": previewImage.asset->url
+  },
+
+  "totalCount": count(*[
+    _type == "resource" &&
+    category == $category
+  ])
+}
+`;
+
+// Search Resources by Title (with Pagination)
+export const searchResourcesQuery = groq`
+*[_type == "resource" && title match $q] 
+| order(date desc) 
+[$pageIndex...($pageIndex + $limit)] {
+  _id,
+  title,
+  category,
+  date,
+  modifiedAt,
+  size,
+  "pdfUrl": pdf.asset->url,
+  "previewImageUrl": previewImage.asset->url
+}
+`;
