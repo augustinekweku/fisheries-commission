@@ -46,9 +46,26 @@ const LawsAndRegulationsList: React.FC<Props> = ({ documents }) => {
               {/* Action Buttons */}
               <div className="col-12 col-md-3">
                 <div className="d-flex flex-column gap-2">
-                  <a
-                    href={doc.downloadUrl}
-                    download
+                  <button
+                    onClick={async () => {
+                      try {
+                        const response = await fetch(doc.downloadUrl);
+                        const blob = await response.blob();
+                        const url = window.URL.createObjectURL(blob);
+                        const a = document.createElement("a");
+                        a.style.display = "none";
+                        a.href = url;
+                        a.download = doc.title + ".pdf";
+                        document.body.appendChild(a);
+                        a.click();
+                        window.URL.revokeObjectURL(url);
+                        document.body.removeChild(a);
+                      } catch (error) {
+                        console.error("Download failed:", error);
+                        // Fallback to opening in new tab
+                        window.open(doc.downloadUrl, "_blank");
+                      }
+                    }}
                     className="btn btn-primary d-flex align-items-center justify-content-center gap-2 py-2 rounded-pill"
                     style={{
                       backgroundColor: "#e64e4e",
@@ -58,7 +75,7 @@ const LawsAndRegulationsList: React.FC<Props> = ({ documents }) => {
                   >
                     <i className="bi bi-download"></i>
                     <span className="fw-medium">Download</span>
-                  </a>
+                  </button>
 
                   <a
                     href={doc.previewUrl}

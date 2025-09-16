@@ -3,7 +3,7 @@ import "./globals.scss";
 import "../public/assets/css/main.css";
 import "../public/assets/vendor/bootstrap/css/bootstrap.css";
 import "../public/assets/vendor/bootstrap-icons/bootstrap-icons.css";
-import "../public/assets/vendor/aos/aos.css";
+// import "../public/assets/vendor/aos/aos.css";
 import "../public/assets/vendor/animate.css/animate.min.css";
 import "../public/assets/vendor/glightbox/css/glightbox.min.css";
 import "../public/assets/vendor/swiper/swiper-bundle.min.css";

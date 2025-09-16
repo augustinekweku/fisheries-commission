@@ -47,7 +47,7 @@ const TopBar = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-7 text-center text-lg-end pe-3">
+          <div className="col-md-7 text-center text-lg-end">
             <div className="d-inline-flex align-items-center">
               <Link href="" className="text-body py-2 pe-3 border-end">
                 <small>What We Do</small>
