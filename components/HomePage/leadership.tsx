@@ -1,19 +1,24 @@
-import { teamMembers } from "@/data/data";
+"use client";
+
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const Leadership = () => {
+  const t = useTranslations("LeadershipSection");
+  const members = t.raw("members"); // <- retrieves array from JSON
+
   return (
     <section id="team" className="team section px-2">
       <div className="container section-title" data-aos="fade-up">
-        <h2>Leadership</h2>
-        <p>Meet Our Dedicated Leadership Team</p>
+        <h2>{t("title")}</h2>
+        <p>{t("subtitle")}</p>
       </div>
 
       <div className="container">
         <div className="row gy-4">
-          {teamMembers.map((member, index) => (
+          {members.map((member: any, index: number) => (
             <div
-              key={member.id}
+              key={index}
               className="col-lg-4 col-md-6 d-flex align-items-stretch"
               data-aos="fade-up"
               data-aos-delay={100 * (index + 1)}
@@ -36,13 +41,14 @@ const Leadership = () => {
             </div>
           ))}
         </div>
+
         <Link
           href="/about-us/leadership"
           data-aos="fade-up"
           className="read-more px-3 px-md-4 mt-4 d-flex align-items-center justify-content-center"
           style={{ width: "fit-content" }}
         >
-          <span>Learn More About The Leadership</span>
+          <span>{t("cta")}</span>
           <i className="bi bi-arrow-right ms-2"></i>
         </Link>
       </div>

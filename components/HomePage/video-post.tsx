@@ -1,12 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const VideoPost = () => {
+  const t = useTranslations("VideoPost");
+
   const videoData = {
-    title:
-      "2025 Closed Season: Industrial trawlers banned from July to August 2025",
-    description:
-      "The Ministry of Fisheries and Aquaculture Development has announced the dates for the 2025 Closed Fishing Season, a key government initiative aimed at restoring Ghana's dwindling marine fish stock. In a press release dated June 23, 2025, the Ministry revealed that industrial trawlers will be banned from fishing between July 1 and August 31, 2025 while semi-industrial inshore vessels will observe a one-month closure from July 1 to July 31.",
+    title: t("title"),
+    description: t("description"),
     videoUrl: "https://youtube.com/embed/O5WYEAJgig0",
   };
 
@@ -22,7 +25,7 @@ const VideoPost = () => {
               href="/press-and-release/2025-closed-season-industrial-trawlers-banned-from-july-to-august-2025"
               className="read-more mt-3 mb-4"
             >
-              <span>Read More</span>
+              <span>{t("readMore")}</span>
               <i className="bi bi-arrow-right ms-2"></i>
             </Link>
           </div>

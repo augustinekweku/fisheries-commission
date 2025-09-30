@@ -1,35 +1,34 @@
 "use client";
 
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const KeyPrinciples = () => {
+  const t = useTranslations("principles");
+
   const principles = [
     {
       id: 1,
-      title: "Multi-Stakeholder participation",
-      description:
-        "The FiTI is implemented in countries through National Multi-Stakeholder Groups, consisting of representatives from government, business and organised civil society. These groups work collectively to assess the information in the public domain, make recommendations on how to improve information published by national authorities and jointly approve the publication of FiTI Reports.",
+      title: t("items.multiStakeholder.title"),
+      description: t("items.multiStakeholder.description"),
       icon: "assets/img/fiti/icon-1.png",
     },
     {
       id: 2,
-      title: "Progressive improvement",
-      description:
-        "Countries are not expected to have complete data for every transparency requirement from the beginning. Instead, public authorities must disclose the information they have, and where important gaps exist, improvements over time must be demonstrated. As such, engaging with the FiTI is not intended to be a burdensome and costly research activity.",
+      title: t("items.progressive.title"),
+      description: t("items.progressive.description"),
       icon: "assets/img/fiti/icon-2.png",
     },
     {
       id: 3,
-      title: "Transparency in the public domain",
-      description:
-        "The FiTI emphasises the need for national authorities to develop and strengthen their own systems for collecting and publishing information online in a complete and accessible manner. The FiTI Report is therefore not intended to replace or duplicate existing government information systems.",
+      title: t("items.transparency.title"),
+      description: t("items.transparency.description"),
       icon: "assets/img/fiti/icon-3.png",
     },
     {
       id: 4,
-      title: "Public debate",
-      description:
-        "The FiTI offers an important means to raise levels of openness and public access to information which can support countries in maintaining or achieving robust democratic governance and accountability in their fisheries sector.",
+      title: t("items.publicDebate.title"),
+      description: t("items.publicDebate.description"),
       icon: "assets/img/fiti/icon-4.png",
     },
   ];
@@ -41,10 +40,7 @@ const KeyPrinciples = () => {
     >
       <div className="container">
         <div className="text-center mb-5">
-          <h2 className="fw-bold mb-5 px-lg-5">
-            Key principles for increasing transparency and participation under
-            the FiTI
-          </h2>
+          <h2 className="fw-bold mb-5 px-lg-5">{t("title")}</h2>
         </div>
 
         <div className="row">

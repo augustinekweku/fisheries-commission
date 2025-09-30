@@ -4,20 +4,18 @@ import { useScrollBehavior } from "@/hooks/useScrollBehaviour";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import SearchModal from "./Search/SearchModal";
 
 const Header = () => {
   const pathname = usePathname();
   const isScrolled = useScrollBehavior();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const t = useTranslations("header");
 
   const isActive = (path: string) => pathname === path;
-
   const isParentActive = (paths: string[]) =>
     paths.some((path) => pathname.startsWith(path));
-
-  const openSearch = () => setIsSearchOpen(true);
-  const closeSearch = () => setIsSearchOpen(false);
 
   return (
     <>
@@ -26,10 +24,7 @@ const Header = () => {
         className={`header d-flex align-items-center header-background dark-background ${
           isScrolled ? "fixed-top shadow-sm scrolled" : "sticky-top"
         }`}
-        style={{
-          zIndex: 1030,
-          transition: "all 0.3s ease",
-        }}
+        style={{ zIndex: 1030, transition: "all 0.3s ease" }}
       >
         <div className="container-xl position-relative d-flex align-items-center justify-content-between">
           {/* Logo */}
@@ -47,109 +42,86 @@ const Header = () => {
               <ul>
                 <li>
                   <Link href="/" className={isActive("/") ? "active" : ""}>
-                    Home
+                    {t("home")}
                   </Link>
                 </li>
 
                 {/* Mobile Only Links */}
                 <div className="d-block d-lg-none">
                   <li>
-                    <Link href="">What We Do</Link>
+                    <Link href="">{t("whatWeDo")}</Link>
                   </li>
                   <li>
-                    <Link href="/fiti-standard" target="_blank">
-                      FiTi
+                    <Link href="/fiti-standard">{t("fiti")}</Link>
+                  </li>
+                  <li>
+                    <Link href="https://www.macppa.com/en" target="_blank">
+                      {t("macppa")}
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      href="https://www.macppa.com/en"
-                      target="_blank"
-                      className="text-body py-2 px-3 border-end"
-                    >
-                      MACPPA
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="">Blue Economy</Link>
+                    <Link href="">{t("blueEconomy")}</Link>
                   </li>
                 </div>
 
                 {/* About Us Dropdown */}
                 <li
-                  className={`dropdown ${
-                    isParentActive([
-                      "/about-us",
-                      "/about-us/board-members",
-                      "/about-us/leadership",
-                      "/about-us/divisions-and-units",
-                    ])
-                      ? "active"
-                      : ""
-                  }`}
+                  className={`dropdown ${isParentActive(["/about-us"]) ? "active" : ""}`}
                 >
                   <Link href="/about-us">
-                    <span>About Us</span>{" "}
+                    <span>{t("aboutUs")}</span>{" "}
                     <i className="bi bi-chevron-down toggle-dropdown"></i>
                   </Link>
                   <ul>
                     <li>
-                      <Link href="#">Goals and Objectives</Link>
+                      <Link href="#">{t("goalsObjectives")}</Link>
                     </li>
                     <li>
-                      <Link href="/about-us/board-members">Board Members</Link>
-                    </li>
-                    <li>
-                      <Link href="/about-us/leadership">Leadership</Link>
-                    </li>
-                    <li>
-                      <Link href="/about-us/divisions-and-units">
-                        Divisions and Units
+                      <Link href="/about-us/board-members">
+                        {t("boardMembers")}
                       </Link>
                     </li>
                     <li>
-                      <Link href="#">Regional Offices</Link>
+                      <Link href="/about-us/leadership">{t("leadership")}</Link>
+                    </li>
+                    <li>
+                      <Link href="/about-us/divisions-and-units">
+                        {t("divisionsUnits")}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="#">{t("regionalOffices")}</Link>
                     </li>
                   </ul>
                 </li>
 
                 {/* Collaborators Dropdown */}
                 <li
-                  className={`dropdown ${
-                    isParentActive([
-                      "/collaborators",
-                      "/collaborators/formal-institutions",
-                      "/collaborators/informal-institutions",
-                      "/collaborators/development-partners",
-                      "/collaborators/fisheries-association-civil-society-organization",
-                    ])
-                      ? "active"
-                      : ""
-                  }`}
+                  className={`dropdown ${isParentActive(["/collaborators"]) ? "active" : ""}`}
                 >
                   <Link href="/collaborators">
-                    <span>Collaborators</span>{" "}
+                    <span>{t("collaborators")}</span>{" "}
                     <i className="bi bi-chevron-down toggle-dropdown"></i>
                   </Link>
                   <ul>
                     <li>
                       <Link href="/collaborators/formal-institutions">
-                        Formal Institutions
+                        {t("formalInstitutions")}
                       </Link>
                     </li>
                     <li>
                       <Link href="/collaborators/informal-institutions">
-                        Informal Institutions
+                        {t("informalInstitutions")}
                       </Link>
                     </li>
                     <li>
                       <Link href="/collaborators/development-partners">
-                        Development Partners
+                        {t("developmentPartners")}
                       </Link>
                     </li>
                     <li>
                       <Link href="/collaborators/fisheries-association-civil-society-organization">
-                        Fisheries Associations & Civil Society Organizations
+                        {t("fisheriesAssociations")}
                       </Link>
                     </li>
                   </ul>
@@ -157,123 +129,90 @@ const Header = () => {
 
                 {/* Resources Dropdown */}
                 <li
-                  className={`dropdown ${
-                    isParentActive([
-                      "/laws-and-regulations",
-                      "/reports-and-plans",
-                    ])
-                      ? "active"
-                      : ""
-                  }`}
+                  className={`dropdown ${isParentActive(["/laws-and-regulations", "/reports-and-plans"]) ? "active" : ""}`}
                 >
                   <Link href="#">
-                    <span>Resources</span>{" "}
+                    <span>{t("resources")}</span>{" "}
                     <i className="bi bi-chevron-down toggle-dropdown"></i>
                   </Link>
                   <ul>
                     <li>
                       <Link href="/laws-and-regulations">
-                        Laws and Regulations
+                        {t("lawsRegulations")}
                       </Link>
                     </li>
                     <li>
-                      <Link href="/reports-and-plans">Reports and Plans</Link>
+                      <Link href="/reports-and-plans">{t("reportsPlans")}</Link>
                     </li>
                   </ul>
                 </li>
 
                 {/* News & Events Dropdown */}
                 <li
-                  className={`dropdown ${
-                    isParentActive([
-                      "/press-and-release",
-                      "/articles",
-                      "/gallery",
-                    ])
-                      ? "active"
-                      : ""
-                  }`}
+                  className={`dropdown ${isParentActive(["/press-and-release", "/articles", "/gallery"]) ? "active" : ""}`}
                 >
                   <Link href="#">
-                    <span>News and Events</span>{" "}
+                    <span>{t("newsEvents")}</span>{" "}
                     <i className="bi bi-chevron-down toggle-dropdown"></i>
                   </Link>
                   <ul>
                     <li>
-                      <Link href="/press-and-release">Press and Release</Link>
+                      <Link href="/press-and-release">{t("pressRelease")}</Link>
                     </li>
                     <li>
-                      <Link href="/articles">Articles</Link>
+                      <Link href="/articles">{t("articles")}</Link>
                     </li>
                     <li>
-                      <Link href="/gallery">Gallery</Link>
+                      <Link href="/gallery">{t("gallery")}</Link>
                     </li>
                   </ul>
                 </li>
 
                 {/* Projects Dropdown */}
                 <li
-                  className={`dropdown ${
-                    isParentActive(["/projects/fish-for-development"])
-                      ? "active"
-                      : ""
-                  }`}
+                  className={`dropdown ${isParentActive(["/projects/fish-for-development"]) ? "active" : ""}`}
                 >
                   <Link href="#">
-                    <span>Projects</span>{" "}
+                    <span>{t("projects")}</span>{" "}
                     <i className="bi bi-chevron-down toggle-dropdown"></i>
                   </Link>
                   <ul>
                     <li>
                       <Link href="/projects/fish-for-development">
-                        Fish For Development (FFD)
+                        {t("ffd")}
                       </Link>
                     </li>
                     <li>
-                      <Link href="#">
-                        Sustainable Fisheries Management Programme (SFMP)
-                      </Link>
+                      <Link href="#">{t("sfmp")}</Link>
                     </li>
                     <li>
-                      <Link href="#">
-                        West African Regional Fisheries Programme (WARFP)
-                      </Link>
+                      <Link href="#">{t("warfp")}</Link>
                     </li>
                   </ul>
                 </li>
 
-                {/* Contact (Mobile only) */}
+                {/* Contact (Mobile Only) */}
                 <li>
                   <Link
-                    className={`d-block d-lg-none ${
-                      isActive("/contact") ? "active" : ""
-                    }`}
                     href="/contact"
+                    className={`d-block d-lg-none ${isActive("/contact") ? "active" : ""}`}
                   >
-                    Contact Us
+                    {t("contactUs")}
                   </Link>
                 </li>
               </ul>
               <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            {/* Search Icon */}
+            {/* Search Button */}
             <button
-              onClick={openSearch}
+              onClick={() => setIsSearchOpen(true)}
               className="search-btn btn p-0 border-0 bg-transparent"
               aria-label="Open search"
               style={{
                 color: "white",
                 fontSize: "1.2rem",
                 transition: "all 0.3s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.color = "#e64e4e";
-                e.currentTarget.style.transform = "scale(1.1)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = "white";
-                e.currentTarget.style.transform = "scale(1)";
               }}
             >
               <i className="bi bi-search"></i>
@@ -283,7 +222,10 @@ const Header = () => {
       </header>
 
       {/* Search Modal Component */}
-      <SearchModal isOpen={isSearchOpen} onClose={closeSearch} />
+      <SearchModal
+        isOpen={isSearchOpen}
+        onClose={() => setIsSearchOpen(false)}
+      />
     </>
   );
 };

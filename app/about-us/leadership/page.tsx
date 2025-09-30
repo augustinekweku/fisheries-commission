@@ -1,12 +1,17 @@
+"use client";
+
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const LeadershipPage = () => {
+  const t = useTranslations("leadership_page");
+
   return (
     <div className="container-fluid">
       <div className="about section">
         <div className="container section-title">
-          <h2>Leadership</h2>
-          <p>The Fisheries Commission</p>
+          <h2>{t("title")}</h2>
+          <p>{t("subtitle")}</p>
         </div>
         <div className="container">
           <div className="row gy-4 gx-5">
@@ -14,7 +19,7 @@ const LeadershipPage = () => {
               <img
                 src="/assets/img/executive-director.jpg"
                 className="img-fluid"
-                alt="Prof. Benjamin B. Campion"
+                alt={t("campion.name")}
                 style={{
                   borderRadius: "8px",
                 }}
@@ -23,43 +28,17 @@ const LeadershipPage = () => {
 
             <div className="col-lg-8 mt-lg-4">
               <h3 className="h5 mb-3 text-uppercase">
-                <strong className="fw-bold">Prof. Benjamin B. Campion</strong>,
-                Executive Director, Fisheries Commission.
+                <strong className="fw-bold">{t("campion.name")}</strong>,{" "}
+                {t("campion.position")}
               </h3>
 
-              <p>
-                Until his appointment, Benjamin Betey Campion (PhD.) was an
-                associate professor at the Department of Fisheries and Watershed
-                Management of the Kwame Nkrumah University of Science and
-                Technology, Kumasi (KNUST).
-              </p>
+              <p>{t("campion.paragraph1")}</p>
 
-              <p>
-                Prof. Campion has a very diverse academic upbringing, which has
-                imbued him with varied and practical knowledge in his area of
-                expertise: BSc. Botany (University of Cape Coast), MSc. Aquatic
-                Tropical Ecology (University of Bremen), MSc. Sustainable
-                Resource Management (Technical University of Munich) and a PhD.
-                in Natural Sciences (University of Bremen). He is also a
-                certified High Conservation Values (HCV) assessor.
-              </p>
+              <p>{t("campion.paragraph2")}</p>
 
-              <p>
-                Prof. Campion has for over 20 years been teaching and conducting
-                research in the University. His areas of academic interest are
-                fisheries management, oceanography and coastal issues, aquatic
-                resource ecology, wetlands, resource and conflict management,
-                climate geography, adaptation and resilience.
-              </p>
+              <p>{t("campion.paragraph3")}</p>
 
-              <p>
-                Prof. Campion brings to the Commission several years of research
-                and working experience with fisheries stakeholders, and
-                networks, both local and international. He is a member of the
-                International Collective in Support of Fishworkers (ICSF) and
-                the Association for the Sciences of Limnology and Oceanography
-                (ASLO).
-              </p>
+              <p>{t("campion.paragraph4")}</p>
             </div>
           </div>
         </div>
@@ -70,7 +49,7 @@ const LeadershipPage = () => {
               <img
                 src="/assets/img/team/asiedu.jpg"
                 className="img-fluid"
-                alt="Prof. Benjamin B. Campion"
+                alt={t("asiedu.name")}
                 style={{
                   borderRadius: "8px",
                 }}
@@ -79,38 +58,13 @@ const LeadershipPage = () => {
 
             <div className="col-lg-8 mt-lg-4">
               <h3 className="h5 mb-3 text-uppercase">
-                <strong className="fw-bold">Prof. Berchie Asiedu</strong>,
-                Deputy Executive Director, Technical Fisheries Commission
+                <strong className="fw-bold">{t("asiedu.name")}</strong>,{" "}
+                {t("asiedu.position")}
               </h3>
-              <p>
-                Prof. Berchie Asiedu is a renowned fisheries and aquaculture
-                expert with extensive experience in small-scale fisheries,
-                aquaculture development, blue economy, ocean governance, value
-                chain analysis, post-harvest operations, and climate change
-                adaptation.
-              </p>
-              <p>
-                Before he was appointed Deputy Executive Director (Technical) of
-                the Fisheries Commission of Ghana, he served as the Dean of the
-                School of Natural Resources; Coordinator of the Ghana Inland and
-                Blue Economy Centre (2023-2025); Head Centre for Climate Change
-                and Gender Studies; (2021-2023); Head, Department of Fisheries
-                and Water Resources (2017-2021) at the University of Energy and
-                Natural Resources.
-              </p>
-              <p>
-                With international experience across several countries, he has
-                received numerous awards from global institutions, including the
-                Department for International Development (UK), Department of
-                Trade and Foreign Affairs (Australia), Canadian Commonwealth
-                Exchange Program-Africa (Canada) and the World Academy of
-                Sciences. His widely cited research focuses on sustainable
-                fisheries management, ocean governance, and food security.
-              </p>
-              <p>
-                Prof. Asiedu continues to contribute to policy and scientific
-                advancements in Ghana's fisheries and aquaculture sector.
-              </p>
+              <p>{t("asiedu.paragraph1")}</p>
+              <p>{t("asiedu.paragraph2")}</p>
+              <p>{t("asiedu.paragraph3")}</p>
+              <p>{t("asiedu.paragraph4")}</p>
             </div>
           </div>
         </div>
@@ -121,7 +75,7 @@ const LeadershipPage = () => {
               <img
                 src="/assets/img/team/cobinah.jpg"
                 className="img-fluid"
-                alt="Prof. Benjamin B. Campion"
+                alt={t("cobinah.name")}
                 style={{
                   borderRadius: "8px",
                 }}
@@ -130,38 +84,14 @@ const LeadershipPage = () => {
 
             <div className="col-lg-8 mt-lg-4">
               <h3 className="h5 mb-3 text-uppercase">
-                <strong className="fw-bold">HON. DR ERIC COBINNAH</strong>,
-                DEPUTY EXECUTIVE DIRECTOR, GENERAL SERVICES FISHERIES COMMISSION
+                <strong className="fw-bold">{t("cobinah.name")}</strong>,{" "}
+                {t("cobinah.position")}
               </h3>
-              <p>
-                Hon. Dr. Eric Cobbinah hails from Shama in the Western Region.
-                He obtained his first degree in Geography and Sociology from the
-                University of Cape Coast and also earned a Bachelor of Laws from
-                the same university.
-              </p>
-              <p>
-                He holds a Master of Arts degree in Development Management from
-                the School of Development Studies, University of Cape Coast.
-                Additionally, he earned a Ph.D. in Management Science
-                Engineering from the School of Management at Jiangsu University
-                in China
-              </p>
-              <p>
-                Dr. Cobbinah is currently pursuing a Master of Laws in Corporate
-                and Commercial Law at the University of Ghana School of Law and
-                is also a student at the Ghana School of Law, undertaking the
-                Professional Law Course.
-              </p>
-              <p>
-                His areas of expertise include Development Management,
-                Organisational Behaviour, Local Governance, Petroleum Law,
-                Insurance Law, Banking Law, and Corporate and Commercial Law.
-              </p>
-              <p>
-                Hon. Dr. Eric Cobbinah served as the District Chief Executive of
-                the Shama District Assembly during the first government of
-                President John Dramani Mahama.
-              </p>
+              <p>{t("cobinah.paragraph1")}</p>
+              <p>{t("cobinah.paragraph2")}</p>
+              <p>{t("cobinah.paragraph3")}</p>
+              <p>{t("cobinah.paragraph4")}</p>
+              <p>{t("cobinah.paragraph5")}</p>
             </div>
           </div>
         </div>

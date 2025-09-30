@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -9,6 +10,7 @@ interface SearchModalProps {
 }
 
 const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
+  const t = useTranslations("search_modal");
   const [searchQuery, setSearchQuery] = useState("");
   const router = useRouter();
 
@@ -113,7 +115,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
               borderRadius: "50%",
               transition: "all 0.2s ease",
             }}
-            aria-label="Close search"
+            aria-label={t("close_label")}
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = "#f8f9fa";
               e.currentTarget.style.color = "#000";
@@ -129,14 +131,14 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
           {/* Search Form */}
           <div className="search-form">
             <h3 className="mb-4 text-center" style={{ color: "#333" }}>
-              Let's Help You Find It!
+              {t("title")}
             </h3>
             <form onSubmit={handleSearchSubmit}>
               <div className="input-group mb-3" style={{ height: "60px" }}>
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="What are you looking for?"
+                  placeholder={t("placeholder")}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   autoFocus
@@ -182,28 +184,31 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
                   }}
                 >
                   <i className="bi bi-search me-2"></i>
-                  Search
+                  {t("search_button")}
                 </button>
               </div>
             </form>
 
             {/* Popular Searches */}
             <div className="popular-searches">
-              <p className="mb-2 text-muted small">Popular searches:</p>
+              <p className="mb-2 text-muted small">{t("popular_searches")}</p>
               <div className="d-flex flex-wrap gap-2">
                 {[
-                  "Fisheries Act",
-                  "Closed Season",
-                  "Fish for Development Program",
-                ].map((term) => (
+                  { key: "popular_search_1", searchTerm: "Fisheries Act" },
+                  { key: "popular_search_2", searchTerm: "Closed Season" },
+                  {
+                    key: "popular_search_3",
+                    searchTerm: "Fish for Development Program",
+                  },
+                ].map((item) => (
                   <button
-                    key={term}
+                    key={item.key}
                     type="button"
                     className="btn btn-outline-secondary btn-sm"
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
-                      handleQuickSearch(term);
+                      handleQuickSearch(item.searchTerm);
                     }}
                     style={{
                       borderRadius: "20px",
@@ -223,7 +228,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
                       e.currentTarget.style.color = "#6c757d";
                     }}
                   >
-                    {term}
+                    {t(item.key)}
                   </button>
                 ))}
               </div>
@@ -233,13 +238,11 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
             <div className="search-tips mt-4">
               <p className="text-muted small mb-1">
                 <i className="bi bi-lightbulb me-1"></i>
-                <strong>Search tips:</strong>
+                <strong>{t("search_tips_title")}</strong>
               </p>
               <ul className="text-muted small ps-3 mb-0">
-                <li>Use specific keywords for better results</li>
-                <li>
-                  Try different terms if you don't find what you're looking for
-                </li>
+                <li>{t("tip_1")}</li>
+                <li>{t("tip_2")}</li>
               </ul>
             </div>
           </div>

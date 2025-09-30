@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import { useTranslations } from "next-intl";
 
 const CallToAction = () => {
+  const t = useTranslations("CallToAction");
+
   return (
     <section
       id="call-to-action"
@@ -10,14 +14,12 @@ const CallToAction = () => {
       <div className="container">
         <div className="row" data-aos="zoom-in" data-aos-delay="100">
           <div className="col-xl-9 text-center text-xl-start">
-            <h3>LEARN MORE ABOUT US</h3>
-            <p className="text-capitalize">
-              WANT TO KNOW MORE ABOUT THE COMMISSION? CURIOUS WHAT ELSE WE DO?
-            </p>
+            <h3>{t("heading")}</h3>
+            <p className="text-capitalize">{t("text")}</p>
           </div>
           <div className="col-xl-3 cta-btn-container text-center">
             <Link className="cta-btn align-middle" href="/about-us">
-              Learn More
+              {t("button")}
             </Link>
           </div>
         </div>

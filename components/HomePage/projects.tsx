@@ -1,6 +1,11 @@
+"use client";
+
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const Projects = () => {
+  const t = useTranslations("Projects");
+
   const projects = [
     {
       id: 1,
@@ -18,10 +23,10 @@ const Projects = () => {
   ];
 
   return (
-    <section id="team" className="team section">
+    <section id="projects" className="projects section">
       <div className="container section-title text-center" data-aos="fade-up">
-        <h2>Projects</h2>
-        <p>Progress through action</p>
+        <h2>{t("heading")}</h2>
+        <p>{t("subtitle")}</p>
       </div>
 
       <div className="container">
@@ -33,20 +38,18 @@ const Projects = () => {
               data-aos="fade-up"
               data-aos-delay={100 * (index + 1)}
             >
-              <div className="">
-                <div className="">
-                  <img
-                    src={project.image}
-                    className="img-fluid"
-                    alt="project image"
-                    style={{
-                      maxHeight: "180px",
-                      objectFit: "contain",
-                      width: "100%",
-                      borderRadius: "8px",
-                    }}
-                  />
-                </div>
+              <div>
+                <img
+                  src={project.image}
+                  className="img-fluid"
+                  alt={project.title || "project image"}
+                  style={{
+                    maxHeight: "180px",
+                    objectFit: "contain",
+                    width: "100%",
+                    borderRadius: "8px",
+                  }}
+                />
               </div>
             </div>
           ))}
