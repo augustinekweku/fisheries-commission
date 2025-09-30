@@ -7,9 +7,11 @@ import { allResourcesPaginatedQuery } from "@/sanity/groq";
 import Loader from "@/components/Loader";
 import LawsAndRegulationsList from "@/components/Resources/LawsAndRegulationsList";
 import { DocumentItem } from "@/types/Resources";
+import { useTranslations } from "next-intl";
 
 const LawsAndRegulationsPage = () => {
   const CATEGORY = "laws-and-regulations";
+  const t = useTranslations("lawsAndRegulations");
 
   // Fetch laws & regulations
   const fetchResources = async () => {
@@ -31,7 +33,7 @@ const LawsAndRegulationsPage = () => {
     data?.resources.map((resource) => {
       return {
         title: resource.title,
-        size: resource.size || "Unknown",
+        size: resource.size || t("unknownSize"),
         dateAdded: new Date(resource.date).toLocaleDateString(),
         dateModified: resource.modifiedAt
           ? new Date(resource.modifiedAt).toLocaleDateString()
@@ -53,8 +55,8 @@ const LawsAndRegulationsPage = () => {
   return (
     <div className="container-fluid pt-5">
       <div className="container section-title" data-aos="fade-up">
-        <h2>Laws & Regulations</h2>
-        <p className="mt-1">Acts, laws and regulations governing the sector.</p>
+        <h2>{t("title")}</h2>
+        <p className="mt-1">{t("description")}</p>
 
         {isLoading ? (
           <Loader />

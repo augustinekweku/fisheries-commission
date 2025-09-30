@@ -1,34 +1,38 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import { useTranslations } from "next-intl";
 
 const HeroSection = () => {
+  const t = useTranslations("Hero");
+
   const carouselItems = [
     {
       id: 1,
       backgroundImage: "/assets/img/blog/hero-1.jpg",
-      title: "Welcome to the Fisheries Commission Official Website",
-      buttonText: "Read More",
+      title: t("item1.title"),
+      buttonText: t("item1.buttonText"),
       buttonLink: "/about-us",
     },
     {
       id: 2,
       backgroundImage: "/assets/img/blog/article-post-1.jpg",
-      title: "Explore Our Services and Resources",
-      buttonText: "Learn More",
+      title: t("item2.title"),
+      buttonText: t("item2.buttonText"),
       buttonLink: "/laws-and-regulations",
     },
     {
       id: 3,
       backgroundImage: "/assets/img/blog/navy-5.jpg",
-      title: "Join Us in Sustainable Fisheries Management",
-      buttonText: "Get Started",
+      title: t("item3.title"),
+      buttonText: t("item3.buttonText"),
       buttonLink: "/contact",
     },
     {
       id: 4,
       backgroundImage: "/assets/img/blog/navy-3.jpg",
-      title: "Read Our Latest News and Updates",
-      buttonText: "Get Started",
+      title: t("item4.title"),
+      buttonText: t("item4.buttonText"),
       buttonLink: "/articles",
     },
   ];
@@ -106,7 +110,7 @@ const HeroSection = () => {
         className="hero-waves"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        viewBox="0 24 150 28 "
+        viewBox="0 24 150 28"
         preserveAspectRatio="none"
       >
         <defs>

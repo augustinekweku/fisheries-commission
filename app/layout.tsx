@@ -1,4 +1,8 @@
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { cookies } from "next/headers";
+import { notFound } from "next/navigation";
+
 import "./globals.scss";
 import "../public/assets/css/main.css";
 import "../public/assets/vendor/bootstrap/css/bootstrap.css";
@@ -12,9 +16,6 @@ import CustomScript from "@/components/CustomScript";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TopBar from "@/components/TopBar";
-
-//Import fonts from Google
-import { Roboto, Raleway } from "next/font/google";
 import BotpressChat from "@/components/BotpressChat";
 
 export const metadata: Metadata = {
@@ -25,34 +26,34 @@ export const metadata: Metadata = {
   },
 };
 
-// Configure fonts
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700"], // main body text weights
-  style: ["normal", "italic"],
-  variable: "--font-roboto",
-});
-
-const raleway = Raleway({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"], // headings only
-  variable: "--font-raleway",
-});
-
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // 1️⃣ Get user locale (cookie or default)
+  const cookieStore = await cookies();
+  const locale = cookieStore.get("locale")?.value || "en";
+
+  // 2️⃣ Load messages based on locale
+  let messages;
+  try {
+    messages = (await import(`../messages/${locale}.json`)).default;
+  } catch {
+    notFound();
+  }
+
   return (
-    <html lang="en" className={`${roboto.variable} ${raleway.variable}`}>
+    <html lang={locale}>
       <body>
-        <TopBar />
-        <Header />
-        {children}
-        <BotpressChat />
-        <CustomScript />
-        <Footer />
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <TopBar />
+          <Header />
+          {children}
+          <BotpressChat />
+          <CustomScript />
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

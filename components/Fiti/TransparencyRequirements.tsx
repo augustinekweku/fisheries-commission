@@ -1,69 +1,54 @@
 "use client";
 
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const TransparencyRequirements = () => {
+  const t = useTranslations("transparency");
+
   const transparencyItems = [
     {
       id: 1,
-      title:
-        "Public Registry of National Fisheries Laws, Regulations and Official Policy Documents",
+      title: t("items.publicRegistry"),
       icon: "assets/img/fiti/public-registry.png",
     },
-    {
-      id: 2,
-      title: "Post-Harvest Sector and Fish Trade",
-      icon: "assets/img/fiti/post.png",
-    },
+    { id: 2, title: t("items.postHarvest"), icon: "assets/img/fiti/post.png" },
     {
       id: 3,
-      title: "Fisheries Tenure Arrangements",
+      title: t("items.tenureArrangements"),
       icon: "assets/img/fiti/tenure.png",
     },
     {
       id: 4,
-      title: "Fisheries Law Enforcement",
+      title: t("items.lawEnforcement"),
       icon: "assets/img/fiti/law.png",
     },
     {
       id: 5,
-      title: "Foreign Fishing Access Agreements",
+      title: t("items.foreignAccess"),
       icon: "assets/img/fiti/foreign.png",
     },
     {
       id: 6,
-      title: "Labour Standards",
+      title: t("items.labourStandards"),
       icon: "assets/img/fiti/labour.png",
     },
     {
       id: 7,
-      title: "The State of the Fisheries Resources",
+      title: t("items.stateResources"),
       icon: "assets/img/fiti/state.png",
     },
-    {
-      id: 8,
-      title: "Fisheries Subsidies",
-      icon: "assets/img/fiti/subsidy.png",
-    },
-    {
-      id: 9,
-      title:
-        "Large Scale Fisheries (Vessel Registry, Payments for fishing, Recorded catch data)",
-      icon: "assets/img/fiti/scale.png",
-    },
-    {
-      id: 10,
-      title: "Official Development Assistance",
-      icon: "assets/img/fiti/official.png",
-    },
+    { id: 8, title: t("items.subsidies"), icon: "assets/img/fiti/subsidy.png" },
+    { id: 9, title: t("items.largeScale"), icon: "assets/img/fiti/scale.png" },
+    { id: 10, title: t("items.oda"), icon: "assets/img/fiti/official.png" },
     {
       id: 11,
-      title: "Small-Scale Fisheries",
+      title: t("items.smallScale"),
       icon: "assets/img/fiti/small-scale.png",
     },
     {
       id: 12,
-      title: "Beneficial Ownership",
+      title: t("items.beneficialOwnership"),
       icon: "assets/img/fiti/beneficial.png",
     },
   ];
@@ -78,12 +63,8 @@ const TransparencyRequirements = () => {
       <div className="container">
         {/* Header */}
         <div className="text-center mb-5">
-          <h3 className="fw-bold mb-4">The 12 transparency requirements</h3>
-          <p className="text-muted px-1 px-lg-3">
-            At the heart of the FiTI Standard are 12 transparency requirements
-            which are applicable for all countries (for more Information please
-            refer to section B.1 of the FiTI Standard):
-          </p>
+          <h3 className="fw-bold mb-4">{t("title")}</h3>
+          <p className="text-muted px-1 px-lg-3">{t("description")}</p>
         </div>
 
         {/* Grid of transparency requirements */}
@@ -118,15 +99,6 @@ const TransparencyRequirements = () => {
                         width: "40px",
                         height: "40px",
                         objectFit: "contain",
-                      }}
-                    />
-                    <div
-                      style={{
-                        display: "none",
-                        width: "40px",
-                        height: "40px",
-                        backgroundColor: "#6c757d",
-                        borderRadius: "8px",
                       }}
                     />
                   </div>

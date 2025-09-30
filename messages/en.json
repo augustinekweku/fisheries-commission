@@ -1,0 +1,558 @@
+{
+  "topbar": {
+    "email": "info@fishcom.gov.gh",
+    "whatWeDo": "What We Do",
+    "fiti": "FiTi",
+    "macppa": "MACPPA",
+    "blueEconomy": "Blue Economy",
+    "recruitment": "Recruitment Portal",
+    "contact": "Contact Us"
+  },
+  "header": {
+    "home": "Home",
+    "whatWeDo": "What We Do",
+    "fiti": "FiTi",
+    "macppa": "MACPPA",
+    "blueEconomy": "Blue Economy",
+    "aboutUs": "About Us",
+    "goalsObjectives": "Goals and Objectives",
+    "boardMembers": "Board Members",
+    "leadership": "Leadership",
+    "divisionsUnits": "Divisions and Units",
+    "regionalOffices": "Regional Offices",
+    "collaborators": "Collaborators",
+    "formalInstitutions": "Formal Institutions",
+    "informalInstitutions": "Informal Institutions",
+    "developmentPartners": "Development Partners",
+    "fisheriesAssociations": "Fisheries Associations & Civil Society Organizations",
+    "resources": "Resources",
+    "lawsRegulations": "Laws and Regulations",
+    "reportsPlans": "Reports and Plans",
+    "newsEvents": "News and Events",
+    "pressRelease": "Press and Release",
+    "articles": "Articles",
+    "gallery": "Gallery",
+    "projects": "Projects",
+    "ffd": "Fish For Development (FFD)",
+    "sfmp": "Sustainable Fisheries Management Programme (SFMP)",
+    "warfp": "West African Regional Fisheries Programme (WARFP)",
+    "contactUs": "Contact Us"
+  },
+  "Hero": {
+    "item1": {
+      "title": "Welcome to the Fisheries Commission Official Website",
+      "buttonText": "Read More"
+    },
+    "item2": {
+      "title": "Explore Our Services and Resources",
+      "buttonText": "Learn More"
+    },
+    "item3": {
+      "title": "Join Us in Sustainable Fisheries Management",
+      "buttonText": "Get Started"
+    },
+    "item4": {
+      "title": "Read Our Latest News and Updates",
+      "buttonText": "Get Started"
+    }
+  },
+  "AboutUs": {
+    "title": "About Us",
+    "subtitle": "WELCOME TO THE FISHERIES COMMISSION",
+    "imageAlt": "About Us",
+    "paragraph1": "The Fisheries Commission is the implementing agency of the Ministry of Fisheries and Aquaculture Development (MoFAD). We are constituted to be the actualizing force behind policies and regulations established by MoFAD. We are therefore responsible for",
+    "list": {
+      "item1": "All monitoring, control, surveillance, evaluation",
+      "item2": "Compliance functions in all areas of fisheries development and management in Ghana",
+      "item3": "These areas include fish health, post-harvest activities, safety, and quality assurance."
+    },
+    "paragraph2": "Our work at the Fisheries Commission is guided by MoFAD's policies and regulations, and we also provide valuable feedback to MoFAD to inform future policies.",
+    "readMore": "Read More"
+  },
+  "LeadershipSection": {
+    "title": "Leadership",
+    "subtitle": "Meet Our Dedicated Leadership Team",
+    "cta": "Learn More About The Leadership",
+    "members": [
+      {
+        "name": "Prof. Benjamin B. Campion",
+        "role": "Executive Director",
+        "image": "assets/img/executive-director.jpg"
+      },
+      {
+        "name": "Prof. Berchie Asiedu",
+        "role": "Deputy Executive Director - Technical",
+        "image": "assets/img/team/asiedu.jpg"
+      },
+      {
+        "name": "HON. DR ERIC COBINNAH",
+        "role": "Deputy Executive Director - General Services",
+        "image": "assets/img/team/cobinah.jpg"
+      }
+    ]
+  },
+  "FacultiesSection": {
+    "title": "SECTIONS",
+    "subtitle": "Our Various Sections",
+    "sections": [
+      {
+        "title": "MOFA",
+        "description": "Ministry Of Fisheries and Aquaculture",
+        "image": "assets/img/faculties/faculties-2.png"
+      },
+      {
+        "title": "National Premix Fuel Secretariat (NPFS)",
+        "description": "Information on the National Premix Fuel Secretariat",
+        "image": "assets/img/faculties/faculties-7.jpg"
+      },
+      {
+        "title": "Vessel Registry & Licensing",
+        "description": "Registration information about all fishing vessels",
+        "image": "assets/img/faculties/faculties-4.jpg"
+      },
+      {
+        "title": "Statistics",
+        "description": "Statistical information about fish production",
+        "image": "assets/img/faculties/faculties-6.jpg"
+      },
+      {
+        "title": "Reports",
+        "description": "General Reports of the Fisheries Commission",
+        "image": "assets/img/faculties/faculties-5.jpg"
+      },
+      {
+        "title": "Regional Offices",
+        "description": "Information on all our regional offices and their activities",
+        "image": "assets/img/faculties/faculties-3.jpg"
+      }
+    ]
+  },
+  "BlogPosts": {
+    "heading": "News",
+    "subheading": "Our Recent News and Articles",
+    "readMore": "Read More"
+  },
+  "CallToAction": {
+    "heading": "LEARN MORE ABOUT US",
+    "text": "WANT TO KNOW MORE ABOUT THE COMMISSION? CURIOUS WHAT ELSE WE DO?",
+    "button": "Learn More"
+  },
+  "Projects": {
+    "heading": "Projects",
+    "subtitle": "Progress through action"
+  },
+  "VideoPost": {
+    "title": "2025 Closed Season: Industrial trawlers banned from July to August 2025",
+    "description": "The Ministry of Fisheries and Aquaculture Development has announced the dates for the 2025 Closed Fishing Season, a key government initiative aimed at restoring Ghana's dwindling marine fish stock. In a press release dated June 23, 2025, the Ministry revealed that industrial trawlers will be banned from fishing between July 1 and August 31, 2025 while semi-industrial inshore vessels will observe a one-month closure from July 1 to July 31.",
+    "readMore": "Read More"
+  },
+  "footer": {
+    "locate_us": "Locate us",
+    "mailing_address": "Mailing Address",
+    "mailing_address_text_1": "Fisheries Commission, HQ, Ridge",
+    "mailing_address_text_2": "P.O. Box GP 630 Ministries, Accra",
+    "physical_address": "Physical Address",
+    "physical_address_text": "Adjacent the Ridge Church School",
+    "email_address": "Email Address",
+    "email_address_text": "info@fishcom.gov.gh",
+    "quick_links": "Quick links",
+    "laws_and_regulations": "Laws and Regulations",
+    "press_and_releases": "Press and Releases",
+    "contact_us": "Contact Us",
+    "reports_and_plans": "Reports and Plans",
+    "collaborators": "Collaborators",
+    "connect_with_us": "Connect with us",
+    "social_text": "Follow us on our social media channels to stay updated with the latest news and activities of the Fisheries Commission",
+    "copyright": "© 2025 Fisheries Commission. All Rights Reserved."
+  },
+  "board_members_page": {
+    "title": "Board Members",
+    "subtitle": "THE FISHERIES COMMISSION",
+    "name": "Name",
+    "institution": "Institution",
+    "designation": "Designation"
+  },
+  "board_members": {
+    "nunoo": {
+      "name": "Prof. Francis Kofi Ewusie Nunoo",
+      "institution": "University of Ghana",
+      "designation": "Board Chairman"
+    },
+    "antwiBoadu": {
+      "name": "Fred Kwasi Antwi-Boadu",
+      "institution": "Fisheries Commission",
+      "designation": "Executive Director/Board Member"
+    },
+    "modey": {
+      "name": "CDRE Prosper Modey",
+      "institution": "Ministry of Defense (Ghana Navy)",
+      "designation": "Board Member"
+    },
+    "asmah": {
+      "name": "Dr. (Mrs.) Ruby Asmah",
+      "institution": "Center for Scientific and Industrial Research (CSIR)",
+      "designation": "Board Member"
+    },
+    "asumaduApenteng": {
+      "name": "Kofi Asumadu-Apenteng",
+      "institution": "Ministry of Transport",
+      "designation": "Board Member"
+    },
+    "solomon": {
+      "name": "Nana Jojo Solomon",
+      "institution": "Ghana National Canoe Fishermen Council (GNCFC)",
+      "designation": "Board Member"
+    },
+    "modzaka": {
+      "name": "Ing. Emmanuel Kofi Modzaka",
+      "institution": "Ghana Irrigation Development Authority (GIDA)",
+      "designation": "Board Member"
+    },
+    "essuah": {
+      "name": "Lydia Obenewa Essuah",
+      "institution": "Min. of Envt., Science and Technology (MESTI)",
+      "designation": "Board Member"
+    },
+    "adjokatcher": {
+      "name": "Stephen Adjokatcher",
+      "institution": "Ghana Industrial Trawlers Association (GITA)",
+      "designation": "Board Member"
+    },
+    "otoo": {
+      "name": "Augustine Acheampong Otoo",
+      "institution": "Office of the President",
+      "designation": "Board Member"
+    }
+  },
+  "leadership_page": {
+    "title": "Leadership",
+    "subtitle": "The Fisheries Commission",
+    "campion": {
+      "name": "Prof. Benjamin B. Campion",
+      "position": "Executive Director, Fisheries Commission.",
+      "paragraph1": "Until his appointment, Benjamin Betey Campion (PhD.) was an associate professor at the Department of Fisheries and Watershed Management of the Kwame Nkrumah University of Science and Technology, Kumasi (KNUST).",
+      "paragraph2": "Prof. Campion has a very diverse academic upbringing, which has imbued him with varied and practical knowledge in his area of expertise: BSc. Botany (University of Cape Coast), MSc. Aquatic Tropical Ecology (University of Bremen), MSc. Sustainable Resource Management (Technical University of Munich) and a PhD. in Natural Sciences (University of Bremen). He is also a certified High Conservation Values (HCV) assessor.",
+      "paragraph3": "Prof. Campion has for over 20 years been teaching and conducting research in the University. His areas of academic interest are fisheries management, oceanography and coastal issues, aquatic resource ecology, wetlands, resource and conflict management, climate geography, adaptation and resilience.",
+      "paragraph4": "Prof. Campion brings to the Commission several years of research and working experience with fisheries stakeholders, and networks, both local and international. He is a member of the International Collective in Support of Fishworkers (ICSF) and the Association for the Sciences of Limnology and Oceanography (ASLO)."
+    },
+    "asiedu": {
+      "name": "Prof. Berchie Asiedu",
+      "position": "Deputy Executive Director, Technical Fisheries Commission",
+      "paragraph1": "Prof. Berchie Asiedu is a renowned fisheries and aquaculture expert with extensive experience in small-scale fisheries, aquaculture development, blue economy, ocean governance, value chain analysis, post-harvest operations, and climate change adaptation.",
+      "paragraph2": "Before he was appointed Deputy Executive Director (Technical) of the Fisheries Commission of Ghana, he served as the Dean of the School of Natural Resources; Coordinator of the Ghana Inland and Blue Economy Centre (2023-2025); Head Centre for Climate Change and Gender Studies; (2021-2023); Head, Department of Fisheries and Water Resources (2017-2021) at the University of Energy and Natural Resources.",
+      "paragraph3": "With international experience across several countries, he has received numerous awards from global institutions, including the Department for International Development (UK), Department of Trade and Foreign Affairs (Australia), Canadian Commonwealth Exchange Program-Africa (Canada) and the World Academy of Sciences. His widely cited research focuses on sustainable fisheries management, ocean governance, and food security.",
+      "paragraph4": "Prof. Asiedu continues to contribute to policy and scientific advancements in Ghana's fisheries and aquaculture sector."
+    },
+    "cobinah": {
+      "name": "HON. DR ERIC COBINNAH",
+      "position": "DEPUTY EXECUTIVE DIRECTOR, GENERAL SERVICES FISHERIES COMMISSION",
+      "paragraph1": "Hon. Dr. Eric Cobbinah hails from Shama in the Western Region. He obtained his first degree in Geography and Sociology from the University of Cape Coast and also earned a Bachelor of Laws from the same university.",
+      "paragraph2": "He holds a Master of Arts degree in Development Management from the School of Development Studies, University of Cape Coast. Additionally, he earned a Ph.D. in Management Science Engineering from the School of Management at Jiangsu University in China",
+      "paragraph3": "Dr. Cobbinah is currently pursuing a Master of Laws in Corporate and Commercial Law at the University of Ghana School of Law and is also a student at the Ghana School of Law, undertaking the Professional Law Course.",
+      "paragraph4": "His areas of expertise include Development Management, Organisational Behaviour, Local Governance, Petroleum Law, Insurance Law, Banking Law, and Corporate and Commercial Law.",
+      "paragraph5": "Hon. Dr. Eric Cobbinah served as the District Chief Executive of the Shama District Assembly during the first government of President John Dramani Mahama."
+    }
+  },
+  "divisionsPage": {
+    "title": "DIVISIONS AND UNITS",
+    "subtitle": "THE FISHERIES COMMISSION",
+    "intro": "For the Fisheries Commission to effectively and efficiently perform its mandate, it is organized internally into seven (7) Divisions and three (3) special units, namely:",
+    "mfmd": {
+      "title": "Marine Fisheries Management Division (MFMD)",
+      "items": ["Artisanal unit", "Industrial unit"]
+    },
+    "ifmd": {
+      "title": "Inland Fisheries Management Division (IFMD)",
+      "items": ["Freshwater unit", "Lagoon unit", "Mariculture unit"]
+    },
+    "fssd": {
+      "title": "Fisheries Scientific Survey Division (FSSD)",
+      "items": [
+        "Environment and Climate Change unit",
+        "Fish stock and statistics unit",
+        "Fishing gears and methods unit"
+      ]
+    },
+    "mcsd": {
+      "title": "Monitoring, Control, and Surveillance Division (MCSD)",
+      "items": [
+        "Fisheries monitoring centre unit",
+        "Fisheries enforcement unit",
+        "Inspections unit"
+      ]
+    },
+    "fa": {
+      "title": "Finance and Administration Division (F&A)",
+      "items": [
+        "Human Resource unit",
+        "Corporate Affairs unit",
+        "Information Technology unit",
+        "Procurement unit",
+        "General Administration unit"
+      ]
+    },
+    "pbmed": {
+      "title": "Planning, Budget, Monitoring and Evaluation Division (PBMED)",
+      "items": [
+        "Planning unit",
+        "Budget unit",
+        "Monitoring and Evaluation unit"
+      ]
+    },
+    "phmtd": {
+      "title": "Post-Harvest Management and Trade Division (PHMTD)",
+      "items": ["Post-Harvest Management unit", "Fish Trade unit"]
+    },
+    "special": {
+      "title": "SPECIAL UNITS",
+      "items": [
+        "Legal and Compliance unit",
+        "Aquatic Animal Health unit",
+        "Internal Audit unit"
+      ]
+    }
+  },
+
+  "collaborators": {
+    "title": "Collaborators",
+    "formalTitle": "Formal Institutions",
+    "informalTitle": "Informal Institutions",
+    "developmentTitle": "Development Partners",
+    "associationsTitle": "Fisheries Associations & Civil Society Organizations",
+    "formalList": [
+      {
+        "name": "Ministry of Environment, Science, Technology and Innovation (MESTI)",
+        "note": "(Environmental Protection Agency)"
+      },
+      { "name": "Ministry of Justice and Office of the Attorney-General" },
+      {
+        "name": "Ministry of Transport, Ghana Maritime Authority (GMA) and Ghana Ports and Harbour Authority (GPHA)"
+      },
+      { "name": "Ministry of Finance (MOF)" },
+      {
+        "name": "Ministry of Interior",
+        "note": "(Ghana Police Service, Ghana Immigration Service)"
+      },
+      {
+        "name": "Ministry of Defence",
+        "note": "(Ghana Navy and Ghana Air force)"
+      },
+      {
+        "name": "Ministry of Trade",
+        "note": "(Ghana Standards Authority and Ghana Export Promotion Authority)"
+      },
+      {
+        "name": "Ministry of Health",
+        "note": "(Food and Drugs Authority, Port Health)"
+      },
+      { "name": "Coastal Development Authority (CODA)" },
+      {
+        "name": "Research Institutions and Universities",
+        "note": "(UG, UCC, CSIR - WRI)"
+      },
+      { "name": "Customs Excise and Preventive Services (CEPS)" },
+      { "name": "Ghana Irrigation Development Authority" },
+      { "name": "Wildlife Department - Forestry Commission" }
+    ],
+    "informalList": [
+      "National Fish Processors and Traders Association (NAFPTA)",
+      "Ghana National Canoe Fishermen Council (GNCFC)",
+      "Ghana National Association of Farmers and Fishermen (GNAFF)",
+      "National Fisheries Association of Ghana (NAFAG)",
+      "National Inland Canoe Fishermen Council (NICFC)"
+    ],
+    "developmentList": [
+      "Ghana Fisheries Recovery Activities - USAID",
+      "Coastal Development Authority (CODA)"
+    ],
+    "associationsList": [
+      "National Fisheries Association of Ghana (NAFAG)",
+      "Ghana National Canoe Fishermen Council (GNCFC)",
+      "National Fish Processors and Traders Association (NAFPTA)",
+      "Ghana Inshore Fisheries Association (GIFA)",
+      "Ghana Tuna Association (GTA)",
+      "Ghana Industrial Trawler Association (GITA)",
+      "Ghana Marine Fishing Officers Association",
+      "Friends of the Nation",
+      "Hen Mpoano",
+      "Environmental Justice Foundation",
+      "Care International"
+    ]
+  },
+  "lawsAndRegulations": {
+    "title": "Laws & Regulations",
+    "description": "Acts, laws and regulations governing the sector.",
+    "size": "Size",
+    "dateAdded": "Date added",
+    "lastModified": "Last Modified",
+    "downloadButton": "Download",
+    "previewButton": "Preview",
+    "unknownSize": "Unknown",
+    "emptyTitle": "No documents available",
+    "emptyDescription": "Documents will appear here when they are added."
+  },
+  "reportsAndPlans": {
+    "title": "Reports & Plans",
+    "description": "Latest updates and strategies",
+    "size": "Size",
+    "dateAdded": "Date added",
+    "lastModified": "Last Modified",
+    "downloadButton": "Download",
+    "previewButton": "Preview",
+    "unknownSize": "Unknown",
+    "emptyTitle": "No documents available",
+    "emptyDescription": "Documents will appear here when they are added."
+  },
+  "pressAndReleases": {
+    "title": "News",
+    "subtitle": "Our Recent Press And Releases",
+    "readMore": "Read More"
+  },
+  "articles": {
+    "title": "News",
+    "subtitle": "Our Recent Articles",
+    "readMore": "Read More"
+  },
+  "pagination": {
+    "ariaLabel": "Pagination Navigation",
+    "previous": "Previous",
+    "next": "Next",
+    "pageOf": "{current} of {total}"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Our Recent Media Highlights",
+    "noImages": "No images available at the moment."
+  },
+
+  "search_page": {
+    "title": "Search Results",
+    "searching": "Searching for \"{query}\"...",
+    "loading": "Loading...",
+    "error_title": "Error occurred during search",
+    "results_count": "Found {count} result",
+    "results_count_plural": "Found {count} results",
+    "results_for": "for \"{query}\"",
+    "no_results_title": "No results found",
+    "no_results_message": "Try different keywords or check your spelling.",
+    "articles_section": "Articles ({count})",
+    "resources_section": "Resources ({count})",
+    "published": "Published:",
+    "read_article": "Read Article",
+    "size": "Size:",
+    "date_added": "Date added:",
+    "last_modified": "Last Modified:",
+    "download": "Download",
+    "preview": "Preview"
+  },
+  "fishDevelopment": {
+    "title": "Fish for Development (FFD)",
+    "imageAlt": "Fisheries Commission Ghana",
+    "paragraph1": "The Programme for Improved Regional Fisheries Governance in Western Africa (PESCAO) is a five-year, European Union-funded initiative, implemented with the Economic Community of West African States (ECOWAS) Commission. PESCAO has a budget of EUR 15 million and is running from 2018 to 2023.",
+    "paragraph2": "PESCAO will support the ECOWAS to facilitate cooperation with development partners and the two-sub regional fisheries organizations, the Fisheries Committee for the West Central Gulf of Guinea (FCWC) and the Sub-Regional Fisheries Commission (SRFC). PESCAO, through its cooperation with the FCWC will support and strengthen existing fisheries mechanisms, such as the West Africa Task Force (WATF), while building new partnership, such as between the FCWC and the European Fisheries Control Agency (EFCA).",
+    "paragraph3": "The objective of PESCAO is to enhance the contribution of fisheries resources to sustainable development, food security, and poverty alleviation in West Africa. This is being achieved through three components:",
+    "list": {
+      "item1": "Addressing regional fisheries policy at the Economic Community of West African States (ECOWAS) level, which will provide both a framework for regional fisheries priorities and also strengthen the impact of regional fisheries bodies by defining more effectively the role and relationships of each organization.",
+      "item2": "Building the capacities of competent national and regional Monitoring, control and surveillance (MCS) authorities to deter IUU fishing;"
+    }
+  },
+  "search_modal": {
+    "title": "Let's Help You Find It!",
+    "placeholder": "What are you looking for?",
+    "search_button": "Search",
+    "popular_searches": "Popular searches:",
+    "popular_search_1": "Fisheries Act",
+    "popular_search_2": "Closed Season",
+    "popular_search_3": "Fish for Development Program",
+    "search_tips_title": "Search tips:",
+    "tip_1": "Use specific keywords for better results",
+    "tip_2": "Try different terms if you don't find what you're looking for",
+    "close_label": "Close search"
+  },
+  "aboutFiti": {
+    "title": "ABOUT THE FITI STANDARD",
+    "imageAlt": "FiTI image",
+    "paragraph1": "At the heart of the initiative is the FiTI Standard, an internationally recognised framework on what information on fisheries should be published online by public authorities.",
+    "paragraph2": "The FiTI Standard provides governments, the fishing industry (both large-scale and small-scale), and civil society with a comprehensive and credible way to achieve and maintain high levels of transparency on the management of the marine fisheries sector and the activities of fishers and fishing companies.",
+    "paragraph3": "The FiTI Standard is the outcome of extensive discussions, spanning nearly two years, by members of the <strong>FiTI International Advisory Group</strong>, including representatives from governments, large-scale and small-scale fishing sector organisations, multinational and regional fisheries organisations and civil society groups working on fisheries and marine conservation.",
+    "paragraph4": "The intention has been to produce a comprehensive Standard that covers all facets of the FiTI and provides clear direction to countries that want to be part of this initiative. Yet all those involved in this process appreciate that the FiTI will evolve further over time, and it will be the role of the FiTI International Board to review the FiTI Standard with the option of enhancing it.",
+    "paragraph5": "Overall, the FITI Standard is divided in two main parts: Part I is intended for countries, Part II outlines the provisions for the international governance of the initiative."
+  },
+  "transparency": {
+    "title": "The 12 transparency requirements",
+    "description": "At the heart of the FiTI Standard are 12 transparency requirements which are applicable for all countries (for more information please refer to section B.1 of the FiTI Standard):",
+    "items": {
+      "publicRegistry": "Public Registry of National Fisheries Laws, Regulations and Official Policy Documents",
+      "postHarvest": "Post-Harvest Sector and Fish Trade",
+      "tenureArrangements": "Fisheries Tenure Arrangements",
+      "lawEnforcement": "Fisheries Law Enforcement",
+      "foreignAccess": "Foreign Fishing Access Agreements",
+      "labourStandards": "Labour Standards",
+      "stateResources": "The State of the Fisheries Resources",
+      "subsidies": "Fisheries Subsidies",
+      "largeScale": "Large Scale Fisheries (Vessel Registry, Payments for fishing, Recorded catch data)",
+      "oda": "Official Development Assistance",
+      "smallScale": "Small-Scale Fisheries",
+      "beneficialOwnership": "Beneficial Ownership"
+    }
+  },
+  "principles": {
+    "title": "Key principles for increasing transparency and participation under the FiTI",
+    "items": {
+      "multiStakeholder": {
+        "title": "Multi-Stakeholder participation",
+        "description": "The FiTI is implemented in countries through National Multi-Stakeholder Groups, consisting of representatives from government, business and organised civil society. These groups work collectively to assess the information in the public domain, make recommendations on how to improve information published by national authorities and jointly approve the publication of FiTI Reports."
+      },
+      "progressive": {
+        "title": "Progressive improvement",
+        "description": "Countries are not expected to have complete data for every transparency requirement from the beginning. Instead, public authorities must disclose the information they have, and where important gaps exist, improvements over time must be demonstrated. As such, engaging with the FiTI is not intended to be a burdensome and costly research activity."
+      },
+      "transparency": {
+        "title": "Transparency in the public domain",
+        "description": "The FiTI emphasises the need for national authorities to develop and strengthen their own systems for collecting and publishing information online in a complete and accessible manner. The FiTI Report is therefore not intended to replace or duplicate existing government information systems."
+      },
+      "publicDebate": {
+        "title": "Public debate",
+        "description": "The FiTI offers an important means to raise levels of openness and public access to information which can support countries in maintaining or achieving robust democratic governance and accountability in their fisheries sector."
+      }
+    }
+  },
+  "downloadAndFooter": {
+    "title": "Download the FiTI Standard",
+    "links": {
+      "english": "The FiTI Standard - English",
+      "french": "The FiTI Standard - French",
+      "spanish": "The FiTI Standard - Spanish",
+      "portuguese": "The FiTI Standard - Portuguese"
+    }
+  },
+  "contact": {
+    "sectionTitle": "Contact",
+    "sectionSubtitle": "Contact Us",
+    "mailingAddress": {
+      "title": "Mailing Address",
+      "text": "Fisheries Commission, HQ, Ridge, P.O. Box GP 630 Ministries, Accra"
+    },
+    "physicalAddress": {
+      "title": "Physical Address",
+      "text": "Adjacent the Ridge Church School"
+    },
+    "emailAddress": {
+      "title": "Email Address",
+      "text": "info@fishcom.gov.gh"
+    },
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Message",
+      "loading": "Loading",
+      "error": "There was an error sending your message",
+      "success": "Your message has been sent. Thank you!",
+      "button": "Send Message"
+    }
+  },
+  "loading": "Loading...",
+  "recentPressAndReleases": "Recent Press and Releases",
+  "recentNews": "Recent News"
+}

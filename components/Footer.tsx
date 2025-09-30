@@ -1,26 +1,31 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+  const t = useTranslations("footer");
+
   return (
     <footer id="footer" className="footer dark-background px-3">
       <div className="container">
         <div className="row d-flex text-start pt-5">
           <div className="col-md-6 col-lg-4">
-            <h4 className="fw-semibold mb-4">Locate us</h4>
-            <h4 className="h6 fw-semibold">Mailing Address</h4>
-            <p className="mb-0 pb-0">Fisheries Commission, HQ, Ridge</p>
-            <p className="mt-0 pt-1">P.O. Box GP 630 Ministries, Accra</p>
+            <h4 className="fw-semibold mb-4">{t("locate_us")}</h4>
 
-            <h4 className="h6 fw-semibold">Physical Address</h4>
-            <p>Adjacent the Ridge Church School</p>
+            <h4 className="h6 fw-semibold">{t("mailing_address")}</h4>
+            <p className="mb-0 pb-0">{t("mailing_address_text_1")}</p>
+            <p className="mt-0 pt-1">{t("mailing_address_text_2")}</p>
 
-            <h4 className="h6 fw-semibold">Email Address</h4>
-            <p>info@fishcom.gov.gh</p>
+            <h4 className="h6 fw-semibold">{t("physical_address")}</h4>
+            <p>{t("physical_address_text")}</p>
+
+            <h4 className="h6 fw-semibold">{t("email_address")}</h4>
+            <p>{t("email_address_text")}</p>
           </div>
 
           <div className="col-md-6 col-lg-4">
-            <h4 className="fw-semibold mb-4">Quick links</h4>
+            <h4 className="fw-semibold mb-4">{t("quick_links")}</h4>
 
             <ul className="list-unstyled">
               <li className="mb-2">
@@ -28,7 +33,7 @@ const Footer = () => {
                   href="/laws-and-regulations"
                   className="btn btn-link p-0 text-white"
                 >
-                  Laws and Regulations
+                  {t("laws_and_regulations")}
                 </Link>
               </li>
               <li className="mb-2">
@@ -36,12 +41,12 @@ const Footer = () => {
                   href="/press-and-release"
                   className="btn btn-link p-0 text-white"
                 >
-                  Press and Releases
+                  {t("press_and_releases")}
                 </Link>
               </li>
               <li className="mb-2">
                 <Link href="/contact" className="text-white">
-                  Contact Us
+                  {t("contact_us")}
                 </Link>
               </li>
               <li className="mb-2">
@@ -49,7 +54,7 @@ const Footer = () => {
                   href="/reports-and-plans"
                   className="btn btn-link p-0 text-white"
                 >
-                  Reports and Plans
+                  {t("reports_and_plans")}
                 </Link>
               </li>
               <li className="mb-2">
@@ -57,19 +62,15 @@ const Footer = () => {
                   href="/collaborators"
                   className="btn btn-link p-0 text-white"
                 >
-                  Collaborators
+                  {t("collaborators")}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div className="col-md-6 col-lg-4">
-            <h4 className="fw-semibold mb-4">Connect with us</h4>
-
-            <p>
-              Follow us on our social media channels to stay updated with the
-              latest news and activities of the Fisheries Commission
-            </p>
+            <h4 className="fw-semibold mb-4">{t("connect_with_us")}</h4>
+            <p>{t("social_text")}</p>
             <div className="social-links d-flex">
               <a href="https://x.com/fisheriescommhq?s=21" target="_blank">
                 <i className="bi bi-twitter-x"></i>
@@ -91,10 +92,7 @@ const Footer = () => {
         </div>
 
         <div className="container">
-          <div className="copyright"></div>
-          <div className="credits">
-            © 2025 Fisheries Commission. All Rights Reserved.
-          </div>
+          <div className="copyright">{t("copyright")}</div>
         </div>
       </div>
     </footer>

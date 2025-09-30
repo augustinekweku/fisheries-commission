@@ -1,13 +1,17 @@
-import React from "react";
+"use client";
+
+import { useTranslations } from "next-intl";
 
 const Contact = () => {
+  const t = useTranslations("contact");
+
   return (
     <section>
       <div id="contact" className="contact section container-fluid">
         {/* Section Title */}
         <div className="container section-title" data-aos="fade-up">
-          <h2>Contact</h2>
-          <p>Contact Us</p>
+          <h2>{t("sectionTitle")}</h2>
+          <p>{t("sectionSubtitle")}</p>
         </div>
 
         <div className="container" data-aos="fade" data-aos-delay="100">
@@ -21,11 +25,8 @@ const Contact = () => {
               >
                 <i className="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
-                  <h3>Mailing Address</h3>
-                  <p>
-                    Fisheries Commission, HQ, Ridge, P.O. Box GP 630 Ministries,
-                    Accra
-                  </p>
+                  <h3>{t("mailingAddress.title")}</h3>
+                  <p>{t("mailingAddress.text")}</p>
                 </div>
               </div>
 
@@ -36,8 +37,8 @@ const Contact = () => {
               >
                 <i className="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
-                  <h3>Physical Address</h3>
-                  <p>Adjacent the Ridge Church School</p>
+                  <h3>{t("physicalAddress.title")}</h3>
+                  <p>{t("physicalAddress.text")}</p>
                 </div>
               </div>
 
@@ -48,8 +49,8 @@ const Contact = () => {
               >
                 <i className="bi bi-envelope flex-shrink-0"></i>
                 <div>
-                  <h3>Email Address</h3>
-                  <p>info@fishcom.gov.gh</p>
+                  <h3>{t("emailAddress.title")}</h3>
+                  <p>{t("emailAddress.text")}</p>
                 </div>
               </div>
             </div>
@@ -69,7 +70,7 @@ const Contact = () => {
                       type="text"
                       name="name"
                       className="form-control"
-                      placeholder="Your Name"
+                      placeholder={t("form.name")}
                       required
                     />
                   </div>
@@ -79,7 +80,7 @@ const Contact = () => {
                       type="email"
                       name="email"
                       className="form-control"
-                      placeholder="Your Email"
+                      placeholder={t("form.email")}
                       required
                     />
                   </div>
@@ -89,7 +90,7 @@ const Contact = () => {
                       type="text"
                       name="subject"
                       className="form-control"
-                      placeholder="Subject"
+                      placeholder={t("form.subject")}
                       required
                     />
                   </div>
@@ -99,19 +100,17 @@ const Contact = () => {
                       name="message"
                       className="form-control"
                       rows={6}
-                      placeholder="Message"
+                      placeholder={t("form.message")}
                       required
                     ></textarea>
                   </div>
 
                   <div className="col-md-12 text-center">
-                    <div className="loading">Loading</div>
-                    <div className="error-message"></div>
-                    <div className="sent-message">
-                      Your message has been sent. Thank you!
-                    </div>
+                    <div className="loading">{t("form.loading")}</div>
+                    <div className="error-message">{t("form.error")}</div>
+                    <div className="sent-message">{t("form.success")}</div>
 
-                    <button type="submit">Send Message</button>
+                    <button type="submit">{t("form.button")}</button>
                   </div>
                 </div>
               </form>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 interface PaginationProps {
   currentPage: number;
@@ -9,43 +10,30 @@ interface PaginationProps {
 }
 
 const Pagination = ({ currentPage, totalPages, basePath }: PaginationProps) => {
+  const t = useTranslations("pagination"); // Load translations from en.json/fr.json
+
   if (totalPages <= 1) return null;
 
   const createLink = (page: number) =>
     page === 1 ? basePath : `${basePath}?page=${page}`;
 
-  // Generate page numbers with ellipsis for large page counts
   const generatePageNumbers = () => {
     const pages = [];
     const maxVisiblePages = 5;
 
     if (totalPages <= maxVisiblePages) {
-      // Show all pages if total is small
-      for (let i = 1; i <= totalPages; i++) {
-        pages.push(i);
-      }
+      for (let i = 1; i <= totalPages; i++) pages.push(i);
     } else {
-      // Show first page, current page area, and last page with ellipsis
       if (currentPage <= 3) {
-        for (let i = 1; i <= 4; i++) {
-          pages.push(i);
-        }
-        pages.push("ellipsis");
-        pages.push(totalPages);
+        for (let i = 1; i <= 4; i++) pages.push(i);
+        pages.push("ellipsis", totalPages);
       } else if (currentPage >= totalPages - 2) {
-        pages.push(1);
-        pages.push("ellipsis");
-        for (let i = totalPages - 3; i <= totalPages; i++) {
-          pages.push(i);
-        }
+        pages.push(1, "ellipsis");
+        for (let i = totalPages - 3; i <= totalPages; i++) pages.push(i);
       } else {
-        pages.push(1);
-        pages.push("ellipsis");
-        for (let i = currentPage - 1; i <= currentPage + 1; i++) {
-          pages.push(i);
-        }
-        pages.push("ellipsis");
-        pages.push(totalPages);
+        pages.push(1, "ellipsis");
+        for (let i = currentPage - 1; i <= currentPage + 1; i++) pages.push(i);
+        pages.push("ellipsis", totalPages);
       }
     }
 
@@ -57,20 +45,17 @@ const Pagination = ({ currentPage, totalPages, basePath }: PaginationProps) => {
   return (
     <nav
       className="d-flex justify-content-center mt-5 mb-4"
-      aria-label="Page navigation"
+      aria-label={t("ariaLabel")}
       role="navigation"
     >
+      {/* Mobile: Simple Previous/Current/Next */}
       <ul className="pagination pagination-sm d-md-none shadow-sm">
-        {/* Mobile: Simple Previous/Current/Next */}
+        {/* Previous */}
         <li className={`page-item ${currentPage <= 1 ? "disabled" : ""}`}>
           {currentPage > 1 ? (
             <Link
               className="page-link text-dark border-0 bg-light me-1 rounded px-2 py-1 fw-semibold"
               href={createLink(currentPage - 1)}
-              style={{
-                textDecoration: "none",
-                fontSize: "0.875rem",
-              }}
             >
               <i className="bi bi-chevron-left"></i>
             </Link>
@@ -81,12 +66,14 @@ const Pagination = ({ currentPage, totalPages, basePath }: PaginationProps) => {
           )}
         </li>
 
+        {/* Current page indicator */}
         <li className="page-item active">
           <span className="page-link bg-primary text-white border-0 mx-1 rounded px-3 py-1 fw-semibold">
-            {currentPage} of {totalPages}
+            {t("pageOf", { current: currentPage, total: totalPages })}
           </span>
         </li>
 
+        {/* Next */}
         <li
           className={`page-item ${currentPage >= totalPages ? "disabled" : ""}`}
         >
@@ -94,10 +81,6 @@ const Pagination = ({ currentPage, totalPages, basePath }: PaginationProps) => {
             <Link
               className="page-link text-dark border-0 bg-light ms-1 rounded px-2 py-1 fw-semibold"
               href={createLink(currentPage + 1)}
-              style={{
-                textDecoration: "none",
-                fontSize: "0.875rem",
-              }}
             >
               <i className="bi bi-chevron-right"></i>
             </Link>
@@ -115,20 +98,16 @@ const Pagination = ({ currentPage, totalPages, basePath }: PaginationProps) => {
         <li className={`page-item ${currentPage <= 1 ? "disabled" : ""}`}>
           {currentPage > 1 ? (
             <Link
-              className="page-link text-dark border-0 bg-light me-1 rounded-pill px-3 py-2 fw-semibold transition-all"
+              className="page-link text-dark border-0 bg-light me-1 rounded-pill px-3 py-2 fw-semibold"
               href={createLink(currentPage - 1)}
-              style={{
-                textDecoration: "none",
-                transition: "all 0.2s ease-in-out",
-              }}
             >
               <i className="bi bi-chevron-left me-1"></i>
-              Previous
+              {t("previous")}
             </Link>
           ) : (
             <span className="page-link text-muted border-0 bg-light me-1 rounded-pill px-3 py-2 fw-semibold">
               <i className="bi bi-chevron-left me-1"></i>
-              Previous
+              {t("previous")}
             </span>
           )}
         </li>
@@ -154,22 +133,12 @@ const Pagination = ({ currentPage, totalPages, basePath }: PaginationProps) => {
               className={`page-item ${isActive ? "active" : ""}`}
             >
               <Link
-                className={`page-link border-0 mx-1 rounded-pill fw-semibold transition-all ${
+                className={`page-link border-0 mx-1 rounded-pill fw-semibold ${
                   isActive
                     ? "bg-primary text-white shadow-sm"
-                    : "bg-light text-dark hover-bg-primary hover-text-white"
+                    : "bg-light text-dark"
                 }`}
                 href={createLink(pageNum)}
-                style={{
-                  minWidth: "45px",
-                  height: "45px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  textDecoration: "none",
-                  transition: "all 0.2s ease-in-out",
-                }}
-                aria-label={`Page ${pageNum}`}
                 aria-current={isActive ? "page" : undefined}
               >
                 {pageNum}
@@ -184,19 +153,15 @@ const Pagination = ({ currentPage, totalPages, basePath }: PaginationProps) => {
         >
           {currentPage < totalPages ? (
             <Link
-              className="page-link text-dark border-0 bg-light ms-1 rounded-pill px-3 py-2 fw-semibold transition-all"
+              className="page-link text-dark border-0 bg-light ms-1 rounded-pill px-3 py-2 fw-semibold"
               href={createLink(currentPage + 1)}
-              style={{
-                textDecoration: "none",
-                transition: "all 0.2s ease-in-out",
-              }}
             >
-              Next
+              {t("next")}
               <i className="bi bi-chevron-right ms-1"></i>
             </Link>
           ) : (
             <span className="page-link text-muted border-0 bg-light ms-1 rounded-pill px-3 py-2 fw-semibold">
-              Next
+              {t("next")}
               <i className="bi bi-chevron-right ms-1"></i>
             </span>
           )}

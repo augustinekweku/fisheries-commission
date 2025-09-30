@@ -7,11 +7,12 @@ import { allResourcesPaginatedQuery } from "@/sanity/groq";
 import Loader from "@/components/Loader";
 import { DocumentItem } from "@/types/Resources";
 import ReportsAndPlansList from "@/components/Resources/ReportsAndPlansList";
+import { useTranslations } from "next-intl";
 
-const LawsAndRegulationsPage = () => {
+const ReportsAndPlansPage = () => {
+  const t = useTranslations("reportsAndPlans");
   const CATEGORY = "reports-and-plans";
 
-  // Fetch laws & regulations
   const fetchResources = async () => {
     return await fetcher([
       allResourcesPaginatedQuery,
@@ -28,24 +29,19 @@ const LawsAndRegulationsPage = () => {
   });
 
   const documents: DocumentItem[] =
-    data?.resources.map((resource) => {
-      // Add this debugging
-      console.log("Resource:", resource.title, "PDF URL:", resource.pdfUrl);
-
-      return {
-        title: resource.title,
-        size: resource.size || "Unknown",
-        dateAdded: new Date(resource.date).toLocaleDateString(),
-        dateModified: resource.modifiedAt
-          ? new Date(resource.modifiedAt).toLocaleDateString()
-          : "—",
-        thumbnailUrl: resource.previewImageUrl,
-        downloadUrl: resource.pdfUrl
-          ? `${resource.pdfUrl}?dl=${encodeURIComponent(resource.title)}.pdf`
-          : "", // Handle null case
-        previewUrl: resource.pdfUrl || "",
-      };
-    }) || [];
+    data?.resources.map((resource) => ({
+      title: resource.title,
+      size: resource.size || t("unknownSize"),
+      dateAdded: new Date(resource.date).toLocaleDateString(),
+      dateModified: resource.modifiedAt
+        ? new Date(resource.modifiedAt).toLocaleDateString()
+        : "—",
+      thumbnailUrl: resource.previewImageUrl,
+      downloadUrl: resource.pdfUrl
+        ? `${resource.pdfUrl}?dl=${encodeURIComponent(resource.title)}.pdf`
+        : "",
+      previewUrl: resource.pdfUrl || "",
+    })) || [];
 
   useEffect(() => {
     const subscription = client
@@ -58,8 +54,8 @@ const LawsAndRegulationsPage = () => {
   return (
     <div className="container-fluid pt-5">
       <div className="container section-title" data-aos="fade-up">
-        <h2>Reports & Plans</h2>
-        <p className="mt-1">Latest updates and strategies</p>
+        <h2>{t("title")}</h2>
+        <p className="mt-1">{t("description")}</p>
 
         {isLoading ? (
           <Loader />
@@ -73,4 +69,4 @@ const LawsAndRegulationsPage = () => {
   );
 };
 
-export default LawsAndRegulationsPage;
+export default ReportsAndPlansPage;

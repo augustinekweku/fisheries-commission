@@ -1,54 +1,42 @@
 export const boardMembers = [
   {
-    name: "Prof. Francis Kofi Ewusie Nunoo",
-    institution: "University of Ghana",
-    designation: "Board Chairman",
+    key: "nunoo",
     image: "/assets/img/board/nunoo.jpg",
   },
   {
-    name: "Fred Kwasi Antwi-Boadu",
-    institution: "Fisheries Commission",
-    designation: "Executive Director/Board Member",
+    key: "antwiBoadu",
     image: "/assets/img/board/antwi-boadu.jpg",
   },
   {
-    name: "CDRE Prosper Modey",
-    institution: "Ministry of Defense (Ghana Navy)",
+    key: "modey",
     image: "/assets/img/board/modey.jpg",
   },
   {
-    name: "Dr. (Mrs.) Ruby Asmah",
-    institution: "Center for Scientific and Industrial Research (CSIR)",
+    key: "asmah",
     image: "/assets/img/board/asmah.jpg",
   },
   {
-    name: "Kofi Asumadu-Apenteng",
-    institution: "Ministry of Transport",
+    key: "asumaduApenteng",
     image: "/assets/img/board/asumadu-apenteng.png",
   },
   {
-    name: "Nana Jojo Solomon",
-    institution: "Ghana National Canoe Fishermen Council (GNCFC)",
+    key: "solomon",
     image: "/assets/img/board/solomon.jpg",
   },
   {
-    name: "Ing. Emmanuel Kofi Modzaka",
-    institution: "Ghana Irrigation Development Authority (GIDA)",
+    key: "modzaka",
     image: "/assets/img/board/modzaka.jpg",
   },
   {
-    name: "Lydia Obenewa Essuah",
-    institution: "Min. of Envt., Science and Technology (MESTI)",
+    key: "essuah",
     image: "/assets/img/board/essuah.jpg",
   },
   {
-    name: "Stephen Adjokatcher",
-    institution: "Ghana Industrial Trawlers Association (GITA)",
+    key: "adjokatcher",
     image: "/assets/img/board/adjokatcher.jpg",
   },
   {
-    name: "Augustine Acheampong Otoo",
-    institution: "Office of the President",
+    key: "otoo",
     image: "/assets/img/board/otoo.jpg",
   },
 ];
@@ -157,13 +145,13 @@ export const teamMembers = [
   {
     id: 2,
     name: "Prof. Berchie Asiedu",
-    role: "Deputy Executive Director",
+    role: "Deputy Executive Director - Technical",
     image: "assets/img/team/asiedu.jpg",
   },
   {
     id: 3,
     name: "HON. DR ERIC COBINNAH",
-    role: "Deputy Executive Director",
+    role: "Deputy Executive Director - General Services",
     image: "assets/img/team/cobinah.jpg",
   },
 ];

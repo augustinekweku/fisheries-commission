@@ -2,9 +2,12 @@
 
 import { useScrollBehavior } from "@/hooks/useScrollBehaviour";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const TopBar = () => {
   const isScrolled = useScrollBehavior();
+  const t = useTranslations("topbar");
 
   return (
     <div
@@ -20,15 +23,9 @@ const TopBar = () => {
     >
       <div className="container">
         <div className="row gx-0">
-          <div className="col-md-5 text-center text-lg-start mb-2 mb-lg-0">
+          <div className="col-md-2 text-center text-lg-start mb-2 mb-lg-0">
             <div className="position-relative d-inline-flex align-items-center ps-3">
-              <div className="me-3 pe-3 border-end py-2">
-                <p className="m-0">
-                  <i className="fa fa-envelope-open me-2"></i>
-                  info@fishcom.gov.gh
-                </p>
-              </div>
-              <div className="social-top-links d-flex">
+              <div className="social-top-links d-flex py-2">
                 <a href="https://x.com/fisheriescommhq?s=21" target="_blank">
                   <i className="bi bi-twitter-x"></i>
                 </a>
@@ -47,26 +44,26 @@ const TopBar = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-7 text-center text-lg-end">
+          <div className="col-md-10 text-center text-lg-end">
             <div className="d-inline-flex align-items-center">
               <Link href="" className="text-body py-2 pe-3 border-end">
-                <small>What We Do</small>
+                <small>{t("whatWeDo")}</small>
               </Link>
               <Link
                 href="/fiti-standard"
                 className="text-body py-2 px-3 border-end"
               >
-                <small>FiTi</small>
+                <small>{t("fiti")}</small>
               </Link>
               <Link
                 href="https://www.macppa.com/en"
                 target="_blank"
                 className="text-body py-2 px-3 border-end"
               >
-                <small>MACPPA</small>
+                <small>{t("macppa")}</small>
               </Link>
               <Link href="#" className="text-body py-2 px-3 border-end">
-                <small>Blue Economy</small>
+                <small>{t("blueEconomy")}</small>
               </Link>
               <Link
                 href="https://fishcom.gov.gh/recruitment/"
@@ -74,11 +71,17 @@ const TopBar = () => {
                 rel="noopener noreferrer"
                 className="text-body py-2 px-3 border-end"
               >
-                <small>Recruitment Portal</small>
+                <small>{t("recruitment")}</small>
               </Link>
-              <Link href="/contact" className="text-body py-2 px-3 border-end">
-                <small>Contact Us</small>
+              <Link
+                href="/contact"
+                className="text-body py-2 px-3 border-end me-3"
+              >
+                <small>{t("contact")}</small>
               </Link>
+
+              {/* Language Switcher */}
+              <LanguageSwitcher />
             </div>
           </div>
         </div>

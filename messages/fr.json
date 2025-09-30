@@ -1,0 +1,558 @@
+{
+  "topbar": {
+    "email": "info@fishcom.gov.gh",
+    "whatWeDo": "Ce Que Nous Faisons",
+    "fiti": "FiTi",
+    "macppa": "MACPPA",
+    "blueEconomy": "Économie Bleue",
+    "recruitment": "Portail de Recrutement",
+    "contact": "Nous Contacter"
+  },
+  "header": {
+    "home": "Accueil",
+    "whatWeDo": "Ce Que Nous Faisons",
+    "fiti": "FiTi",
+    "macppa": "MACPPA",
+    "blueEconomy": "Économie Bleue",
+    "aboutUs": "À Propos",
+    "goalsObjectives": "Objectifs",
+    "boardMembers": "Membres du Conseil",
+    "leadership": "Direction",
+    "divisionsUnits": "Divisions et Unités",
+    "regionalOffices": "Bureaux Régionaux",
+    "collaborators": "Collaborateurs",
+    "formalInstitutions": "Institutions Formelles",
+    "informalInstitutions": "Institutions Informelles",
+    "developmentPartners": "Partenaires de Développement",
+    "fisheriesAssociations": "Associations de Pêche & Société Civile",
+    "resources": "Ressources",
+    "lawsRegulations": "Lois et Règlements",
+    "reportsPlans": "Rapports et Plans",
+    "newsEvents": "Actualités et Événements",
+    "pressRelease": "Communiqués de Presse",
+    "articles": "Articles",
+    "gallery": "Galerie",
+    "projects": "Projets",
+    "ffd": "Pêche Pour le Développement (FFD)",
+    "sfmp": "Programme de Gestion Durable des Pêches (SFMP)",
+    "warfp": "Programme Régional des Pêches en Afrique de l’Ouest (WARFP)",
+    "contactUs": "Nous Contacter"
+  },
+  "Hero": {
+    "item1": {
+      "title": "Bienvenue sur le site officiel de la Commission des Pêches",
+      "buttonText": "Lire plus"
+    },
+    "item2": {
+      "title": "Découvrez nos services et ressources",
+      "buttonText": "En savoir plus"
+    },
+    "item3": {
+      "title": "Rejoignez-nous pour une gestion durable des pêches",
+      "buttonText": "Commencer"
+    },
+    "item4": {
+      "title": "Lisez nos dernières actualités et mises à jour",
+      "buttonText": "Commencer"
+    }
+  },
+  "AboutUs": {
+    "title": "À propos de nous",
+    "subtitle": "BIENVENUE À LA COMMISSION DES PÊCHES",
+    "imageAlt": "À propos de nous",
+    "paragraph1": "La Commission des Pêches est l'agence chargée de la mise en œuvre du Ministère des Pêches et du Développement de l'Aquaculture (MoFAD). Elle constitue la force de réalisation des politiques et réglementations établies par le MoFAD. Elle est donc responsable de",
+    "list": {
+      "item1": "Tout le suivi, le contrôle, la surveillance et l'évaluation",
+      "item2": "Les fonctions de conformité dans tous les domaines du développement et de la gestion des pêches au Ghana",
+      "item3": "Ces domaines incluent la santé des poissons, les activités post-récolte, la sécurité et l’assurance qualité."
+    },
+    "paragraph2": "Notre travail à la Commission des Pêches est guidé par les politiques et réglementations du MoFAD, et nous fournissons également des retours précieux pour orienter les futures politiques.",
+    "readMore": "Lire plus"
+  },
+
+  "LeadershipSection": {
+    "title": "Direction",
+    "subtitle": "Rencontrez notre équipe de direction dévouée",
+    "cta": "En savoir plus sur la direction",
+    "members": [
+      {
+        "name": "Prof. Benjamin B. Campion",
+        "role": "Directeur exécutif",
+        "image": "assets/img/executive-director.jpg"
+      },
+      {
+        "name": "Prof. Berchie Asiedu",
+        "role": "Directeur exécutif adjoint - Technique",
+        "image": "assets/img/team/asiedu.jpg"
+      },
+      {
+        "name": "HON. DR ERIC COBINNAH",
+        "role": "Directeur exécutif adjoint - Services généraux",
+        "image": "assets/img/team/cobinah.jpg"
+      }
+    ]
+  },
+  "FacultiesSection": {
+    "title": "SECTIONS",
+    "subtitle": "Nos différentes sections",
+    "sections": [
+      {
+        "title": "MOFA",
+        "description": "Ministère de la Pêche et de l'Aquaculture",
+        "image": "assets/img/faculties/faculties-2.png"
+      },
+      {
+        "title": "Secrétariat national du carburant prémélangé (NPFS)",
+        "description": "Informations sur le Secrétariat national du carburant prémélangé",
+        "image": "assets/img/faculties/faculties-7.jpg"
+      },
+      {
+        "title": "Registre et licence des navires",
+        "description": "Informations sur l'enregistrement de tous les navires de pêche",
+        "image": "assets/img/faculties/faculties-4.jpg"
+      },
+      {
+        "title": "Statistiques",
+        "description": "Informations statistiques sur la production de poisson",
+        "image": "assets/img/faculties/faculties-6.jpg"
+      },
+      {
+        "title": "Rapports",
+        "description": "Rapports généraux de la Commission des Pêches",
+        "image": "assets/img/faculties/faculties-5.jpg"
+      },
+      {
+        "title": "Bureaux régionaux",
+        "description": "Informations sur nos bureaux régionaux et leurs activités",
+        "image": "assets/img/faculties/faculties-3.jpg"
+      }
+    ]
+  },
+  "BlogPosts": {
+    "heading": "Actualités",
+    "subheading": "Nos dernières nouvelles et articles",
+    "readMore": "Lire la suite"
+  },
+  "CallToAction": {
+    "heading": "EN SAVOIR PLUS SUR NOUS",
+    "text": "VOUS VOULEZ EN SAVOIR PLUS SUR LA COMMISSION ? CURIEUX DE SAVOIR CE QUE NOUS FAISONS D'AUTRE ?",
+    "button": "En savoir plus"
+  },
+  "Projects": {
+    "heading": "Projets",
+    "subtitle": "Progrès par l'action"
+  },
+  "VideoPost": {
+    "title": "Saison de fermeture 2025 : Interdiction des chalutiers industriels de juillet à août 2025",
+    "description": "Le ministère de la Pêche et du Développement de l'Aquaculture a annoncé les dates de la saison de fermeture de la pêche 2025, une initiative clé du gouvernement visant à restaurer les stocks de poissons marins en déclin au Ghana. Dans un communiqué de presse daté du 23 juin 2025, le ministère a révélé que les chalutiers industriels seront interdits de pêche du 1er juillet au 31 août 2025, tandis que les navires semi-industriels observeront une fermeture d'un mois du 1er juillet au 31 juillet.",
+    "readMore": "En savoir plus"
+  },
+  "footer": {
+    "locate_us": "Nous localiser",
+    "mailing_address": "Adresse postale",
+    "mailing_address_text_1": "Commission des Pêches, Siège, Ridge",
+    "mailing_address_text_2": "Boîte postale GP 630 Ministères, Accra",
+    "physical_address": "Adresse physique",
+    "physical_address_text": "Adjacent à l'école de l'église Ridge",
+    "email_address": "Adresse e-mail",
+    "email_address_text": "info@fishcom.gov.gh",
+    "quick_links": "Liens rapides",
+    "laws_and_regulations": "Lois et règlements",
+    "press_and_releases": "Communiqués de presse",
+    "contact_us": "Contactez-nous",
+    "reports_and_plans": "Rapports et plans",
+    "collaborators": "Collaborateurs",
+    "connect_with_us": "Connectez-vous avec nous",
+    "social_text": "Suivez-nous sur nos réseaux sociaux pour rester informé des dernières nouvelles et activités de la Commission des Pêches",
+    "copyright": "© 2025 Commission des Pêches. Tous droits réservés."
+  },
+  "board_members_page": {
+    "title": "Membres du Conseil",
+    "subtitle": "LA COMMISSION DES PÊCHES",
+    "name": "Nom",
+    "institution": "Institution",
+    "designation": "Fonction"
+  },
+  "board_members": {
+    "nunoo": {
+      "name": "Prof. Francis Kofi Ewusie Nunoo",
+      "institution": "Université du Ghana",
+      "designation": "Président du Conseil"
+    },
+    "antwiBoadu": {
+      "name": "Fred Kwasi Antwi-Boadu",
+      "institution": "Commission des Pêches",
+      "designation": "Directeur exécutif / Membre du Conseil"
+    },
+    "modey": {
+      "name": "CDRE Prosper Modey",
+      "institution": "Ministère de la Défense (Marine du Ghana)",
+      "designation": "Membre du Conseil"
+    },
+    "asmah": {
+      "name": "Dr. (Mme) Ruby Asmah",
+      "institution": "Centre de recherche scientifique et industrielle (CSIR)",
+      "designation": "Membre du Conseil"
+    },
+    "asumaduApenteng": {
+      "name": "Kofi Asumadu-Apenteng",
+      "institution": "Ministère des Transports",
+      "designation": "Membre du Conseil"
+    },
+    "solomon": {
+      "name": "Nana Jojo Solomon",
+      "institution": "Conseil national des pêcheurs en pirogue du Ghana (GNCFC)",
+      "designation": "Membre du Conseil"
+    },
+    "modzaka": {
+      "name": "Ing. Emmanuel Kofi Modzaka",
+      "institution": "Autorité ghanéenne de développement de l'irrigation (GIDA)",
+      "designation": "Membre du Conseil"
+    },
+    "essuah": {
+      "name": "Lydia Obenewa Essuah",
+      "institution": "Min. de l’Environnement, Science et Technologie (MESTI)",
+      "designation": "Membre du Conseil"
+    },
+    "adjokatcher": {
+      "name": "Stephen Adjokatcher",
+      "institution": "Association ghanéenne des chalutiers industriels (GITA)",
+      "designation": "Membre du Conseil"
+    },
+    "otoo": {
+      "name": "Augustine Acheampong Otoo",
+      "institution": "Bureau du Président",
+      "designation": "Membre du Conseil"
+    }
+  },
+  "leadership_page": {
+    "title": "Direction",
+    "subtitle": "La Commission des Pêches",
+    "campion": {
+      "name": "Prof. Benjamin B. Campion",
+      "position": "Directeur Exécutif, Commission des Pêches.",
+      "paragraph1": "Jusqu'à sa nomination, Benjamin Betey Campion (PhD.) était professeur associé au Département de la pêche et de la gestion des bassins versants de l'Université des sciences et technologies Kwame Nkrumah, Kumasi (KNUST).",
+      "paragraph2": "Le Prof. Campion a une formation académique très diversifiée, qui lui a conféré des connaissances variées et pratiques dans son domaine d'expertise : BSc. Botanique (Université de Cape Coast), MSc. Écologie tropicale aquatique (Université de Brême), MSc. Gestion durable des ressources (Université technique de Munich) et un doctorat en sciences naturelles (Université de Brême). Il est également évaluateur certifié des valeurs de haute conservation (HCV).",
+      "paragraph3": "Le Prof. Campion enseigne et mène des recherches à l'université depuis plus de 20 ans. Ses domaines d'intérêt académique sont la gestion des pêches, l'océanographie et les questions côtières, l'écologie des ressources aquatiques, les zones humides, la gestion des ressources et des conflits, la géographie climatique, l'adaptation et la résilience.",
+      "paragraph4": "Le Prof. Campion apporte à la Commission plusieurs années d'expérience de recherche et de travail avec les parties prenantes et les réseaux de la pêche, tant locaux qu'internationaux. Il est membre du Collectif international d'appui aux travailleurs de la pêche (ICSF) et de l'Association pour les sciences de la limnologie et de l'océanographie (ASLO)."
+    },
+    "asiedu": {
+      "name": "Prof. Berchie Asiedu",
+      "position": "Directeur Exécutif Adjoint, Commission Technique des Pêches",
+      "paragraph1": "Le Prof. Berchie Asiedu est un expert renommé en pêche et aquaculture avec une vaste expérience dans la pêche artisanale, le développement de l'aquaculture, l'économie bleue, la gouvernance des océans, l'analyse de la chaîne de valeur, les opérations post-récolte et l'adaptation au changement climatique.",
+      "paragraph2": "Avant d'être nommé Directeur exécutif adjoint (Technique) de la Commission des pêches du Ghana, il a été doyen de l'École des ressources naturelles ; coordinateur du Centre ghanéen de l'intérieur et de l'économie bleue (2023-2025) ; chef du Centre d'études sur le changement climatique et le genre (2021-2023) ; chef du Département des pêches et des ressources en eau (2017-2021) à l'Université de l'énergie et des ressources naturelles.",
+      "paragraph3": "Fort d'une expérience internationale dans plusieurs pays, il a reçu de nombreux prix d'institutions mondiales, notamment du Département du développement international (Royaume-Uni), du Département du commerce et des affaires étrangères (Australie), du Programme d'échange du Commonwealth canadien-Afrique (Canada) et de l'Académie mondiale des sciences. Ses recherches largement citées portent sur la gestion durable de la pêche, la gouvernance des océans et la sécurité alimentaire.",
+      "paragraph4": "Le Prof. Asiedu continue de contribuer aux avancées politiques et scientifiques dans le secteur de la pêche et de l'aquaculture au Ghana."
+    },
+    "cobinah": {
+      "name": "HON. DR ERIC COBINNAH",
+      "position": "DIRECTEUR EXÉCUTIF ADJOINT, SERVICES GÉNÉRAUX COMMISSION DES PÊCHES",
+      "paragraph1": "L'Hon. Dr Eric Cobbinah est originaire de Shama dans la région occidentale. Il a obtenu son premier diplôme en géographie et sociologie de l'Université de Cape Coast et a également obtenu un baccalauréat en droit de la même université.",
+      "paragraph2": "Il détient une maîtrise ès arts en gestion du développement de l'École d'études du développement de l'Université de Cape Coast. De plus, il a obtenu un doctorat en ingénierie des sciences de gestion de l'École de gestion de l'Université du Jiangsu en Chine",
+      "paragraph3": "Le Dr Cobbinah poursuit actuellement une maîtrise en droit en droit des sociétés et commercial à la Faculté de droit de l'Université du Ghana et est également étudiant à la Faculté de droit du Ghana, suivant le cours de droit professionnel.",
+      "paragraph4": "Ses domaines d'expertise comprennent la gestion du développement, le comportement organisationnel, la gouvernance locale, le droit pétrolier, le droit des assurances, le droit bancaire et le droit des sociétés et commercial.",
+      "paragraph5": "L'Hon. Dr Eric Cobbinah a été chef de l'exécutif du district de l'Assemblée du district de Shama pendant le premier gouvernement du président John Dramani Mahama."
+    }
+  },
+  "divisionsPage": {
+    "title": "DIVISIONS ET UNITÉS",
+    "subtitle": "LA COMMISSION DES PÊCHES",
+    "intro": "Pour que la Commission des Pêches remplisse efficacement et efficacement son mandat, elle est organisée en sept (7) divisions et trois (3) unités spéciales, à savoir :",
+    "mfmd": {
+      "title": "Division de Gestion des Pêches Marines (MFMD)",
+      "items": ["Unité artisanale", "Unité industrielle"]
+    },
+    "ifmd": {
+      "title": "Division de Gestion des Pêches Continentales (IFMD)",
+      "items": ["Unité eau douce", "Unité lagunaire", "Unité mariculture"]
+    },
+    "fssd": {
+      "title": "Division des Enquêtes Scientifiques sur les Pêches (FSSD)",
+      "items": [
+        "Unité environnement et changement climatique",
+        "Unité stocks de poissons et statistiques",
+        "Unité engins et méthodes de pêche"
+      ]
+    },
+    "mcsd": {
+      "title": "Division de Suivi, Contrôle et Surveillance (MCSD)",
+      "items": [
+        "Unité centre de surveillance des pêches",
+        "Unité de contrôle des pêches",
+        "Unité inspections"
+      ]
+    },
+    "fa": {
+      "title": "Division des Finances et de l’Administration (F&A)",
+      "items": [
+        "Unité des ressources humaines",
+        "Unité des affaires corporatives",
+        "Unité technologie de l’information",
+        "Unité des achats",
+        "Unité administration générale"
+      ]
+    },
+    "pbmed": {
+      "title": "Division de Planification, Budget, Suivi et Évaluation (PBMED)",
+      "items": [
+        "Unité de planification",
+        "Unité du budget",
+        "Unité de suivi et évaluation"
+      ]
+    },
+    "phmtd": {
+      "title": "Division de Gestion Post-Récolte et du Commerce du Poisson (PHMTD)",
+      "items": ["Unité gestion post-récolte", "Unité commerce du poisson"]
+    },
+    "special": {
+      "title": "UNITÉS SPÉCIALES",
+      "items": [
+        "Unité juridique et conformité",
+        "Unité santé animale aquatique",
+        "Unité audit interne"
+      ]
+    }
+  },
+  "collaborators": {
+    "title": "Collaborateurs",
+    "formalTitle": "Institutions Formelles",
+    "informalTitle": "Institutions Informelles",
+    "developmentTitle": "Partenaires de Développement",
+    "associationsTitle": "Associations de Pêche et Organisations de la Société Civile",
+    "formalList": [
+      {
+        "name": "Ministère de l'Environnement, de la Science, de la Technologie et de l'Innovation (MESTI)",
+        "note": "(Agence de Protection de l'Environnement)"
+      },
+      { "name": "Ministère de la Justice et Bureau du Procureur Général" },
+      {
+        "name": "Ministère des Transports, Autorité Maritime du Ghana (GMA) et Autorité des Ports et Havres du Ghana (GPHA)"
+      },
+      { "name": "Ministère des Finances (MOF)" },
+      {
+        "name": "Ministère de l'Intérieur",
+        "note": "(Service de Police du Ghana, Service d'Immigration du Ghana)"
+      },
+      {
+        "name": "Ministère de la Défense",
+        "note": "(Marine et Armée de l'air du Ghana)"
+      },
+      {
+        "name": "Ministère du Commerce",
+        "note": "(Autorité des Normes du Ghana et Autorité de Promotion des Exportations)"
+      },
+      {
+        "name": "Ministère de la Santé",
+        "note": "(Autorité Alimentaire et Médicamenteuse, Santé Portuaire)"
+      },
+      { "name": "Autorité de Développement Côtier (CODA)" },
+      {
+        "name": "Instituts de Recherche et Universités",
+        "note": "(UG, UCC, CSIR - WRI)"
+      },
+      { "name": "Services des Douanes et de Prévention (CEPS)" },
+      { "name": "Autorité de Développement de l'Irrigation du Ghana" },
+      { "name": "Département de la Faune - Commission Forestière" }
+    ],
+    "informalList": [
+      "Association Nationale des Transformateurs et Commerçants de Poissons (NAFPTA)",
+      "Conseil National des Pêcheurs en Canoë du Ghana (GNCFC)",
+      "Association Nationale des Agriculteurs et Pêcheurs du Ghana (GNAFF)",
+      "Association Nationale de la Pêche du Ghana (NAFAG)",
+      "Conseil National des Pêcheurs en Canoë de l'Intérieur (NICFC)"
+    ],
+    "developmentList": [
+      "Activités de Récupération de la Pêche au Ghana - USAID",
+      "Autorité de Développement Côtier (CODA)"
+    ],
+    "associationsList": [
+      "Association Nationale de la Pêche du Ghana (NAFAG)",
+      "Conseil National des Pêcheurs en Canoë du Ghana (GNCFC)",
+      "Association Nationale des Transformateurs et Commerçants de Poissons (NAFPTA)",
+      "Association de la Pêche Côtière du Ghana (GIFA)",
+      "Association du Thon du Ghana (GTA)",
+      "Association des Chalutiers Industriels du Ghana (GITA)",
+      "Association des Officiers de Pêche Maritime du Ghana",
+      "Amis de la Nation",
+      "Hen Mpoano",
+      "Fondation pour la Justice Environnementale",
+      "Care International"
+    ]
+  },
+  "lawsAndRegulations": {
+    "title": "Lois et règlements",
+    "description": "Actes, lois et règlements régissant le secteur.",
+    "size": "Taille",
+    "dateAdded": "Date d'ajout",
+    "lastModified": "Dernière modification",
+    "downloadButton": "Télécharger",
+    "previewButton": "Aperçu",
+    "unknownSize": "Inconnu",
+    "emptyTitle": "Aucun document disponible",
+    "emptyDescription": "Les documents apparaîtront ici lorsqu'ils seront ajoutés."
+  },
+  "reportsAndPlans": {
+    "title": "Rapports et Plans",
+    "description": "Dernières mises à jour et stratégies",
+    "size": "Taille",
+    "dateAdded": "Date d'ajout",
+    "lastModified": "Dernière modification",
+    "downloadButton": "Télécharger",
+    "previewButton": "Aperçu",
+    "unknownSize": "Inconnu",
+    "emptyTitle": "Aucun document disponible",
+    "emptyDescription": "Les documents apparaîtront ici lorsqu'ils seront ajoutés."
+  },
+  "pressAndReleases": {
+    "title": "Actualités",
+    "subtitle": "Nos récents communiqués et publications",
+    "readMore": "Lire la suite"
+  },
+  "articles": {
+    "title": "Actualités",
+    "subtitle": "Nos récents articles",
+    "readMore": "Lire la suite"
+  },
+  "pagination": {
+    "ariaLabel": "Navigation de pagination",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "pageOf": "{current} sur {total}"
+  },
+  "gallery": {
+    "title": "Galerie",
+    "subtitle": "Nos moments médiatiques récents",
+    "noImages": "Aucune image disponible pour le moment."
+  },
+  "search_page": {
+    "title": "Résultats de recherche",
+    "searching": "Recherche de \"{query}\"...",
+    "loading": "Chargement...",
+    "error_title": "Une erreur s'est produite lors de la recherche",
+    "results_count": "{count} résultat trouvé",
+    "results_count_plural": "{count} résultats trouvés",
+    "results_for": "pour \"{query}\"",
+    "no_results_title": "Aucun résultat trouvé",
+    "no_results_message": "Essayez des mots-clés différents ou vérifiez votre orthographe.",
+    "articles_section": "Articles ({count})",
+    "resources_section": "Ressources ({count})",
+    "published": "Publié :",
+    "read_article": "Lire l'article",
+    "size": "Taille :",
+    "date_added": "Date d'ajout :",
+    "last_modified": "Dernière modification :",
+    "download": "Télécharger",
+    "preview": "Aperçu"
+  },
+  "fishDevelopment": {
+    "title": "Poisson pour le Développement (FFD)",
+    "imageAlt": "Commission des Pêches du Ghana",
+    "paragraph1": "Le Programme pour l'Amélioration de la Gouvernance Régionale des Pêches en Afrique de l'Ouest (PESCAO) est une initiative quinquennale financée par l'Union Européenne, mise en œuvre avec la Commission de la CEDEAO. PESCAO dispose d'un budget de 15 millions d'euros et se déroule de 2018 à 2023.",
+    "paragraph2": "PESCAO soutiendra la CEDEAO pour faciliter la coopération avec les partenaires de développement et les deux organisations sous-régionales de pêche, le Comité des Pêches pour le Golfe de Guinée Centre-Ouest (FCWC) et la Commission Sous-Régionale des Pêches (CSRP). PESCAO, grâce à sa coopération avec le FCWC, soutiendra et renforcera les mécanismes existants de gestion des pêches, tels que le Groupe de Travail pour l'Afrique de l'Ouest (WATF), tout en établissant de nouveaux partenariats, notamment entre le FCWC et l'Agence Européenne de Contrôle des Pêches (EFCA).",
+    "paragraph3": "L'objectif de PESCAO est d'accroître la contribution des ressources halieutiques au développement durable, à la sécurité alimentaire et à la réduction de la pauvreté en Afrique de l'Ouest. Cela est réalisé à travers trois composantes :",
+    "list": {
+      "item1": "Aborder la politique régionale de la pêche au niveau de la Communauté Économique des États de l'Afrique de l'Ouest (CEDEAO), ce qui fournira à la fois un cadre pour les priorités régionales de la pêche et renforcera l'impact des organismes régionaux de la pêche en définissant plus efficacement le rôle et les relations de chaque organisation.",
+      "item2": "Renforcer les capacités des autorités nationales et régionales compétentes en matière de surveillance, de contrôle et de suivi (MCS) pour dissuader la pêche INN ;"
+    }
+  },
+
+  "search_modal": {
+    "title": "Laissez-nous vous aider à le trouver !",
+    "placeholder": "Que cherchez-vous ?",
+    "search_button": "Rechercher",
+    "popular_searches": "Recherches populaires :",
+    "popular_search_1": "Loi sur les pêches",
+    "popular_search_2": "Saison fermée",
+    "popular_search_3": "Programme Poisson pour le développement",
+    "search_tips_title": "Conseils de recherche :",
+    "tip_1": "Utilisez des mots-clés spécifiques pour de meilleurs résultats",
+    "tip_2": "Essayez des termes différents si vous ne trouvez pas ce que vous cherchez",
+    "close_label": "Fermer la recherche"
+  },
+  "aboutFiti": {
+    "title": "À PROPOS DE LA NORME FITI",
+    "imageAlt": "Image FiTI",
+    "paragraph1": "Au cœur de l'initiative se trouve la Norme FiTI, un cadre reconnu internationalement sur les informations relatives aux pêches qui doivent être publiées en ligne par les autorités publiques.",
+    "paragraph2": "La Norme FiTI fournit aux gouvernements, à l'industrie de la pêche (à la fois à grande et petite échelle) et à la société civile un moyen complet et crédible d'atteindre et de maintenir un haut niveau de transparence dans la gestion du secteur des pêches marines et les activités des pêcheurs et des entreprises de pêche.",
+    "paragraph3": "La Norme FiTI est le résultat de discussions approfondies, s'étalant sur près de deux ans, par les membres du <strong>Groupe Consultatif International de la FiTI</strong>, y compris des représentants des gouvernements, des organisations de pêche à grande et petite échelle, des organisations régionales et multinationales de pêche et des groupes de la société civile travaillant sur la pêche et la conservation marine.",
+    "paragraph4": "L'objectif a été de produire une Norme complète qui couvre tous les aspects de la FiTI et donne une orientation claire aux pays qui souhaitent faire partie de cette initiative. Cependant, toutes les parties impliquées dans ce processus comprennent que la FiTI continuera d'évoluer au fil du temps, et il appartiendra au Conseil International de la FiTI de revoir la Norme avec la possibilité de l'améliorer.",
+    "paragraph5": "Dans l'ensemble, la Norme FiTI est divisée en deux parties principales : la Partie I est destinée aux pays, la Partie II définit les dispositions pour la gouvernance internationale de l'initiative."
+  },
+  "transparency": {
+    "title": "Les 12 exigences de transparence",
+    "description": "Au cœur de la Norme FiTI se trouvent 12 exigences de transparence qui s'appliquent à tous les pays (pour plus d'informations, veuillez vous référer à la section B.1 de la Norme FiTI) :",
+    "items": {
+      "publicRegistry": "Registre public des lois, règlements et documents de politique officielle relatifs aux pêches nationales",
+      "postHarvest": "Secteur post-récolte et commerce du poisson",
+      "tenureArrangements": "Régimes de tenure des pêches",
+      "lawEnforcement": "Application des lois sur les pêches",
+      "foreignAccess": "Accords d'accès à la pêche étrangère",
+      "labourStandards": "Normes du travail",
+      "stateResources": "L'état des ressources halieutiques",
+      "subsidies": "Subventions pour la pêche",
+      "largeScale": "Pêches à grande échelle (registre des navires, paiements pour la pêche, données de capture enregistrées)",
+      "oda": "Aide publique au développement",
+      "smallScale": "Pêches à petite échelle",
+      "beneficialOwnership": "Propriété effective"
+    }
+  },
+  "principles": {
+    "title": "Principes clés pour accroître la transparence et la participation dans le cadre de la FiTI",
+    "items": {
+      "multiStakeholder": {
+        "title": "Participation multipartite",
+        "description": "La FiTI est mise en œuvre dans les pays par le biais de Groupes Nationaux Multipartites, composés de représentants du gouvernement, des entreprises et de la société civile organisée. Ces groupes travaillent collectivement à évaluer les informations disponibles dans le domaine public, à formuler des recommandations pour améliorer les informations publiées par les autorités nationales et à approuver conjointement la publication des rapports FiTI."
+      },
+      "progressive": {
+        "title": "Amélioration progressive",
+        "description": "Les pays ne sont pas tenus de disposer de données complètes pour chaque exigence de transparence dès le départ. Les autorités publiques doivent plutôt divulguer les informations dont elles disposent et, en cas de lacunes importantes, démontrer des améliorations au fil du temps. Ainsi, l'engagement dans la FiTI n'est pas censé être une activité de recherche lourde et coûteuse."
+      },
+      "transparency": {
+        "title": "Transparence dans le domaine public",
+        "description": "La FiTI souligne la nécessité pour les autorités nationales de développer et de renforcer leurs propres systèmes de collecte et de publication d'informations en ligne de manière complète et accessible. Le rapport FiTI n'est donc pas destiné à remplacer ou à dupliquer les systèmes d'information gouvernementaux existants."
+      },
+      "publicDebate": {
+        "title": "Débat public",
+        "description": "La FiTI offre un moyen important d'accroître les niveaux d'ouverture et l'accès du public à l'information, ce qui peut aider les pays à maintenir ou à atteindre une gouvernance démocratique solide et une responsabilité dans leur secteur des pêches."
+      }
+    }
+  },
+  "downloadAndFooter": {
+    "title": "Télécharger la Norme FiTI",
+    "links": {
+      "english": "La Norme FiTI - Anglais",
+      "french": "La Norme FiTI - Français",
+      "spanish": "La Norme FiTI - Espagnol",
+      "portuguese": "La Norme FiTI - Portugais"
+    }
+  },
+  "contact": {
+    "sectionTitle": "Contact",
+    "sectionSubtitle": "Nous contacter",
+    "mailingAddress": {
+      "title": "Adresse postale",
+      "text": "Fisheries Commission, HQ, Ridge, P.O. Box GP 630 Ministries, Accra"
+    },
+    "physicalAddress": {
+      "title": "Adresse physique",
+      "text": "À côté de la Ridge Church School"
+    },
+    "emailAddress": {
+      "title": "Adresse email",
+      "text": "info@fishcom.gov.gh"
+    },
+    "form": {
+      "name": "Votre nom",
+      "email": "Votre email",
+      "subject": "Sujet",
+      "message": "Message",
+      "loading": "Chargement",
+      "error": "Une erreur s'est produite lors de l'envoi du message",
+      "success": "Votre message a été envoyé. Merci !",
+      "button": "Envoyer le message"
+    }
+  },
+  "recentPressAndReleases": "Communiqués et publications récents",
+  "recentNews": "Actualités Récentes",
+  "loading": "Chargement..."
+}

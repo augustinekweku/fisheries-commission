@@ -1,39 +1,28 @@
+"use client";
+
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const InformalInstitutions = () => {
+  const t = useTranslations("collaborators");
+
+  const informalList: string[] = t.raw("informalList");
+
   return (
     <div className="container-fluid">
       <section className="about section">
         <div className="container section-title pb-3">
-          <p>Informal Institutions</p>
+          <p>{t("informalTitle")}</p>
         </div>
 
         <div className="container">
           <ul>
-            <li>
-              <i className="bi bi-check2-circle me-1"></i>
-              <span>
-                National Fish Processors and Traders Association (NAFPTA)
-              </span>
-            </li>
-            <li>
-              <i className="bi bi-check2-circle me-1"></i>
-              <span>Ghana National Canoe Fishermen Council (GNCFC)</span>
-            </li>
-            <li>
-              <i className="bi bi-check2-circle me-1"></i>
-              <span>
-                Ghana National Association of Farmers and Fishermen (GNAFF)
-              </span>
-            </li>
-            <li>
-              <i className="bi bi-check2-circle me-1"></i>
-              <span>National Fisheries Association of Ghana (NAFAG)</span>
-            </li>
-            <li>
-              <i className="bi bi-check2-circle me-1"></i>
-              <span>National Inland Canoe Fishermen Council (NICFC)</span>
-            </li>
+            {informalList.map((item, index) => (
+              <li key={index} className="">
+                <i className="bi bi-check2-circle me-1"></i>
+                <span>{item}</span>
+              </li>
+            ))}
           </ul>
         </div>
       </section>

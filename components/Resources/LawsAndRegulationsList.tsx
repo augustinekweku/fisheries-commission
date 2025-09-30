@@ -1,10 +1,15 @@
+"use client";
+
 import { DocumentItem } from "@/types/Resources";
+import { useTranslations } from "next-intl";
 
 interface Props {
   documents: DocumentItem[];
 }
 
 const LawsAndRegulationsList: React.FC<Props> = ({ documents }) => {
+  const t = useTranslations("lawsAndRegulations");
+
   return (
     <div className="mt-4">
       {documents.map((doc, index) => (
@@ -35,10 +40,10 @@ const LawsAndRegulationsList: React.FC<Props> = ({ documents }) => {
                   <strong>{doc.title}</strong>
                 </h6>
                 <small className="text-muted d-block text-break">
-                  Size: {doc.size}
+                  {t("size")}: {doc.size}
                 </small>
                 <small className="text-muted d-block text-break">
-                  Date added: {doc.dateAdded} | Last Modified:{" "}
+                  {t("dateAdded")}: {doc.dateAdded} | {t("lastModified")}:{" "}
                   {doc.dateModified}
                 </small>
               </div>
@@ -46,6 +51,7 @@ const LawsAndRegulationsList: React.FC<Props> = ({ documents }) => {
               {/* Action Buttons */}
               <div className="col-12 col-md-3">
                 <div className="d-flex flex-column gap-2">
+                  {/* Download button */}
                   <button
                     onClick={async () => {
                       try {
@@ -62,7 +68,6 @@ const LawsAndRegulationsList: React.FC<Props> = ({ documents }) => {
                         document.body.removeChild(a);
                       } catch (error) {
                         console.error("Download failed:", error);
-                        // Fallback to opening in new tab
                         window.open(doc.downloadUrl, "_blank");
                       }
                     }}
@@ -74,9 +79,10 @@ const LawsAndRegulationsList: React.FC<Props> = ({ documents }) => {
                     }}
                   >
                     <i className="bi bi-download"></i>
-                    <span className="fw-medium">Download</span>
+                    <span className="fw-medium">{t("downloadButton")}</span>
                   </button>
 
+                  {/* Preview link */}
                   <a
                     href={doc.previewUrl}
                     target="_blank"
@@ -99,7 +105,7 @@ const LawsAndRegulationsList: React.FC<Props> = ({ documents }) => {
                     }}
                   >
                     <i className="bi bi-eye"></i>
-                    <span className="fw-medium">Preview</span>
+                    <span className="fw-medium">{t("previewButton")}</span>
                   </a>
                 </div>
               </div>
@@ -108,6 +114,7 @@ const LawsAndRegulationsList: React.FC<Props> = ({ documents }) => {
         </div>
       ))}
 
+      {/* Empty State */}
       {documents.length === 0 && (
         <div className="text-center py-5">
           <div className="mb-3">
@@ -116,10 +123,8 @@ const LawsAndRegulationsList: React.FC<Props> = ({ documents }) => {
               style={{ fontSize: "3rem" }}
             ></i>
           </div>
-          <h5 className="text-muted">No documents available</h5>
-          <p className="text-muted mb-0">
-            Documents will appear here when they are added.
-          </p>
+          <h5 className="text-muted">{t("emptyTitle")}</h5>
+          <p className="text-muted mb-0">{t("emptyDescription")}</p>
         </div>
       )}
     </div>

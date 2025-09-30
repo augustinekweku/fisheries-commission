@@ -3,11 +3,18 @@ import type { Metadata } from "next";
 import { PortableText } from "@portabletext/react";
 import NewsSidebar from "@/components/NewsAndEvents/NewsSidebar";
 import { client } from "@/sanity/client";
+import { cookies } from "next/headers";
 
 type Post = {
   _id: string;
-  title: string;
-  body: any[];
+  title: {
+    en: string;
+    fr: string;
+  };
+  body: {
+    en: any[];
+    fr: any[];
+  };
   imageUrl?: string;
   imageUrl2?: string;
   imageUrl3?: string;
@@ -34,6 +41,22 @@ async function getPostBySlug(slug: string): Promise<Post | null> {
   return await client.fetch(query, { slug });
 }
 
+// Helper to get locale from cookie
+async function getLocale(): Promise<"en" | "fr"> {
+  const cookieStore = await cookies();
+  const locale = cookieStore.get("locale")?.value as "en" | "fr" | undefined;
+  return locale || "en";
+}
+
+// Helper to get localized field
+function getLocalizedField(field: any, locale: "en" | "fr"): any {
+  if (!field) return "";
+  // If it's already a string (old format), return it
+  if (typeof field === "string") return field;
+  // If it's an object with language keys, return the correct one
+  return field[locale] || field.en || "";
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -41,16 +64,29 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
-  const excerpt =
-    post?.body
-      ?.map((block: any) =>
-        (block.children || []).map((c: any) => c.text).join("")
-      )
-      .join(" ")
-      .slice(0, 160) ?? "";
+  const locale = await getLocale();
+
+  if (!post) {
+    return {
+      title: "Article Not Found",
+    };
+  }
+
+  const title = getLocalizedField(post.title, locale);
+  const body = getLocalizedField(post.body, locale);
+
+  const excerpt = Array.isArray(body)
+    ? body
+        ?.map((block: any) =>
+          (block.children || []).map((c: any) => c.text).join("")
+        )
+        .join(" ")
+        .slice(0, 160)
+    : "";
+
   return {
-    title: post?.title ?? "Article",
-    description: excerpt,
+    title: title || "Article",
+    description: excerpt || "",
   };
 }
 
@@ -61,12 +97,20 @@ export default async function ArticleDetailPage({
 }) {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
+  const locale = await getLocale();
 
   if (!post) return notFound();
 
+  // Get localized content
+  const title = getLocalizedField(post.title, locale);
+  const body = getLocalizedField(post.body, locale);
+
+  // Ensure body is an array
+  const bodyArray = Array.isArray(body) ? body : [];
+
   // compute plain text length from portable text for reading time
   const plainText =
-    post.body
+    bodyArray
       ?.map((block: any) =>
         (block.children || []).map((c: any) => c.text).join("")
       )
@@ -86,13 +130,13 @@ export default async function ArticleDetailPage({
         <div className="row">
           {/* Main Post */}
           <div className="col-lg-8">
-            <h2 className="fw-bold mb-3 text-uppercase">{post.title}</h2>
+            <h2 className="fw-bold mb-3 text-uppercase">{title}</h2>
 
             <div className="d-flex justify-content-between align-items-center mt-5 border-bottom pb-2 mb-4 text-muted small flex-wrap">
               <span className="mb-2 mb-md-0">
                 <i className="bi bi-calendar3 me-2"></i>
                 {post.publishedAt
-                  ? new Date(post.publishedAt).toLocaleDateString(undefined, {
+                  ? new Date(post.publishedAt).toLocaleDateString(locale, {
                       year: "numeric",
                       month: "short",
                       day: "numeric",
@@ -110,7 +154,7 @@ export default async function ArticleDetailPage({
             {post.imageUrl && (
               <img
                 src={post.imageUrl}
-                alt={post.title}
+                alt={title}
                 className="img-fluid mb-4 rounded shadow"
                 style={{
                   maxHeight: "500px",
@@ -122,7 +166,7 @@ export default async function ArticleDetailPage({
 
             {/* Body (Portable Text) */}
             <div className="mx-auto mb-5" style={{ maxWidth: "800px" }}>
-              <PortableText value={post.body} />
+              <PortableText value={bodyArray} />
             </div>
 
             {/* Gallery Images */}
@@ -132,7 +176,7 @@ export default async function ArticleDetailPage({
                   <div className="col-md-6" key={idx}>
                     <img
                       src={src}
-                      alt={`${post.title} - image ${idx + 2}`}
+                      alt={`${title} - image ${idx + 2}`}
                       className="img-fluid rounded shadow"
                       style={{ width: "100%", objectFit: "cover" }}
                     />

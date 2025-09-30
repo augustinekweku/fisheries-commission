@@ -1,20 +1,22 @@
 import { groq } from "next-sanity";
 
-// Single Post
+// Single Post - with locale support
 export const singlequery = groq`
 *[_type == "post" && slug.current == $slug][0] {
     _id,
     title,
     slug,
     "imageUrl": image.asset->url,
-     "imageUrl2": image2.asset->url, "imageUrl3": image3.asset->url, "imageUrl4": image4.asset->url,
+    "imageUrl2": image2.asset->url,
+    "imageUrl3": image3.asset->url,
+    "imageUrl4": image4.asset->url,
+    "imageUrl5": image5.asset->url,
     body,
     publishedAt,
 }
 `;
 
 // Get paginated posts
-
 export const allPostsPaginatedQuery = groq`
 {
   "posts": *[
@@ -27,6 +29,7 @@ export const allPostsPaginatedQuery = groq`
     "imageUrl2": image2.asset->url,
     "imageUrl3": image3.asset->url,
     "imageUrl4": image4.asset->url,
+    "imageUrl5": image5.asset->url,
     slug,
     title,
     category,
@@ -55,6 +58,7 @@ export const paginatedByCategoryquery = groq`
     "imageUrl2": image2.asset->url,
     "imageUrl3": image3.asset->url,
     "imageUrl4": image4.asset->url,
+    "imageUrl5": image5.asset->url,
     slug,
     title,
     category,
@@ -73,7 +77,7 @@ export const paginatedByCategoryquery = groq`
 
 // search query with pagination
 export const searchquery = groq`
-*[_type == "post" && title match $q && publishStatus == $publishStatus] | order(publishedAt desc) [$pageIndex...$limit] {
+*[_type == "post" && (title.en match $q || title.fr match $q) && publishStatus == $publishStatus] | order(publishedAt desc) [$pageIndex...$limit] {
     "imageUrl": image.asset->url,
     slug,
     title,

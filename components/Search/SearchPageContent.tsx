@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { client } from "@/sanity/client";
 
 // Enhanced search queries
@@ -62,6 +63,7 @@ interface SearchResults {
 }
 
 const SearchPageContent = () => {
+  const t = useTranslations("search_page");
   const searchParams = useSearchParams();
   const query = searchParams.get("q") || "";
 
@@ -145,8 +147,8 @@ const SearchPageContent = () => {
       <div className="container-fluid">
         <section className="about section">
           <div className="container section-title pb-3">
-            <h2>Search Results</h2>
-            <p>Searching for "{query}"...</p>
+            <h2>{t("title")}</h2>
+            <p>{t("searching", { query })}</p>
           </div>
           <div className="container">
             <div
@@ -154,7 +156,7 @@ const SearchPageContent = () => {
               style={{ minHeight: "300px" }}
             >
               <div className="spinner-border text-danger" role="status">
-                <span className="visually-hidden">Loading...</span>
+                <span className="visually-hidden">{t("loading")}</span>
               </div>
             </div>
           </div>
@@ -168,8 +170,8 @@ const SearchPageContent = () => {
       <div className="container-fluid">
         <section className="about section">
           <div className="container section-title pb-3">
-            <h2>Search Results</h2>
-            <p>Error occurred during search</p>
+            <h2>{t("title")}</h2>
+            <p>{t("error_title")}</p>
           </div>
           <div className="container">
             <div className="alert alert-danger" role="alert">
@@ -186,10 +188,12 @@ const SearchPageContent = () => {
     <div className="container-fluid">
       <section className="about section">
         <div className="container section-title pb-3">
-          <h2>Search Results</h2>
+          <h2>{t("title")}</h2>
           <p>
-            Found {totalResults} result{totalResults !== 1 ? "s" : ""} for "
-            {query}"
+            {totalResults !== 1
+              ? t("results_count_plural", { count: totalResults })
+              : t("results_count", { count: totalResults })}{" "}
+            {t("results_for", { query })}
           </p>
         </div>
 
@@ -200,10 +204,8 @@ const SearchPageContent = () => {
                 className="bi bi-search"
                 style={{ fontSize: "4rem", color: "#e64e4e" }}
               ></i>
-              <h4 className="mt-3">No results found</h4>
-              <p className="text-muted">
-                Try different keywords or check your spelling.
-              </p>
+              <h4 className="mt-3">{t("no_results_title")}</h4>
+              <p className="text-muted">{t("no_results_message")}</p>
             </div>
           ) : (
             <>
@@ -219,7 +221,7 @@ const SearchPageContent = () => {
                     }}
                   >
                     <i className="bi bi-newspaper me-2"></i>
-                    Articles ({results.posts.length})
+                    {t("articles_section", { count: results.posts.length })}
                   </h3>
                   <div className="row g-4">
                     {results.posts.map((post) => (
@@ -288,7 +290,8 @@ const SearchPageContent = () => {
                                     {post.category}
                                   </span>
                                   <small className="text-muted">
-                                    Published: {formatDate(post.publishedAt)}
+                                    {t("published")}{" "}
+                                    {formatDate(post.publishedAt)}
                                   </small>
                                 </div>
                               </div>
@@ -307,7 +310,7 @@ const SearchPageContent = () => {
                                   >
                                     <i className="bi bi-book-open"></i>
                                     <span className="fw-medium">
-                                      Read Article
+                                      {t("read_article")}
                                     </span>
                                   </a>
                                 </div>
@@ -333,7 +336,9 @@ const SearchPageContent = () => {
                     }}
                   >
                     <i className="bi bi-file-text me-2"></i>
-                    Resources ({results.resources.length})
+                    {t("resources_section", {
+                      count: results.resources.length,
+                    })}
                   </h3>
                   <div className="row g-4">
                     {results.resources.map((resource) => (
@@ -388,17 +393,18 @@ const SearchPageContent = () => {
                                   </span>
                                   {resource.size && (
                                     <small className="text-muted">
-                                      Size: {formatFileSize(resource.size)}
+                                      {t("size")}{" "}
+                                      {formatFileSize(resource.size)}
                                     </small>
                                   )}
                                 </div>
                                 <small className="text-muted d-block text-break">
-                                  Date added: {formatDate(resource.date)}
+                                  {t("date_added")} {formatDate(resource.date)}
                                   {resource.modifiedAt &&
                                     resource.modifiedAt !== resource.date && (
                                       <>
                                         {" "}
-                                        | Last Modified:{" "}
+                                        | {t("last_modified")}{" "}
                                         {formatDate(resource.modifiedAt)}
                                       </>
                                     )}
@@ -442,7 +448,9 @@ const SearchPageContent = () => {
                                     }}
                                   >
                                     <i className="bi bi-download"></i>
-                                    <span className="fw-medium">Download</span>
+                                    <span className="fw-medium">
+                                      {t("download")}
+                                    </span>
                                   </button>
 
                                   <a
@@ -471,7 +479,9 @@ const SearchPageContent = () => {
                                     }}
                                   >
                                     <i className="bi bi-eye"></i>
-                                    <span className="fw-medium">Preview</span>
+                                    <span className="fw-medium">
+                                      {t("preview")}
+                                    </span>
                                   </a>
                                 </div>
                               </div>
