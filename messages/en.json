@@ -98,32 +98,44 @@
       {
         "title": "MOFA",
         "description": "Ministry Of Fisheries and Aquaculture",
-        "image": "assets/img/faculties/faculties-2.png"
+        "image": "assets/img/faculties/faculties-2.png",
+        "anchor": "https://www.mofaq.gov.gh/",
+        "isExternal": true
       },
       {
         "title": "National Premix Fuel Secretariat (NPFS)",
         "description": "Information on the National Premix Fuel Secretariat",
-        "image": "assets/img/faculties/faculties-7.jpg"
+        "image": "assets/img/faculties/faculties-7.jpg",
+        "anchor": "#",
+        "isExternal": false
       },
       {
         "title": "Vessel Registry & Licensing",
         "description": "Registration information about all fishing vessels",
-        "image": "assets/img/faculties/faculties-4.jpg"
+        "image": "assets/img/faculties/faculties-4.jpg",
+        "anchor": "#",
+        "isExternal": false
       },
       {
         "title": "Statistics",
         "description": "Statistical information about fish production",
-        "image": "assets/img/faculties/faculties-6.jpg"
+        "image": "assets/img/faculties/faculties-6.jpg",
+        "anchor": "#",
+        "isExternal": false
       },
       {
         "title": "Reports",
         "description": "General Reports of the Fisheries Commission",
-        "image": "assets/img/faculties/faculties-5.jpg"
+        "image": "assets/img/faculties/faculties-5.jpg",
+        "anchor": "/reports-and-plans",
+        "isExternal": false
       },
       {
         "title": "Regional Offices",
         "description": "Information on all our regional offices and their activities",
-        "image": "assets/img/faculties/faculties-3.jpg"
+        "image": "assets/img/faculties/faculties-3.jpg",
+        "anchor": "#",
+        "isExternal": false
       }
     ]
   },

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const Faculties = () => {
   const t = useTranslations("FacultiesSection");
@@ -23,19 +24,47 @@ const Faculties = () => {
               data-aos="fade-up"
               data-aos-delay={100 * (index + 1)}
             >
-              <div className="team-member">
-                <div className="member-img">
-                  <img
-                    src={section.image}
-                    className="img-fluid"
-                    alt={section.title}
-                  />
-                </div>
-                <div className="member-info">
-                  <h4>{section.title}</h4>
-                  <span>{section.description}</span>
-                </div>
-              </div>
+              {section.isExternal ? (
+                // External link
+                <a
+                  href={section.anchor}
+                  className="team-member w-100 text-decoration-none"
+                  style={{ display: "block" }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="member-img">
+                    <img
+                      src={section.image}
+                      className="img-fluid"
+                      alt={section.title}
+                    />
+                  </div>
+                  <div className="member-info">
+                    <h4>{section.title}</h4>
+                    <span>{section.description}</span>
+                  </div>
+                </a>
+              ) : (
+                // Internal link
+                <Link
+                  href={section.anchor}
+                  className="team-member w-100 text-decoration-none"
+                  style={{ display: "block" }}
+                >
+                  <div className="member-img">
+                    <img
+                      src={section.image}
+                      className="img-fluid"
+                      alt={section.title}
+                    />
+                  </div>
+                  <div className="member-info">
+                    <h4>{section.title}</h4>
+                    <span>{section.description}</span>
+                  </div>
+                </Link>
+              )}
             </div>
           ))}
         </div>
