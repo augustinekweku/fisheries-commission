@@ -99,32 +99,44 @@
       {
         "title": "MOFA",
         "description": "Ministère de la Pêche et de l'Aquaculture",
-        "image": "assets/img/faculties/faculties-2.png"
+        "image": "assets/img/faculties/faculties-2.png",
+        "anchor": "https://www.mofaq.gov.gh/",
+        "isExternal": true
       },
       {
-        "title": "Secrétariat national du carburant prémélangé (NPFS)",
-        "description": "Informations sur le Secrétariat national du carburant prémélangé",
-        "image": "assets/img/faculties/faculties-7.jpg"
+        "title": "Secrétariat National du Carburant Premix (NPFS)",
+        "description": "Informations sur le Secrétariat National du Carburant Premix",
+        "image": "assets/img/faculties/faculties-7.jpg",
+        "anchor": "#",
+        "isExternal": false
       },
       {
-        "title": "Registre et licence des navires",
-        "description": "Informations sur l'enregistrement de tous les navires de pêche",
-        "image": "assets/img/faculties/faculties-4.jpg"
+        "title": "Registre et Licence des Navires",
+        "description": "Informations d'enregistrement sur tous les navires de pêche",
+        "image": "assets/img/faculties/faculties-4.jpg",
+        "anchor": "/#",
+        "isExternal": false
       },
       {
         "title": "Statistiques",
-        "description": "Informations statistiques sur la production de poisson",
-        "image": "assets/img/faculties/faculties-6.jpg"
+        "description": "Informations statistiques sur la production halieutique",
+        "image": "assets/img/faculties/faculties-6.jpg",
+        "anchor": "#",
+        "isExternal": false
       },
       {
         "title": "Rapports",
         "description": "Rapports généraux de la Commission des Pêches",
-        "image": "assets/img/faculties/faculties-5.jpg"
+        "image": "assets/img/faculties/faculties-5.jpg",
+        "anchor": "/reports-and-plans",
+        "isExternal": false
       },
       {
-        "title": "Bureaux régionaux",
-        "description": "Informations sur nos bureaux régionaux et leurs activités",
-        "image": "assets/img/faculties/faculties-3.jpg"
+        "title": "Bureaux Régionaux",
+        "description": "Informations sur tous nos bureaux régionaux et leurs activités",
+        "image": "assets/img/faculties/faculties-3.jpg",
+        "anchor": "#",
+        "isExternal": false
       }
     ]
   },

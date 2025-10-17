@@ -17,6 +17,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TopBar from "@/components/TopBar";
 import BotpressChat from "@/components/BotpressChat";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export const metadata: Metadata = {
   title: "Fisheries Commission",
@@ -31,11 +32,11 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // 1️⃣ Get user locale (cookie or default)
+  // Get user locale
   const cookieStore = await cookies();
   const locale = cookieStore.get("locale")?.value || "en";
 
-  // 2️⃣ Load messages based on locale
+  // Load messages based on locale
   let messages;
   try {
     messages = (await import(`../messages/${locale}.json`)).default;
@@ -51,6 +52,7 @@ export default async function RootLayout({
           <Header />
           {children}
           <BotpressChat />
+          <LanguageSwitcher variant="fixed" />
           <CustomScript />
           <Footer />
         </NextIntlClientProvider>
