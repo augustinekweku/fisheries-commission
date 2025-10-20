@@ -7,7 +7,7 @@ import { client } from "@/sanity/client";
 
 // Enhanced search queries
 const searchPostsQuery = `
-*[_type == "post" && (title match $q || body match $q) && publishStatus == "published"] 
+*[_type == "post" && (title.en match $q || title.fr match $q || body.en match $q || body.fr match $q) && publishStatus == "published"] 
 | order(publishedAt desc) 
 [0...$limit] {
   "imageUrl": image.asset->url,
@@ -17,7 +17,7 @@ const searchPostsQuery = `
   _id,
   body,
   publishedAt,
-  "excerpt": array::join(string::split(pt::text(body), "")[0..150], "") + "..."
+  "excerpt": array::join(string::split(pt::text(body.en), "")[0..150], "") + "..."
 }
 `;
 
@@ -132,11 +132,19 @@ const SearchPageContent = () => {
     return (size / (1024 * 1024)).toFixed(1) + " MB";
   };
 
-  const highlightSearchTerm = (text: string, searchTerm: string) => {
-    if (!searchTerm.trim()) return text;
+  const getLocalizedText = (text: string | any, locale: string = "en") => {
+    if (typeof text === "string") return text;
+    return text?.[locale] || text?.en || text?.fr || "";
+  };
+
+  const highlightSearchTerm = (text: string | any, searchTerm: string) => {
+    // Convert text to string if it's an object (handles multilingual fields)
+    const textStr = typeof text === "string" ? text : getLocalizedText(text);
+
+    if (!searchTerm.trim() || !textStr) return textStr;
 
     const regex = new RegExp(`(${searchTerm.trim()})`, "gi");
-    return text.replace(
+    return textStr.replace(
       regex,
       '<mark style="background-color: #ffe066; padding: 2px 4px; border-radius: 3px;">$1</mark>'
     );
