@@ -225,13 +225,13 @@ h1 {
 
   .navmenu li {
     position: relative;
-    margin-left: 5px;
+    margin-left: 4px;
   }
 
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    padding: 7px 17px;
+    padding: 7px 14px;
     font-size: 14px;
     font-family: var(--nav-font);
     font-weight: 400;
@@ -691,7 +691,7 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   position: relative;
 }
 
@@ -719,7 +719,7 @@ section,
 .section-title p {
   color: var(--heading-color);
   margin: 0;
-  font-size: 28px;
+  font-size: 23px;
   font-weight: 700;
   text-transform: uppercase;
   font-family: var(--heading-font);
@@ -728,7 +728,7 @@ section,
 
 @media (max-width: 768px) {
   .section-title p {
-    font-size: 20px;
+    font-size: 19px;
     line-height: 1.2;
     margin-top: 8px;
   }

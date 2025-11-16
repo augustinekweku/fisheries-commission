@@ -52,7 +52,12 @@ const Header = () => {
                     <Link href="">{t("whatWeDo")}</Link>
                   </li>
                   <li>
-                    <Link href="/fiti-standard">{t("fiti")}</Link>
+                    <Link
+                      href="https://www.ghana.gov.gh/mdas/c8d398322e"
+                      target="_blank"
+                    >
+                      {t("started")}
+                    </Link>
                   </li>
                   <li>
                     <Link href="https://www.macppa.com/en" target="_blank">
@@ -129,7 +134,16 @@ const Header = () => {
 
                 {/* Resources Dropdown */}
                 <li
-                  className={`dropdown ${isParentActive(["/laws-and-regulations", "/reports-and-plans"]) ? "active" : ""}`}
+                  className={`dropdown ${
+                    isParentActive([
+                      "/laws-and-regulations",
+                      "/reports-and-plans",
+                      "/research",
+                      "/policy",
+                    ])
+                      ? "active"
+                      : ""
+                  }`}
                 >
                   <Link href="#">
                     <span>{t("resources")}</span>{" "}
@@ -143,6 +157,12 @@ const Header = () => {
                     </li>
                     <li>
                       <Link href="/reports-and-plans">{t("reportsPlans")}</Link>
+                    </li>
+                    <li>
+                      <Link href="#">{t("research")}</Link>
+                    </li>
+                    <li>
+                      <Link href="#">{t("policy")}</Link>
                     </li>
                   </ul>
                 </li>
@@ -178,9 +198,7 @@ const Header = () => {
                   </Link>
                   <ul>
                     <li>
-                      <Link href="/projects/fish-for-development">
-                        {t("ffd")}
-                      </Link>
+                      <Link href="#">{t("ffd")}</Link>
                     </li>
                     <li>
                       <Link href="#">{t("sfmp")}</Link>
@@ -189,6 +207,15 @@ const Header = () => {
                       <Link href="#">{t("warfp")}</Link>
                     </li>
                   </ul>
+                </li>
+
+                <li>
+                  <Link
+                    href="#"
+                    className={isActive("/permitsLicences") ? "active" : ""}
+                  >
+                    {t("permitsLicences")}
+                  </Link>
                 </li>
 
                 {/* Contact (Mobile Only) */}

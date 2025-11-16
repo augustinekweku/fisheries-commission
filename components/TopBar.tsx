@@ -49,12 +49,12 @@ const TopBar = () => {
               <Link href="" className="text-body py-2 pe-3 border-end">
                 <small>{t("whatWeDo")}</small>
               </Link>
-              <Link
+              {/* <Link
                 href="/fiti-standard"
                 className="text-body py-2 px-3 border-end"
               >
                 <small>{t("fiti")}</small>
-              </Link>
+              </Link> */}
               <Link
                 href="https://www.macppa.com/en"
                 target="_blank"
@@ -73,11 +73,15 @@ const TopBar = () => {
               >
                 <small>{t("recruitment")}</small>
               </Link>
+              <Link href="/contact" className="text-body py-2 px-3 border-end">
+                <small>{t("contact")}</small>
+              </Link>
               <Link
-                href="/contact"
+                href="https://www.ghana.gov.gh/mdas/c8d398322e/ "
+                target="_blank"
                 className="text-body py-2 px-3 border-end me-3"
               >
-                <small>{t("contact")}</small>
+                <small>{t("started")}</small>
               </Link>
 
               {/* Language Switcher */}
