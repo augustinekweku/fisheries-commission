@@ -38,7 +38,6 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      console.log("Searching for:", searchQuery.trim()); // Debug log
       // Redirect to search results page with query parameter
       router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
       onClose();
@@ -51,7 +50,6 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
   };
 
   const handleQuickSearch = (term: string) => {
-    console.log("Quick searching for:", term); // Debug log
     try {
       router.push(`/search?q=${encodeURIComponent(term)}`);
       onClose();

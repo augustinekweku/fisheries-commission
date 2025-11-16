@@ -189,6 +189,7 @@ export default function LanguageSwitcher({
             style={{
               fontSize: variant === "fixed" ? "14px" : "12px",
               fontWeight: variant === "fixed" ? "500" : "normal",
+              color: "#333 !important",
             }}
           >
             {selectedLang.label}

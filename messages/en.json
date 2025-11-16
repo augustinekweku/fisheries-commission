@@ -2,11 +2,11 @@
   "topbar": {
     "email": "info@fishcom.gov.gh",
     "whatWeDo": "What We Do",
-    "fiti": "FiTi",
     "macppa": "MACPPA",
     "blueEconomy": "Blue Economy",
     "recruitment": "Recruitment Portal",
-    "contact": "Contact Us"
+    "contact": "Contact Us",
+    "started": "Get Started"
   },
   "header": {
     "home": "Home",
@@ -21,14 +21,16 @@
     "divisionsUnits": "Divisions and Units",
     "regionalOffices": "Regional Offices",
     "collaborators": "Collaborators",
-    "formalInstitutions": "Formal Institutions",
-    "informalInstitutions": "Informal Institutions",
+    "formalInstitutions": "Government Institutions",
+    "informalInstitutions": "Non-Government Institutions",
     "developmentPartners": "Development Partners",
     "fisheriesAssociations": "Fisheries Associations & Civil Society Organizations",
     "resources": "Resources",
     "lawsRegulations": "Laws and Regulations",
     "reportsPlans": "Reports and Plans",
-    "newsEvents": "News and Events",
+    "research": "Research",
+    "policy": "Policy",
+    "newsEvents": "News & Events",
     "pressRelease": "Press and Release",
     "articles": "Articles",
     "gallery": "Gallery",
@@ -36,7 +38,9 @@
     "ffd": "Fish For Development (FFD)",
     "sfmp": "Sustainable Fisheries Management Programme (SFMP)",
     "warfp": "West African Regional Fisheries Programme (WARFP)",
-    "contactUs": "Contact Us"
+    "contactUs": "Contact Us",
+    "started": "Get Started",
+    "permitsLicences": "Permits & Licences"
   },
   "Hero": {
     "item1": {
@@ -134,6 +138,13 @@
         "title": "Regional Offices",
         "description": "Information on all our regional offices and their activities",
         "image": "assets/img/faculties/faculties-3.jpg",
+        "anchor": "/regional-offices",
+        "isExternal": false
+      },
+      {
+        "title": "Aquaculture Information Management System (AIMS)",
+        "description": "Information on the AIMS platform",
+        "image": "assets/img/faculties/faculties-8.png",
         "anchor": "#",
         "isExternal": false
       }
@@ -271,17 +282,24 @@
     "intro": "For the Fisheries Commission to effectively and efficiently perform its mandate, it is organized internally into seven (7) Divisions and three (3) special units, namely:",
     "mfmd": {
       "title": "Marine Fisheries Management Division (MFMD)",
-      "items": ["Artisanal unit", "Industrial unit"]
+      "items": [
+        "Small Scale Fisheries Unit /Section (Canoe and Inshore)",
+        "Industrial Fisheries Unit /Section (Trawlers and Tuna)"
+      ]
     },
     "ifmd": {
       "title": "Inland Fisheries Management Division (IFMD)",
-      "items": ["Freshwater unit", "Lagoon unit", "Mariculture unit"]
+      "items": ["Freshwater unit", "Lagoon unit"]
+    },
+    "aquaculture": {
+      "title": "Aquaculture",
+      "items": ["Freshwater Culture", "Mariculture unit"]
     },
     "fssd": {
       "title": "Fisheries Scientific Survey Division (FSSD)",
       "items": [
         "Environment and Climate Change unit",
-        "Fish stock and statistics unit",
+        "Fish stock, Biology and Statistics unit",
         "Fishing gears and methods unit"
       ]
     },
@@ -327,8 +345,8 @@
 
   "collaborators": {
     "title": "Collaborators",
-    "formalTitle": "Formal Institutions",
-    "informalTitle": "Informal Institutions",
+    "formalTitle": "Government Institutions",
+    "informalTitle": "Non-Government Institutions",
     "developmentTitle": "Development Partners",
     "associationsTitle": "Fisheries Associations & Civil Society Organizations",
     "formalList": [
@@ -549,6 +567,14 @@
       "title": "Physical Address",
       "text": "Adjacent the Ridge Church School"
     },
+    "digitalAddress": {
+      "title": "Digital Address",
+      "text": "GA-079-5564"
+    },
+    "phoneNumber": {
+      "title": "Phone",
+      "text": "0303941583"
+    },
     "emailAddress": {
       "title": "Email Address",
       "text": "info@fishcom.gov.gh"
@@ -566,5 +592,27 @@
   },
   "loading": "Loading...",
   "recentPressAndReleases": "Recent Press and Releases",
-  "recentNews": "Recent News"
+  "recentNews": "Recent News",
+  "regionalOffices": {
+    "title": "Regional Offices",
+    "subtitle": "Our offices across all regions of Ghana",
+    "officesList": [
+      { "name": "Ashanti Regional Office" },
+      { "name": "Brong Ahafo Regional Office" },
+      { "name": "Central Regional Office" },
+      { "name": "Eastern Regional Office" },
+      { "name": "Greater Accra Regional Office" },
+      { "name": "Northern Regional Office" },
+      { "name": "Upper East Regional Office" },
+      { "name": "Upper West Regional Office" },
+      { "name": "Volta Regional Office" },
+      { "name": "Western Regional Office" },
+      { "name": "Savannah Regional Office" },
+      { "name": "Bono East Regional Office" },
+      { "name": "Oti Regional Office" },
+      { "name": "Ahafo Regional Office" },
+      { "name": "Western North Regional Office" },
+      { "name": "North East Regional Office" }
+    ]
+  }
 }

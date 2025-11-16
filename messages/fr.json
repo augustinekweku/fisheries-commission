@@ -2,11 +2,11 @@
   "topbar": {
     "email": "info@fishcom.gov.gh",
     "whatWeDo": "Ce Que Nous Faisons",
-    "fiti": "FiTi",
     "macppa": "MACPPA",
     "blueEconomy": "Économie Bleue",
     "recruitment": "Portail de Recrutement",
-    "contact": "Nous Contacter"
+    "contact": "Nous Contacter",
+    "started": "Commencer"
   },
   "header": {
     "home": "Accueil",
@@ -21,13 +21,15 @@
     "divisionsUnits": "Divisions et Unités",
     "regionalOffices": "Bureaux Régionaux",
     "collaborators": "Collaborateurs",
-    "formalInstitutions": "Institutions Formelles",
-    "informalInstitutions": "Institutions Informelles",
+    "formalInstitutions": "Institutions Gouvernementales",
+    "informalInstitutions": "Institutions Non Gouvernementales",
     "developmentPartners": "Partenaires de Développement",
     "fisheriesAssociations": "Associations de Pêche & Société Civile",
     "resources": "Ressources",
     "lawsRegulations": "Lois et Règlements",
     "reportsPlans": "Rapports et Plans",
+    "research": "Recherche",
+    "policy": "Politique",
     "newsEvents": "Actualités et Événements",
     "pressRelease": "Communiqués de Presse",
     "articles": "Articles",
@@ -35,8 +37,10 @@
     "projects": "Projets",
     "ffd": "Pêche Pour le Développement (FFD)",
     "sfmp": "Programme de Gestion Durable des Pêches (SFMP)",
-    "warfp": "Programme Régional des Pêches en Afrique de l’Ouest (WARFP)",
-    "contactUs": "Nous Contacter"
+    "warfp": "Programme Régional des Pêches en Afrique de l'Ouest (WARFP)",
+    "contactUs": "Nous Contacter",
+    "started": "Commencer",
+    "permitsLicences": "Permis et Licences"
   },
   "Hero": {
     "item1": {
@@ -135,6 +139,13 @@
         "title": "Bureaux Régionaux",
         "description": "Informations sur tous nos bureaux régionaux et leurs activités",
         "image": "assets/img/faculties/faculties-3.jpg",
+        "anchor": "/regional-offices",
+        "isExternal": false
+      },
+      {
+        "title": "Système de Gestion de l'Information Aquacole (AIMS)",
+        "description": "Informations sur la plateforme AIMS",
+        "image": "assets/img/faculties/faculties-8.png",
         "anchor": "#",
         "isExternal": false
       }
@@ -272,17 +283,24 @@
     "intro": "Pour que la Commission des Pêches remplisse efficacement et efficacement son mandat, elle est organisée en sept (7) divisions et trois (3) unités spéciales, à savoir :",
     "mfmd": {
       "title": "Division de Gestion des Pêches Marines (MFMD)",
-      "items": ["Unité artisanale", "Unité industrielle"]
+      "items": [
+        "Unité / Section de la Pêche à Petite Échelle (Canoë et Côtière)",
+        "Unité / Section de la Pêche Industrielle (Chalutiers et Thon)"
+      ]
     },
     "ifmd": {
       "title": "Division de Gestion des Pêches Continentales (IFMD)",
-      "items": ["Unité eau douce", "Unité lagunaire", "Unité mariculture"]
+      "items": ["Unité eau douce", "Unité lagunaire"]
+    },
+    "aquaculture": {
+      "title": "Aquaculture",
+      "items": ["Culture en Eau Douce", "Unité Mariculture"]
     },
     "fssd": {
       "title": "Division des Enquêtes Scientifiques sur les Pêches (FSSD)",
       "items": [
         "Unité environnement et changement climatique",
-        "Unité stocks de poissons et statistiques",
+        "Unité Stocks, Biologie et Statistiques des Poissons",
         "Unité engins et méthodes de pêche"
       ]
     },
@@ -295,11 +313,11 @@
       ]
     },
     "fa": {
-      "title": "Division des Finances et de l’Administration (F&A)",
+      "title": "Division des Finances et de l'Administration (F&A)",
       "items": [
         "Unité des ressources humaines",
         "Unité des affaires corporatives",
-        "Unité technologie de l’information",
+        "Unité technologie de l'information",
         "Unité des achats",
         "Unité administration générale"
       ]
@@ -327,8 +345,8 @@
   },
   "collaborators": {
     "title": "Collaborateurs",
-    "formalTitle": "Institutions Formelles",
-    "informalTitle": "Institutions Informelles",
+    "formalTitle": "Institutions Gouvernementales",
+    "informalTitle": "Institutions Non Gouvernementales",
     "developmentTitle": "Partenaires de Développement",
     "associationsTitle": "Associations de Pêche et Organisations de la Société Civile",
     "formalList": [
@@ -549,6 +567,14 @@
       "title": "Adresse physique",
       "text": "À côté de la Ridge Church School"
     },
+    "digitalAddress": {
+      "title": "Adresse Numérique",
+      "text": "GA-079-5564"
+    },
+    "phoneNumber": {
+      "title": "Téléphone",
+      "text": "0303941583"
+    },
     "emailAddress": {
       "title": "Adresse email",
       "text": "info@fishcom.gov.gh"
@@ -566,5 +592,27 @@
   },
   "recentPressAndReleases": "Communiqués et publications récents",
   "recentNews": "Actualités Récentes",
-  "loading": "Chargement..."
+  "loading": "Chargement...",
+  "regionalOffices": {
+    "title": "Bureaux Régionaux",
+    "subtitle": "Nos bureaux dans toutes les régions du Ghana",
+    "officesList": [
+      { "name": "Bureau Régional de l'Ashanti" },
+      { "name": "Bureau Régional du Brong Ahafo" },
+      { "name": "Bureau Régional du Centre" },
+      { "name": "Bureau Régional de l'Est" },
+      { "name": "Bureau Régional du Grand Accra" },
+      { "name": "Bureau Régional du Nord" },
+      { "name": "Bureau Régional de l'Upper East" },
+      { "name": "Bureau Régional de l'Upper West" },
+      { "name": "Bureau Régional de la Volta" },
+      { "name": "Bureau Régional de l'Ouest" },
+      { "name": "Bureau Régional du Savannah" },
+      { "name": "Bureau Régional du Bono East" },
+      { "name": "Bureau Régional de l'Oti" },
+      { "name": "Bureau Régional de l'Ahafo" },
+      { "name": "Bureau Régional de l'Ouest Nord" },
+      { "name": "Bureau Régional du North East" }
+    ]
+  }
 }

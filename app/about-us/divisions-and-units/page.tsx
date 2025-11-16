@@ -9,6 +9,7 @@ const DivisionsAndUnits = () => {
     "mfmd",
     "ifmd",
     "fssd",
+    "aquaculture",
     "mcsd",
     "fa",
     "pbmed",
@@ -19,7 +20,7 @@ const DivisionsAndUnits = () => {
   return (
     <div className="container-fluid">
       <section id="about" className="about section">
-        <div className="container section-title pb-4 mb-1">
+        <div className="container section-title pb-3 mb-1">
           <h2>{t("title")}</h2>
           <p>{t("subtitle")}</p>
         </div>
