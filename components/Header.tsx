@@ -38,7 +38,7 @@ const Header = () => {
 
           <div className="d-flex align-items-center">
             {/* Navigation */}
-            <nav id="navmenu" className="navmenu me-2">
+            <nav id="navmenu" className="navmenu">
               <ul>
                 <li>
                   <Link href="/" className={isActive("/") ? "active" : ""}>
@@ -82,9 +82,7 @@ const Header = () => {
                       <Link href="#">{t("goalsObjectives")}</Link>
                     </li>
                     <li>
-                      <Link href="/about-us/board-members">
-                        {t("boardMembers")}
-                      </Link>
+                      <Link href="#">{t("boardMembers")}</Link>
                     </li>
                     <li>
                       <Link href="/about-us/leadership">{t("leadership")}</Link>
@@ -95,7 +93,9 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="#">{t("regionalOffices")}</Link>
+                      <Link href="/regional-offices">
+                        {t("regionalOffices")}
+                      </Link>
                     </li>
                   </ul>
                 </li>
@@ -234,7 +234,7 @@ const Header = () => {
             {/* Search Button */}
             <button
               onClick={() => setIsSearchOpen(true)}
-              className="search-btn btn p-0 border-0 bg-transparent"
+              className="search-btn btn p-0 border-0 bg-transparent me-1"
               aria-label="Open search"
               style={{
                 color: "white",

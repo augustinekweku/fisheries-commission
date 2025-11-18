@@ -200,6 +200,7 @@ export default function LanguageSwitcher({
               height: variant === "fixed" ? "14px" : "12px",
               transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
               transition: "transform 0.2s",
+              color: "#333 !important",
             }}
             fill="none"
             stroke="currentColor"
@@ -254,7 +255,10 @@ export default function LanguageSwitcher({
                   }}
                 />
                 <span
-                  style={{ fontSize: variant === "fixed" ? "14px" : "12px" }}
+                  style={{
+                    fontSize: variant === "fixed" ? "14px" : "12px",
+                    color: "#333 !important",
+                  }}
                 >
                   {lang.label}
                 </span>
