@@ -166,7 +166,7 @@ h1 {
 }
 
 .header .logo img {
-  max-height: 85px;
+  max-height: 80px;
   margin-right: 8px;
 }
 
@@ -225,7 +225,7 @@ h1 {
 
   .navmenu li {
     position: relative;
-    margin-left: 4px;
+    margin-left: 3px;
   }
 
   .navmenu a,
@@ -246,7 +246,7 @@ h1 {
   .header.scrolled .navmenu a,
   .header.scrolled .navmenu a:focus {
     font-size: 12px;
-    padding: 8px 17px;
+    padding: 7px 15px;
   }
 
   .navmenu a i,

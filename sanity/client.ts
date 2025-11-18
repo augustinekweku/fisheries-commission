@@ -1,5 +1,4 @@
 import { createClient, QueryParams } from "next-sanity";
-import { allPostsPaginatedQuery } from "./groq";
 
 export const client = createClient({
   projectId: "p8bgl0wr",
