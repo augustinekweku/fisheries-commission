@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 import { client } from "@/sanity/client";
 
@@ -24,8 +24,10 @@ const query = `
 
 const HeroSection = () => {
   const t = useTranslations("Hero");
+  const locale = useLocale();
   const [carouselItems, setCarouselItems] = useState<any[]>([]);
 
+  // translated static fallback slides
   const fallbackItems = [
     {
       id: "fallback-1",
@@ -52,21 +54,23 @@ const HeroSection = () => {
           id: post._id,
           backgroundImage:
             post.images.find((img: string) => img) || "/assets/img/default.jpg",
-          title: post.title?.en || "Untitled",
-          buttonText: "Read More",
+          title: post.title?.[locale] || post.title?.en || "Untitled",
+          buttonText: t("readMore"),
           buttonLink: `/articles/${post.slug?.current}`,
         }));
 
-        // Static fallback slides come first
+        // static slides show first, then sanity posts
         setCarouselItems([...fallbackItems, ...formattedPosts]);
       } catch (err) {
         console.error("Slider Error:", err);
-        setCarouselItems(fallbackItems); // fallback if fetch fails
+
+        // fallback to static slides on error
+        setCarouselItems(fallbackItems);
       }
     }
 
     loadFeatured();
-  }, []);
+  }, [locale]); // Refresh on language change
 
   return (
     <section id="hero" className="hero section dark-background">
@@ -85,7 +89,6 @@ const HeroSection = () => {
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              width: "100%",
             }}
           >
             <div
@@ -99,6 +102,7 @@ const HeroSection = () => {
                 <h1 className="animate__animated animate__fadeInDown display-5 hero-title fw-semibold">
                   {item.title}
                 </h1>
+
                 <Link
                   href={item.buttonLink}
                   className="btn-get-started animate__animated animate__fadeInUp scrollto"
@@ -132,7 +136,6 @@ const HeroSection = () => {
       <svg
         className="hero-waves"
         xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
         viewBox="0 24 150 28"
         preserveAspectRatio="none"
       >
@@ -143,13 +146,13 @@ const HeroSection = () => {
           />
         </defs>
         <g className="wave1">
-          <use xlinkHref="#wave-path" x="50" y="3"></use>
+          <use href="#wave-path" x="50" y="3" />
         </g>
         <g className="wave2">
-          <use xlinkHref="#wave-path" x="50" y="0"></use>
+          <use href="#wave-path" x="50" y="0" />
         </g>
         <g className="wave3">
-          <use xlinkHref="#wave-path" x="50" y="9"></use>
+          <use href="#wave-path" x="50" y="9" />
         </g>
       </svg>
     </section>

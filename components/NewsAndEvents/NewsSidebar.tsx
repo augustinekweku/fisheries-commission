@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { client } from "@/sanity/client";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
+import LoadingFallback from "../LoadingFallback";
 
 type SidebarPost = {
   _id: string;
@@ -58,11 +59,8 @@ export default function NewsSidebar() {
 
   if (loading) {
     return (
-      <div className="col-lg-4 mt-5 mt-lg-0">
-        <h5 className="mb-4 border-bottom pb-2 accent-color fw-bold">
-          {t("recentNews")}
-        </h5>
-        <p className="text-muted">{t("loading")}</p>
+      <div className="col-lg-4">
+        <LoadingFallback />
       </div>
     );
   }

@@ -43,6 +43,7 @@
     "permitsLicences": "Permits & Licences"
   },
   "Hero": {
+    "readMore": "Read More",
     "item1": {
       "title": "Welcome to the Fisheries Commission Official Website",
       "buttonText": "Read More"
@@ -50,14 +51,6 @@
     "item2": {
       "title": "Explore Our Services and Resources",
       "buttonText": "Learn More"
-    },
-    "item3": {
-      "title": "Join Us in Sustainable Fisheries Management",
-      "buttonText": "Get Started"
-    },
-    "item4": {
-      "title": "Read Our Latest News and Updates",
-      "buttonText": "Get Started"
     }
   },
   "AboutUs": {
