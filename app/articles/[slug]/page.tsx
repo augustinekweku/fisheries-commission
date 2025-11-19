@@ -174,12 +174,28 @@ export default async function ArticleDetailPage({
               <div className="row g-4">
                 {gallery.map((src, idx) => (
                   <div className="col-md-6" key={idx}>
-                    <img
-                      src={src}
-                      alt={`${title} - image ${idx + 2}`}
-                      className="img-fluid rounded shadow"
-                      style={{ width: "100%", objectFit: "cover" }}
-                    />
+                    <div
+                      style={{
+                        position: "relative",
+                        paddingBottom: "75%",
+                        overflow: "hidden",
+                        borderRadius: "0.375rem",
+                      }}
+                      className="shadow"
+                    >
+                      <img
+                        src={src}
+                        alt={`${title} - image ${idx + 2}`}
+                        style={{
+                          position: "absolute",
+                          top: 0,
+                          left: 0,
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
+                    </div>
                   </div>
                 ))}
               </div>

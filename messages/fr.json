@@ -43,6 +43,7 @@
     "permitsLicences": "Permis et Licences"
   },
   "Hero": {
+    "readMore": "Lire plus",
     "item1": {
       "title": "Bienvenue sur le site officiel de la Commission des Pêches",
       "buttonText": "Lire plus"
@@ -50,14 +51,6 @@
     "item2": {
       "title": "Découvrez nos services et ressources",
       "buttonText": "En savoir plus"
-    },
-    "item3": {
-      "title": "Rejoignez-nous pour une gestion durable des pêches",
-      "buttonText": "Commencer"
-    },
-    "item4": {
-      "title": "Lisez nos dernières actualités et mises à jour",
-      "buttonText": "Commencer"
     }
   },
   "AboutUs": {
