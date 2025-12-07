@@ -20,7 +20,7 @@ jobs:
 
       - name: Install & Build (CI)
         run: |
-          npm ci
+          npm install
           npm run build
 
       - name: Upload to cPanel via SSH
