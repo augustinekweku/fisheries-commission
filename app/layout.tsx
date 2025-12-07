@@ -21,7 +21,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export const metadata: Metadata = {
   title: "Fisheries Commission",
-  description: "The official website of the Fisheries Commission of Ghana",
+  description: "The official website of the Fisheries Commission of Ghana.",
   icons: {
     icon: "/assets/img/logo.jpeg",
   },
