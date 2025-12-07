@@ -20,7 +20,7 @@ jobs:
 
       - name: Install & Build (CI)
         run: |
-          npm install
+          npm install --legacy-peer-deps
           npm run build
 
       - name: Upload to cPanel via SSH
