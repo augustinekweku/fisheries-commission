@@ -607,5 +607,33 @@
       { "name": "Bureau Régional de l'Ouest Nord" },
       { "name": "Bureau Régional du North East" }
     ]
+  },
+  "goalsAndObjectives": {
+    "missionTitle": "Mission",
+    "mission": "Transformer le secteur et l'industrie de la pêche et de l'aquaculture en un segment économique viable et fournir des services de soutien pour promouvoir l'investissement du secteur privé.",
+    "visionTitle": "Vision",
+    "vision": "Promouvoir le développement accéléré de la pêche et de l'aquaculture pour contribuer au développement national.",
+    "goalTitle": "Notre Objectif",
+    "goal": "L'objet de la Commission est de réglementer et de gérer l'utilisation des ressources halieutiques de la République et de coordonner les politiques qui s'y rapportent.",
+    "objectivesTitle": "Objectifs Clés",
+    "objectivesSubtitle": "Conformément à l'objectif de la Commission des pêches, voici les fonctions clés:",
+    "objectives": [
+      "Préparer et maintenir sous révision continue des plans de gestion et de développement de la pêche dans les eaux sous juridiction de la République;",
+      "Établir des priorités pour l'utilisation des ressources halieutiques qui apporteront les plus grands avantages au pays;",
+      "Assurer la conservation appropriée des ressources halieutiques par la prévention de la surpêche;",
+      "S'efforcer de minimiser, dans la mesure du possible, les conflits d'engins de pêche entre les utilisateurs;",
+      "Assurer le suivi, le contrôle et la surveillance des eaux de pêche;",
+      "Promouvoir la coopération sous-régionale, régionale et internationale dans la gestion des pêches;",
+      "Promouvoir la coopération entre les pêcheurs locaux et faire progresser le développement de la pêche artisanale;",
+      "Effectuer des travaux de recherche et d'enquête pour l'évaluation des stocks des ressources halieutiques;",
+      "Corréler les pêches avec d'autres utilisations de l'eau et la protection de l'environnement, particulièrement en ce qui concerne les ressources halieutiques et la chaîne alimentaire dans les rivières, les lagunes, les lacs et le plateau continental le long de la côte du pays;",
+      "Normaliser la qualité du poisson, le poids et la base de tarification du poisson en consultation avec toute autre agence responsable des normes de qualité du poisson;",
+      "Faire des recommandations au Ministre sur l'octroi de licences de pêche;",
+      "En consultation avec le Ministre, contrôler et coordonner l'importation de poisson frais et congelé;",
+      "En collaboration avec l'autorité compétente, établir des exigences pour l'équipage des navires et bateaux de pêche, la sécurité de l'équipage et des navires et pour les engins de pêche utilisés afin d'éviter les dommages causés par d'autres navires;",
+      "Entendre et déterminer les plaintes de personnes lésées concernant des questions découlant de ou liées aux activités de pêche et à l'industrie de la pêche en général;",
+      "En collaboration avec les Assemblées de district avec des communautés de pêche, assurer l'application des lois sur les pêches, y compris les règlements adoptés par l'Assemblée de district; et",
+      "Exercer toute autre fonction qui lui est conférée en vertu de la Loi sur les pêches, 2002 (Loi 625) ou de toute autre loi"
+    ]
   }
 }

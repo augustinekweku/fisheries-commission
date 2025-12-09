@@ -79,7 +79,9 @@ const Header = () => {
                   </Link>
                   <ul>
                     <li>
-                      <Link href="#">{t("goalsObjectives")}</Link>
+                      <Link href="/about-us/goals-and-objectives">
+                        {t("goalsObjectives")}
+                      </Link>
                     </li>
                     <li>
                       <Link href="#">{t("boardMembers")}</Link>

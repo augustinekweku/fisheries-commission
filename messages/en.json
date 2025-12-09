@@ -607,5 +607,33 @@
       { "name": "Western North Regional Office" },
       { "name": "North East Regional Office" }
     ]
+  },
+  "goalsAndObjectives": {
+    "missionTitle": "Mission",
+    "mission": "Transform the Fisheries and Aquaculture Sector and Industry into a viable economic segment and provide support services to promote private sector investment.",
+    "visionTitle": "Vision",
+    "vision": "Promote Accelerated Fisheries and Aquaculture Development to contribute to National Development.",
+    "goalTitle": "Our Goal",
+    "goal": "The object of the Commission is to regulate and manage the utilization of the fishery resources of the Republic and co-ordinate the policies in relation to them.",
+    "objectivesTitle": "Key Objectives",
+    "objectivesSubtitle": "In line with the Goal of the Fisheries Commission, the following are the key functions:",
+    "objectives": [
+      "Prepare and keep under continual review plans for the management and development of fisheries in waters under the jurisdiction of the Republic;",
+      "Establish priorities for the utilisation of fishery resources which will provide the greatest benefits to the country;",
+      "Ensure the proper conservation of the fishery resources through the prevention of over fishing;",
+      "Strive to minimise, as far as practicable, fishery gear conflict among users;",
+      "Ensure the monitoring, control and surveillance of the fishery waters;",
+      "Promote sub regional, regional and international co-operation in fisheries management;",
+      "Promote co-operation among local fishermen and advance development of artisanal fishing;",
+      "Carry out research and survey work for the assessment of stock of the fisheries resources;",
+      "Correlate fisheries with other water uses and environmental protection particularly with respect to the fish resources and food chain in the rivers, la-goons, lakes and the continental shelf along the coast of the country;",
+      "Standardise fish quality, weight and the basis for fish pricing in consultation with any other agency that has responsibility for fish quality standards;",
+      "Make recommendations to the Minister on granting of licences for fishing;",
+      "In consultation with the Minister, control and co-ordinate the importation of fresh and frozen fish;",
+      "In collaboration with the competent authority, establish requirement for manning fishing vessels and boats, safety for crew and vessels and for fishing gears in use to avoid damage by other vessels;",
+      "Hear and determine complaints from persons aggrieved in respect of matters arising from or related to fishing activities and the fishing industry generally;",
+      "In collaboration with District Assemblies with fishing communities, ensure the enforcement of the fishery laws including by-laws made by the District Assembly; and",
+      "Perform any other function conferred on it under the Fisheries Act, 2002 (Act 625) or any other enactment"
+    ]
   }
 }
