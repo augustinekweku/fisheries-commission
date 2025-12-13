@@ -30,6 +30,7 @@ jobs:
           username: ${{ secrets.CPANEL_SSH_USER }}
           key: ${{ secrets.CPANEL_SSH_KEY }}
           passphrase: ${{ secrets.CPANEL_SSH_PASSPHRASE }}
+          port: 2112
           source: "."
           target: ${{ secrets.CPANEL_APP_PATH }}
 
@@ -40,6 +41,7 @@ jobs:
           username: ${{ secrets.CPANEL_SSH_USER }}
           key: ${{ secrets.CPANEL_SSH_KEY }}
           passphrase: ${{ secrets.CPANEL_SSH_PASSPHRASE }}
+          port: 2112
           script: |
             cd ${{ secrets.CPANEL_APP_PATH }}
             npm install
