@@ -23,6 +23,18 @@ jobs:
           npm install --legacy-peer-deps
           npm run build
 
+      - name: Test SSH Connection
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.CPANEL_SSH_HOST }}
+          username: ${{ secrets.CPANEL_SSH_USER }}
+          key: ${{ secrets.CPANEL_SSH_KEY }}
+          passphrase: ${{ secrets.CPANEL_SSH_PASSPHRASE }}
+          port: 2112
+          script: |
+            echo "SSH connection successful"
+            pwd
+
       - name: Upload to cPanel via SSH
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -33,6 +45,8 @@ jobs:
           port: 2112
           source: "."
           target: ${{ secrets.CPANEL_APP_PATH }}
+          timeout: 30s
+          command_timeout: 10m
 
       - name: Install, Build & Restart App (Server)
         uses: appleboy/ssh-action@v1.0.3
