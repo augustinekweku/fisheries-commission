@@ -10,23 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name:  Checkout repository
         uses: actions/checkout@v4
 
       - name: Deploy via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ${{ secrets.CPANEL_HOST }}
+          server:  ${{ secrets.CPANEL_HOST }}
           username: ${{ secrets.CPANEL_USER }}
-          password: ${{ secrets.CPANEL_PASSWORD }}
+          password: ${{ secrets. CPANEL_PASSWORD }}
           port: ${{ secrets.CPANEL_PORT }}
-          protocol: ftp
-          local-dir: ./
-          server-dir: /home/CPANEL_USER/nextjs-website/
-          exclude: |
-            **/.git*
-            **/.github*
-            **/node_modules/**
-            **/.next/**
-            **/.env*
-            **/.DS_Store
+          local_path: '. /*'
+          remote_path: '/home/CPANEL_USER/nextjs-website/'
+          sftp_only: true
+          args: '--exclude=.git* --exclude=.github* --exclude=node_modules/ --exclude=.next/ --exclude=.env* --exclude=.DS_Store'
