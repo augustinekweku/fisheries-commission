@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.CPANEL_USER }}
           password: ${{ secrets.CPANEL_PASSWORD }}
           port: ${{ secrets.CPANEL_PORT }}
-          protocol: sftp
+          protocol: ftp
           local-dir: ./
           server-dir: /home/CPANEL_USER/nextjs-website/
           exclude: |
