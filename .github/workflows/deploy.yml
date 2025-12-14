@@ -26,12 +26,12 @@ jobs:
       - name: Deploy via SCP
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: ${{ secrets.CPANEL_HOST }}
-          username: ${{ secrets.CPANEL_USER }}
+          host: ${{ secrets.CPANEL_SSH_HOST }}
+          username: ${{ secrets.CPANEL_SSH_USER }}
           key: ${{ secrets.CPANEL_SSH_KEY }}
           port: 2112
           source: "."
-          target: "/home/CPANEL_USER/public_html"
+          target: "/home/CPANEL_SSH_USER/public_html"
           rm: false
 
       - name: Install, Build & Restart App (Server)
