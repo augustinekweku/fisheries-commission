@@ -23,18 +23,16 @@ jobs:
           npm install --legacy-peer-deps
           npm run build
 
-      - name: Deploy to cPanel via SSH
-        uses: easingthemes/ssh-deploy@v5.1.0
+      - name: Deploy via SCP
+        uses: appleboy/scp-action@v0.1.7
         with:
-          SSH_PRIVATE_KEY: ${{ secrets.CPANEL_SSH_KEY }}
-          REMOTE_HOST: ${{ secrets.CPANEL_SSH_HOST }}
-          REMOTE_USER: ${{ secrets.CPANEL_SSH_USER }}
-          REMOTE_PORT: 2112
-          SOURCE: ./
-          TARGET: ${{ secrets.CPANEL_APP_PATH }}/
-          EXCLUDE: >-
-            .git, .github, node_modules, .next,
-            .env, .env.local, .env.production, .DS_Store
+          host: ${{ secrets.CPANEL_HOST }}
+          username: ${{ secrets.CPANEL_USER }}
+          key: ${{ secrets.CPANEL_SSH_KEY }}
+          port: 2112
+          source: "."
+          target: "/home/CPANEL_USER/public_html"
+          rm: false
 
       - name: Install, Build & Restart App (Server)
         uses: appleboy/ssh-action@v1.0.3
