@@ -1,4 +1,4 @@
-name: Deploy to cPanel via SFTP
+name: Deploy Next.js to cPanel via SFTP
 
 on:
   push:
@@ -10,17 +10,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name:  Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Next.js app
+        run: npm run build
 
       - name: Deploy via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server:  ${{ secrets.CPANEL_HOST }}
+          server: ${{ secrets.CPANEL_HOST }}
           username: ${{ secrets.CPANEL_USER }}
-          password: ${{ secrets. CPANEL_PASSWORD }}
+          password: ${{ secrets.CPANEL_PASSWORD }}
           port: ${{ secrets.CPANEL_PORT }}
-          local_path: '. /*'
-          remote_path: '/home/CPANEL_USER/nextjs-website/'
+          local_path: .
+          remote_path: /home/${{ secrets.CPANEL_USER }}/fisheries-commission-nextjs-website/
           sftp_only: true
-          args: '--exclude=.git* --exclude=.github* --exclude=node_modules/ --exclude=.next/ --exclude=.env* --exclude=.DS_Store'
+          args: >
+            --exclude=.git*
+            --exclude=.github*
+            --exclude=node_modules/
+            --exclude=.env*
+            --exclude=.DS_Store
