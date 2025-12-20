@@ -13,22 +13,31 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: "pnpm"
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
       - name: Install dependencies
-        run: npm i --legacy-peer-deps
+        run: pnpm install --frozen-lockfile
 
       - name: Build Next.js app
-        run: npm run build
+        run: pnpm build
 
-      - name: Deploy via SFTP
+      - name: Deploy to cPanel via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.CPANEL_HOST }}
           username: ${{ secrets.CPANEL_USER }}
           password: ${{ secrets.CPANEL_PASSWORD }}
           port: ${{ secrets.CPANEL_PORT }}
+          sftp_only: true
           local_path: .
           remote_path: /home/${{ secrets.CPANEL_USER }}/fisheries-commission-nextjs-website/
-          sftp_only: true
           args: >
             --exclude=.git*
             --exclude=.github*
