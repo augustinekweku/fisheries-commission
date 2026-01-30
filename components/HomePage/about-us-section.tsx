@@ -21,7 +21,7 @@ const AboutUs = () => {
             data-aos-delay="100"
           >
             <img
-              src="/assets/img/blog/navy-5.jpg"
+              src="/assets/img/about-us-image.jpeg"
               className="img-fluid"
               alt={t("imageAlt")}
               style={{
