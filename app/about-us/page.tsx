@@ -25,9 +25,9 @@ const AboutUsPage = () => {
             <div className="col-lg-8 mt-lg-4">
               <p>
                 The Fisheries Commission is the implementing agency of the
-                Ministry of Fisheries and Aquaculture Development (MoFAD). We
-                are constituted to be the actualizing force behind policies and
-                regulations established by MoFAD.
+                Ministry of Fisheries and Aquaculture (MoFA). We are constituted
+                to be the actualizing force behind policies and regulations
+                established by MoFA.
               </p>
 
               <p>
@@ -39,9 +39,9 @@ const AboutUsPage = () => {
               </p>
 
               <p>
-                Our work at the Fisheries Commission is guided by MoFAD’s
+                Our work at the Fisheries Commission is guided by MoFA’s
                 policies and regulations, and we also provide valuable feedback
-                to MoFAD to inform future policies.
+                to MoFA to inform future policies.
               </p>
 
               <p>
@@ -51,7 +51,7 @@ const AboutUsPage = () => {
               </p>
 
               <p>
-                The Fisheries Commission under MoFAD is headed by the Executive
+                The Fisheries Commission under MoFA is headed by the Executive
                 Director, with the support of two Deputy Executive Directors
                 (Deputy Executive Director, Technical and Deputy Executive
                 Director, General Services).
