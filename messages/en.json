@@ -426,6 +426,18 @@
     "emptyTitle": "No documents available",
     "emptyDescription": "Documents will appear here when they are added."
   },
+  "permitsAndLicenses": {
+    "title": "Permits & Licences",
+    "description": "Fishing permits, licences and related documents.",
+    "size": "Size",
+    "dateAdded": "Date added",
+    "lastModified": "Last Modified",
+    "downloadButton": "Download",
+    "previewButton": "Preview",
+    "unknownSize": "Unknown",
+    "emptyTitle": "No documents available",
+    "emptyDescription": "Documents will appear here when they are added."
+  },
   "pressAndReleases": {
     "title": "News",
     "subtitle": "Our Recent Press And Releases",

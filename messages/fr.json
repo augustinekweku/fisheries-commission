@@ -426,6 +426,18 @@
     "emptyTitle": "Aucun document disponible",
     "emptyDescription": "Les documents apparaîtront ici lorsqu'ils seront ajoutés."
   },
+  "permitsAndLicenses": {
+    "title": "Permis et Licences",
+    "description": "Permis de pêche, licences et documents connexes.",
+    "size": "Taille",
+    "dateAdded": "Date d'ajout",
+    "lastModified": "Dernière modification",
+    "downloadButton": "Télécharger",
+    "previewButton": "Aperçu",
+    "unknownSize": "Inconnu",
+    "emptyTitle": "Aucun document disponible",
+    "emptyDescription": "Les documents apparaîtront ici lorsqu'ils seront ajoutés."
+  },
   "pressAndReleases": {
     "title": "Actualités",
     "subtitle": "Nos récents communiqués et publications",

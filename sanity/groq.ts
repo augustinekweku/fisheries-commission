@@ -1,5 +1,16 @@
 import { groq } from "next-sanity";
 
+// About Us Page
+export const aboutPageQuery = groq`
+*[_type == "aboutPage"][0] {
+  _id,
+  title,
+  subtitle,
+  "imageUrl": image.asset->url,
+  body
+}
+`;
+
 // Single Post - with locale support
 export const singlequery = groq`
 *[_type == "post" && slug.current == $slug][0] {

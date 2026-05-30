@@ -213,8 +213,10 @@ const Header = () => {
 
                 <li>
                   <Link
-                    href="#"
-                    className={isActive("/permitsLicences") ? "active" : ""}
+                    href="/permits-and-licenses"
+                    className={
+                      isActive("/permits-and-licenses") ? "active" : ""
+                    }
                   >
                     {t("permitsLicences")}
                   </Link>
