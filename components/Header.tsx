@@ -211,15 +211,48 @@ const Header = () => {
                   </ul>
                 </li>
 
-                <li>
-                  <Link
-                    href="/permits-and-licenses"
-                    className={
-                      isActive("/permits-and-licenses") ? "active" : ""
-                    }
-                  >
-                    {t("permitsLicences")}
+                {/* Permits & Licences Dropdown */}
+                <li
+                  className={`dropdown ${isParentActive(["/permits-and-licenses"]) ? "active" : ""}`}
+                >
+                  <Link href="#">
+                    <span>{t("permitsLicences")}</span>{" "}
+                    <i className="bi bi-chevron-down toggle-dropdown"></i>
                   </Link>
+                  <ul>
+                    <li className="dropdown">
+                      <Link href="#">
+                        <span>{t("fishing")}</span>{" "}
+                        <i className="bi bi-chevron-down toggle-dropdown"></i>
+                      </Link>
+                      <ul>
+                        <li>
+                          <Link href="#">{t("industrial")}</Link>
+                        </li>
+                        <li>
+                          <Link href="#">{t("semiIndustrial")}</Link>
+                        </li>
+                        <li>
+                          <Link href="#">{t("artisanal")}</Link>
+                        </li>
+                        <li>
+                          <Link href="#">{t("authorization")}</Link>
+                        </li>
+                        <li>
+                          <Link href="#">{t("recreationalFishing")}</Link>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <Link href="#">{t("importExport")}</Link>
+                    </li>
+                    <li>
+                      <Link href="#">{t("aquaculture")}</Link>
+                    </li>
+                    <li>
+                      <Link href="#">{t("coldStorageFacility")}</Link>
+                    </li>
+                  </ul>
                 </li>
 
                 {/* Contact (Mobile Only) */}

@@ -40,7 +40,16 @@
     "warfp": "West African Regional Fisheries Programme (WARFP)",
     "contactUs": "Contact Us",
     "started": "Get Started",
-    "permitsLicences": "Permits & Licences"
+    "permitsLicences": "Permits & Licences",
+    "fishing": "Fishing",
+    "importExport": "Import and Export",
+    "aquaculture": "Aquaculture",
+    "coldStorageFacility": "Cold Storage Facility",
+    "industrial": "Industrial",
+    "semiIndustrial": "Semi-Industrial",
+    "artisanal": "Artisanal",
+    "authorization": "Authorization",
+    "recreationalFishing": "Recreational Fishing"
   },
   "Hero": {
     "readMore": "Read More",

@@ -40,7 +40,16 @@
     "warfp": "Programme Régional des Pêches en Afrique de l'Ouest (WARFP)",
     "contactUs": "Nous Contacter",
     "started": "Commencer",
-    "permitsLicences": "Permis et Licences"
+    "permitsLicences": "Permis et Licences",
+    "fishing": "Pêche",
+    "importExport": "Import et Export",
+    "aquaculture": "Aquaculture",
+    "coldStorageFacility": "Chambre Froide",
+    "industrial": "Industriel",
+    "semiIndustrial": "Semi-Industriel",
+    "artisanal": "Artisanal",
+    "authorization": "Autorisation",
+    "recreationalFishing": "Pêche Récréative"
   },
   "Hero": {
     "readMore": "Lire plus",
