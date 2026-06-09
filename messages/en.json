@@ -447,6 +447,26 @@
     "emptyTitle": "No documents available",
     "emptyDescription": "Documents will appear here when they are added."
   },
+  "permitsCategory": {
+    "fishing": "Fishing Permits & Licences",
+    "fishingDesc": "Permits and licences for fishing operations.",
+    "importAndExport": "Import & Export Permits",
+    "importAndExportDesc": "Permits for importing and exporting fish and fishery products.",
+    "aquaculture": "Aquaculture Permits & Licences",
+    "aquacultureDesc": "Permits and licences for aquaculture operations.",
+    "coldStorageFacility": "Cold Storage Facility Licences",
+    "coldStorageFacilityDesc": "Licences for cold storage facilities.",
+    "industrial": "Industrial Fishing",
+    "industrialDesc": "Permits and licences for industrial fishing vessels.",
+    "semiIndustrial": "Semi-Industrial Fishing",
+    "semiIndustrialDesc": "Permits and licences for semi-industrial fishing operations.",
+    "artisanal": "Artisanal Fishing",
+    "artisanalDesc": "Permits and licences for artisanal fishing activities.",
+    "authorization": "Authorization",
+    "authorizationDesc": "Authorization documents for fishing activities.",
+    "recreationalFishing": "Recreational Fishing",
+    "recreationalFishingDesc": "Permits for recreational fishing activities."
+  },
   "pressAndReleases": {
     "title": "News",
     "subtitle": "Our Recent Press And Releases",

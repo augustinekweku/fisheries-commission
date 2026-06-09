@@ -179,3 +179,32 @@ export const searchResourcesQuery = groq`
   "previewImageUrl": previewImage.asset->url
 }
 `;
+
+// Get Permits and Licences by Category (and optional Subcategory)
+export const permitsByCategoryQuery = groq`
+{
+  "permits": *[
+    _type == "permitsAndLicences" &&
+    category == $category &&
+    ($subcategory == null || subcategory == $subcategory)
+  ]
+  | order(date desc)
+  [$pageIndex...($pageIndex + $limit)]{
+    _id,
+    title,
+    category,
+    subcategory,
+    date,
+    modifiedAt,
+    size,
+    "pdfUrl": pdf.asset->url,
+    "previewImageUrl": previewImage.asset->url
+  },
+
+  "totalCount": count(*[
+    _type == "permitsAndLicences" &&
+    category == $category &&
+    ($subcategory == null || subcategory == $subcategory)
+  ])
+}
+`;

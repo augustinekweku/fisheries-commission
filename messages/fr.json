@@ -447,6 +447,26 @@
     "emptyTitle": "Aucun document disponible",
     "emptyDescription": "Les documents apparaîtront ici lorsqu'ils seront ajoutés."
   },
+  "permitsCategory": {
+    "fishing": "Permis et Licences de Pêche",
+    "fishingDesc": "Permis et licences pour les activités de pêche.",
+    "importAndExport": "Permis d'Import et Export",
+    "importAndExportDesc": "Permis pour l'importation et l'exportation de poissons et produits halieutiques.",
+    "aquaculture": "Permis et Licences d'Aquaculture",
+    "aquacultureDesc": "Permis et licences pour les activités d'aquaculture.",
+    "coldStorageFacility": "Licences de Chambre Froide",
+    "coldStorageFacilityDesc": "Licences pour les installations de chambre froide.",
+    "industrial": "Pêche Industrielle",
+    "industrialDesc": "Permis et licences pour les navires de pêche industrielle.",
+    "semiIndustrial": "Pêche Semi-Industrielle",
+    "semiIndustrialDesc": "Permis et licences pour les activités de pêche semi-industrielle.",
+    "artisanal": "Pêche Artisanale",
+    "artisanalDesc": "Permis et licences pour les activités de pêche artisanale.",
+    "authorization": "Autorisation",
+    "authorizationDesc": "Documents d'autorisation pour les activités de pêche.",
+    "recreationalFishing": "Pêche Récréative",
+    "recreationalFishingDesc": "Permis pour les activités de pêche récréative."
+  },
   "pressAndReleases": {
     "title": "Actualités",
     "subtitle": "Nos récents communiqués et publications",

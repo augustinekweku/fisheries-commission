@@ -227,30 +227,46 @@ const Header = () => {
                       </Link>
                       <ul>
                         <li>
-                          <Link href="#">{t("industrial")}</Link>
+                          <Link href="/permits-and-licenses/fishing/industrial">
+                            {t("industrial")}
+                          </Link>
                         </li>
                         <li>
-                          <Link href="#">{t("semiIndustrial")}</Link>
+                          <Link href="/permits-and-licenses/fishing/semi-industrial">
+                            {t("semiIndustrial")}
+                          </Link>
                         </li>
                         <li>
-                          <Link href="#">{t("artisanal")}</Link>
+                          <Link href="/permits-and-licenses/fishing/artisanal">
+                            {t("artisanal")}
+                          </Link>
                         </li>
                         <li>
-                          <Link href="#">{t("authorization")}</Link>
+                          <Link href="/permits-and-licenses/fishing/authorization">
+                            {t("authorization")}
+                          </Link>
                         </li>
                         <li>
-                          <Link href="#">{t("recreationalFishing")}</Link>
+                          <Link href="/permits-and-licenses/fishing/recreational-fishing">
+                            {t("recreationalFishing")}
+                          </Link>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <Link href="#">{t("importExport")}</Link>
+                      <Link href="/permits-and-licenses/import-and-export">
+                        {t("importExport")}
+                      </Link>
                     </li>
                     <li>
-                      <Link href="#">{t("aquaculture")}</Link>
+                      <Link href="/permits-and-licenses/aquaculture">
+                        {t("aquaculture")}
+                      </Link>
                     </li>
                     <li>
-                      <Link href="#">{t("coldStorageFacility")}</Link>
+                      <Link href="/permits-and-licenses/cold-storage-facility">
+                        {t("coldStorageFacility")}
+                      </Link>
                     </li>
                   </ul>
                 </li>
