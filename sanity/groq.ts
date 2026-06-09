@@ -107,7 +107,7 @@ export const singleResourceQuery = groq`
   category,
   date,
   modifiedAt,
-  size,
+  "size": pdf.asset->size,
   "pdfUrl": pdf.asset->url,
   "previewImageUrl": previewImage.asset->url
 }
@@ -125,7 +125,7 @@ export const allResourcesPaginatedQuery = groq`
     title,
     date,
     modifiedAt,
-    size,
+    "size": pdf.asset->size,
     category,
     "pdfUrl": pdf.asset->url,
     "previewImageUrl": previewImage.asset->url
@@ -152,7 +152,7 @@ export const resourcesByCategoryQuery = groq`
     category,
     date,
     modifiedAt,
-    size,
+    "size": pdf.asset->size,
     "pdfUrl": pdf.asset->url,
     "previewImageUrl": previewImage.asset->url
   },
@@ -174,7 +174,7 @@ export const searchResourcesQuery = groq`
   category,
   date,
   modifiedAt,
-  size,
+  "size": pdf.asset->size,
   "pdfUrl": pdf.asset->url,
   "previewImageUrl": previewImage.asset->url
 }
@@ -196,7 +196,7 @@ export const permitsByCategoryQuery = groq`
     subcategory,
     date,
     modifiedAt,
-    size,
+    "size": pdf.asset->size,
     "pdfUrl": pdf.asset->url,
     "previewImageUrl": previewImage.asset->url
   },

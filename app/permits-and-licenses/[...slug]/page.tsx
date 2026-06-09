@@ -9,6 +9,7 @@ import Loader from "@/components/Loader";
 import { DocumentItem } from "@/types/Resources";
 import PermitsList from "@/components/Permits/PermitsList";
 import { useTranslations } from "next-intl";
+import { formatFileSize } from "@/lib/formatFileSize";
 
 const SLUG_TO_KEY: Record<string, string> = {
   fishing: "fishing",
@@ -23,7 +24,6 @@ const SLUG_TO_KEY: Record<string, string> = {
 };
 
 const PermitCategoryPage = () => {
-  const t = useTranslations("permitsAndLicenses");
   const tCategory = useTranslations("permitsCategory");
   const params = useParams();
   const slug = params.slug as string[];
@@ -51,7 +51,7 @@ const PermitCategoryPage = () => {
   const documents: DocumentItem[] =
     data?.permits.map((permit) => ({
       title: permit.title,
-      size: permit.size || t("unknownSize"),
+      size: formatFileSize(permit.size),
       dateAdded: new Date(permit.date).toLocaleDateString(),
       dateModified: permit.modifiedAt
         ? new Date(permit.modifiedAt).toLocaleDateString()

@@ -2,6 +2,7 @@
 
 import { DocumentItem } from "@/types/Resources";
 import { useTranslations } from "next-intl";
+import PdfThumbnail from "@/components/PdfThumbnail";
 
 interface Props {
   documents: DocumentItem[];
@@ -41,19 +42,7 @@ const PermitsList: React.FC<Props> = ({ documents }) => {
             <div className="row g-4 align-items-center">
               {/* Thumbnail */}
               <div className="col-12 col-sm-2 text-center text-sm-start">
-                {doc.thumbnailUrl ? (
-                  <img
-                    src={doc.thumbnailUrl}
-                    alt="doc"
-                    className="img-fluid"
-                    style={{ maxWidth: 80 }}
-                  />
-                ) : (
-                  <i
-                    className="bi bi-file-earmark-pdf text-muted"
-                    style={{ fontSize: "3rem" }}
-                  ></i>
-                )}
+                <PdfThumbnail pdfUrl={doc.previewUrl} width={80} />
               </div>
 
               {/* Document Info */}

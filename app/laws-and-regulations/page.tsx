@@ -8,6 +8,7 @@ import Loader from "@/components/Loader";
 import LawsAndRegulationsList from "@/components/Resources/LawsAndRegulationsList";
 import { DocumentItem } from "@/types/Resources";
 import { useTranslations } from "next-intl";
+import { formatFileSize } from "@/lib/formatFileSize";
 
 const LawsAndRegulationsPage = () => {
   const CATEGORY = "laws-and-regulations";
@@ -33,7 +34,7 @@ const LawsAndRegulationsPage = () => {
     data?.resources.map((resource) => {
       return {
         title: resource.title,
-        size: resource.size || t("unknownSize"),
+        size: formatFileSize(resource.size),
         dateAdded: new Date(resource.date).toLocaleDateString(),
         dateModified: resource.modifiedAt
           ? new Date(resource.modifiedAt).toLocaleDateString()

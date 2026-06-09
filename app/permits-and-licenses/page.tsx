@@ -8,6 +8,7 @@ import Loader from "@/components/Loader";
 import { DocumentItem } from "@/types/Resources";
 import PermitsAndLicensesList from "@/components/Resources/PermitsAndLicensesList";
 import { useTranslations } from "next-intl";
+import { formatFileSize } from "@/lib/formatFileSize";
 
 const PermitsAndLicensesPage = () => {
   const t = useTranslations("permitsAndLicenses");
@@ -31,7 +32,7 @@ const PermitsAndLicensesPage = () => {
   const documents: DocumentItem[] =
     data?.resources.map((resource) => ({
       title: resource.title,
-      size: resource.size || t("unknownSize"),
+      size: formatFileSize(resource.size),
       dateAdded: new Date(resource.date).toLocaleDateString(),
       dateModified: resource.modifiedAt
         ? new Date(resource.modifiedAt).toLocaleDateString()

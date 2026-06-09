@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { client } from "@/sanity/client";
+import { formatFileSize } from "@/lib/formatFileSize";
 
 // Enhanced search queries
 const searchPostsQuery = `
@@ -30,7 +31,7 @@ const searchResourcesQuery = `
   category,
   date,
   modifiedAt,
-  size,
+  "size": pdf.asset->size,
   "pdfUrl": pdf.asset->url,
   "previewImageUrl": previewImage.asset->url
 }
@@ -52,7 +53,7 @@ interface Resource {
   category: string;
   date: string;
   modifiedAt: string;
-  size: string;
+  size: number;
   pdfUrl: string;
   previewImageUrl?: string;
 }
@@ -107,7 +108,7 @@ const SearchPageContent = () => {
       });
 
       setTotalResults(
-        (postsResults?.length || 0) + (resourcesResults?.length || 0)
+        (postsResults?.length || 0) + (resourcesResults?.length || 0),
       );
     } catch (err) {
       console.error("Search error:", err);
@@ -125,13 +126,6 @@ const SearchPageContent = () => {
     });
   };
 
-  const formatFileSize = (bytes: string | number) => {
-    const size = typeof bytes === "string" ? parseInt(bytes) : bytes;
-    if (size < 1024) return size + " B";
-    if (size < 1024 * 1024) return (size / 1024).toFixed(1) + " KB";
-    return (size / (1024 * 1024)).toFixed(1) + " MB";
-  };
-
   const getLocalizedText = (text: string | any, locale: string = "en") => {
     if (typeof text === "string") return text;
     return text?.[locale] || text?.en || text?.fr || "";
@@ -146,7 +140,7 @@ const SearchPageContent = () => {
     const regex = new RegExp(`(${searchTerm.trim()})`, "gi");
     return textStr.replace(
       regex,
-      '<mark style="background-color: #ffe066; padding: 2px 4px; border-radius: 3px;">$1</mark>'
+      '<mark style="background-color: #ffe066; padding: 2px 4px; border-radius: 3px;">$1</mark>',
     );
   };
 
@@ -288,7 +282,7 @@ const SearchPageContent = () => {
                                     dangerouslySetInnerHTML={{
                                       __html: highlightSearchTerm(
                                         post.excerpt,
-                                        query
+                                        query,
                                       ),
                                     }}
                                   />
@@ -426,7 +420,7 @@ const SearchPageContent = () => {
                                     onClick={async () => {
                                       try {
                                         const response = await fetch(
-                                          resource.pdfUrl
+                                          resource.pdfUrl,
                                         );
                                         const blob = await response.blob();
                                         const url =
@@ -442,7 +436,7 @@ const SearchPageContent = () => {
                                       } catch (error) {
                                         console.error(
                                           "Download failed:",
-                                          error
+                                          error,
                                         );
                                         // Fallback to opening in new tab
                                         window.open(resource.pdfUrl, "_blank");
