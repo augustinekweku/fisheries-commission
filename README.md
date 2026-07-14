@@ -1,40 +1,157 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fisheries Commission Frontend
 
-the fisheries commission website.. 
+Public website for the Fisheries Commission, built with Next.js (App Router) and connected to Sanity for content.
 
-## Getting Started
+## Who This Is For
 
-First, run the development server:
+This document is written for two audiences:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- PMs and non-technical stakeholders: use the Product Overview and Content Workflow sections.
+- Developers: use the Technical Overview, Setup, and Development Workflow sections.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Product Overview (Non-Technical)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This frontend project is the public-facing website.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Main goals:
 
-## Learn More
+- Present official information about the Commission.
+- Publish articles, press releases, reports, laws, and permit-related resources.
+- Support a bilingual experience (English and French).
+- Render content managed by the editorial team in Sanity Studio.
 
-To learn more about Next.js, take a look at the following resources:
+In simple terms:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Sanity Studio is where content is created and edited.
+- This Next.js app reads that content and displays it on the website.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Split
 
-## Deploy on Vercel
+The full solution is made up of two repositories:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Frontend (this repo): website UI and page rendering.
+- Backend CMS (Sanity Studio): content authoring and content structure.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The matching CMS project is located in the sibling folder named studio-fisheries-commission.
 
-# fisheries-commission
+## Technical Overview (Developer)
+
+Stack:
+
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- SCSS
+- next-intl for translations
+- next-sanity for CMS queries
+
+Key folders:
+
+- app: route-based pages
+- components: reusable UI building blocks
+- sanity: Sanity client and GROQ queries
+- messages: translation dictionaries
+- data: local static data used by some pages/components
+- public: static assets and documents
+
+Important implementation notes:
+
+- Local dev runs on port 3007 by default.
+- Locale configuration currently defaults requests to English in i18n/request.ts.
+- Sanity projectId and dataset are currently defined directly in sanity/client.ts.
+
+## Content Flow
+
+1. Content editors create or update documents in Sanity Studio.
+2. This frontend fetches content via GROQ queries from sanity/groq.ts.
+3. Pages in app render the fetched content for users.
+
+This means content changes do not usually require frontend code changes unless:
+
+- A new content type is introduced.
+- Layout or presentation rules need updates.
+- New filters/search behavior are needed.
+
+## Local Setup
+
+Prerequisites:
+
+- Node.js 20+
+- pnpm (recommended because pnpm-lock.yaml is committed)
+
+Install dependencies:
+
+    pnpm install
+
+Run development server:
+
+    pnpm dev
+
+App URL:
+
+- http://localhost:3007
+
+Build for production:
+
+    pnpm build
+    pnpm start
+
+Lint:
+
+    pnpm lint
+
+## Development Workflow
+
+1. Pull latest changes.
+2. Start local frontend and local Sanity Studio.
+3. Implement UI or data query updates.
+4. Validate page behavior in browser.
+5. Run lint and fix issues.
+6. Submit PR with screenshots and testing notes.
+
+Recommended when changing content-driven features:
+
+- Confirm schema field names in the Sanity repo before changing frontend queries.
+- Keep query and UI changes in the same PR to avoid drift.
+
+## PM/Content Workflow
+
+1. Open Sanity Studio and edit content.
+2. Mark posts as Published where applicable.
+3. Verify updates on the website pages.
+4. Report layout or data-mapping issues to engineering with page URL and content item title.
+
+## Feature Map
+
+Common public sections include:
+
+- About Us
+- Articles
+- Press and Releases
+- Resources (laws, reports, plans)
+- Permits and Licences
+- Gallery
+- Contact
+
+These pages are organized under the app folder as route segments.
+
+## Troubleshooting
+
+Frontend starts but content is missing:
+
+- Verify Sanity Studio has published content in the correct category/status.
+- Confirm schema field names still match the frontend GROQ query fields.
+
+Wrong language shown:
+
+- Locale request config is currently static to English; update locale resolution in i18n/request.ts if dynamic locale switching is required.
+
+Port conflict:
+
+- The dev script binds to 3007. Stop the process using that port or adjust the script temporarily.
+
+## Ownership Notes
+
+- Frontend code and UX behavior live in this repository.
+- Content model and editorial experience live in the Sanity repository.
+- Changes to content structure should be coordinated across both repositories.
