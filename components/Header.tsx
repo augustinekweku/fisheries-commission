@@ -251,6 +251,11 @@ const Header = () => {
                             {t("recreationalFishing")}
                           </Link>
                         </li>
+                        <li>
+                          <Link href="/permits-and-licenses/fishing/industrial-trawlers">
+                            {t("industrialTrawlers")}
+                          </Link>
+                        </li>
                       </ul>
                     </li>
                     <li>

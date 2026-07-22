@@ -49,7 +49,8 @@
     "semiIndustrial": "Semi-Industrial",
     "artisanal": "Artisanal",
     "authorization": "Authorization",
-    "recreationalFishing": "Recreational Fishing"
+    "recreationalFishing": "Recreational Fishing",
+    "industrialTrawlers": "Industrial Trawlers"
   },
   "Hero": {
     "readMore": "Read More",
