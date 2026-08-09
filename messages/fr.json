@@ -114,14 +114,14 @@
         "title": "Secrétariat National du Carburant Premix (NPFS)",
         "description": "Informations sur le Secrétariat National du Carburant Premix",
         "image": "assets/img/faculties/faculties-7.jpg",
-        "anchor": "#",
+        "anchor": "https://npfs.gov.gh/",
         "isExternal": false
       },
       {
         "title": "Registre et Licence des Navires",
         "description": "Informations d'enregistrement sur tous les navires de pêche",
         "image": "assets/img/faculties/faculties-4.jpg",
-        "anchor": "/#",
+        "anchor": "#",
         "isExternal": false
       },
       {
@@ -146,11 +146,18 @@
         "isExternal": false
       },
       {
-        "title": "Système de Gestion de l'Information Aquacole (AIMS)",
+        "title": "Système de Gestion de l'Information Aquacole (GAIMS)",
         "description": "Informations sur la plateforme AIMS",
         "image": "assets/img/faculties/faculties-8.png",
-        "anchor": "#",
-        "isExternal": false
+        "anchor": "https://gaims-fc.org",
+        "isExternal": true
+      },
+      {
+        "title": "Portail Public des Pisciculteurs",
+        "description": "Enregistrez vos fermes, gérez le renouvellement des permis et suivez les paiements en un seul endroit simple et sécurisé.",
+        "image": "assets/img/faculties/one-stop-shop.jpeg",
+        "anchor": "https://one-stop-gaims.test-draytechits.com",
+        "isExternal": true
       }
     ]
   },

@@ -113,7 +113,7 @@
         "title": "National Premix Fuel Secretariat (NPFS)",
         "description": "Information on the National Premix Fuel Secretariat",
         "image": "assets/img/faculties/faculties-7.jpg",
-        "anchor": "#",
+        "anchor": "https://npfs.gov.gh/",
         "isExternal": false
       },
       {
@@ -145,11 +145,18 @@
         "isExternal": false
       },
       {
-        "title": "Aquaculture Information Management System (AIMS)",
+        "title": "Ghana Aquaculture Information Management System (GAIMS)",
         "description": "Information on the AIMS platform",
         "image": "assets/img/faculties/faculties-8.png",
-        "anchor": "#",
-        "isExternal": false
+        "anchor": "https://gaims-fc.org",
+        "isExternal": true
+      },
+      {
+        "title": "Fish Farmers Public Portal",
+        "description": "Register farms, manage permit renewals and track payments in one simple, secure place.",
+        "image": "assets/img/faculties/one-stop-shop.jpeg",
+        "anchor": "https://one-stop-gaims.test-draytechits.com",
+        "isExternal": true
       }
     ]
   },
