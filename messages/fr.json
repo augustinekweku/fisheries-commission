@@ -1,7 +1,7 @@
 {
   "topbar": {
     "email": "info@fishcom.gov.gh",
-    "whatWeDo": "Ce Que Nous Faisons",
+    "fis": "FIS",
     "macppa": "MACPPA",
     "blueEconomy": "Économie Bleue",
     "recruitment": "Portail de Recrutement",
@@ -10,7 +10,7 @@
   },
   "header": {
     "home": "Accueil",
-    "whatWeDo": "Ce Que Nous Faisons",
+    "fis": "FIS",
     "fiti": "FiTi",
     "macppa": "MACPPA",
     "blueEconomy": "Économie Bleue",

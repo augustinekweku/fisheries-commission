@@ -49,7 +49,13 @@ const Header = () => {
                 {/* Mobile Only Links */}
                 <div className="d-block d-lg-none">
                   <li>
-                    <Link href="">{t("whatWeDo")}</Link>
+                    <Link
+                      href="https://www.mofaq.gov.gh/fis/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t("fis")}
+                    </Link>
                   </li>
                   <li>
                     <Link

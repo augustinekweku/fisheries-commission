@@ -46,8 +46,13 @@ const TopBar = () => {
           </div>
           <div className="col-md-10 text-center text-lg-end">
             <div className="d-inline-flex align-items-center">
-              <Link href="" className="text-body py-2 pe-3 border-end">
-                <small>{t("whatWeDo")}</small>
+              <Link
+                href="https://www.mofaq.gov.gh/fis/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-body py-2 pe-3 border-end"
+              >
+                <small>{t("fis")}</small>
               </Link>
               {/* <Link
                 href="/fiti-standard"
