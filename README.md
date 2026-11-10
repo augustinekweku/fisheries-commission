@@ -7,7 +7,7 @@ Public website for the Fisheries Commission, built with Next.js (App Router) and
 This document is written for two audiences:
 
 - PMs and non-technical stakeholders: use the Product Overview and Content Workflow sections.
-- Developers: use the Technical Overview, Setup, and Development Workflow sections.
+- Developers: use the Technical Overview, Setup, and Development Workflow sections..
 
 ## Product Overview (Non-Technical)
 
